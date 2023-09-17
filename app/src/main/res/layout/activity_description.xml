@@ -81,7 +81,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_bold"
-                    android:text="Toyota Vios"
+                    android:text="@string/toyota_vios"
                     android:textColor="#182981"
                     android:textSize="18sp"
                     app:layout_constraintEnd_toStartOf="@+id/textView5"

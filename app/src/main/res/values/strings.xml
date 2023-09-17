@@ -60,4 +60,9 @@
 
     <!--  try  -->
     <string name="you_clicked_the_image">You clicked Toyota Vios.</string>
+    <string name="car_section">Car Section</string>
+    <string name="available_cars">Available Cars</string>
+    <string name="brands">Brands</string>
+    <string name="toyota_vios">Toyota Vios</string>
+    <string name="don_t_have_a_account">Don\'t have a account?</string>
 </resources>
