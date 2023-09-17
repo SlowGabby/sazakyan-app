@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <gradient android:startColor="#2247FF"
+                android:centerColor="#FFFFFF"
+                android:endColor="#FFFFFF"
+                android:type="radial"
+                android:gradientRadius="110%p"
+                android:centerX="0.1"
+                android:centerY="0.3"/>
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <gradient android:startColor="#9C27B0"
+                android:centerColor="@android:color/transparent"
+                android:endColor="@android:color/transparent"
+                android:gradientRadius="110%p"
+                android:centerY="0.3"
+                android:centerX="0.8"
+                android:type="radial"/>
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <gradient android:startColor="#D3FFEB3B"
+                android:centerColor="@android:color/transparent"
+                android:endColor="@android:color/transparent"
+                android:gradientRadius="110%p"
+                android:centerY="0.4"
+                android:centerX="0.6"
+                android:type="radial"/>
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <gradient android:startColor="#E91E63"
+                android:centerColor="@android:color/transparent"
+                android:endColor="@android:color/transparent"
+                android:gradientRadius="110%p"
+                android:centerY="0.8"
+                android:centerX="0.8"
+                android:type="radial"/>
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <gradient android:startColor="#E4FF5722"
+                android:centerColor="@android:color/transparent"
+                android:endColor="@android:color/transparent"
+                android:gradientRadius="110%p"
+                android:centerY="0.6"
+                android:centerX="0.1"
+                android:type="radial"/>
+        </shape>
+    </item>
+</layer-list>

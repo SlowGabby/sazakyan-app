@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--  COLOR PALETTES  -->
+    <color name="main_background">#19191b</color>
+    <color name="second_bg">#ECEBEB</color>
+    <color name="button">#E69B9139</color>
+    <color name="button2">#2196F3</color>
+    <color name="primary_font_color">#f1f1f1</color>
+    <color name="secondary_font_color">#0e0e0e</color>
+    <color name="splash_bg">#182981</color>
+
+</resources>
