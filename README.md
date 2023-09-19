@@ -1,1 +1,1 @@
-# sazakyan-app
+# SAZAKYAN RENTAL APP
