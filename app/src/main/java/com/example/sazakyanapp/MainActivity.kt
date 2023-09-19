@@ -5,10 +5,10 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
-class IntroActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_intro)
+        setContentView(R.layout.activity_main)
 
         //get the component with id
         val btnLogin = findViewById<Button>(R.id.btnLogin)
@@ -16,7 +16,6 @@ class IntroActivity : AppCompatActivity() {
         btnLogin.setOnClickListener() {
             val availableCars = Intent(this, CarsActivity::class.java)
             startActivity(availableCars)
-            finish()
         }
     }
 }

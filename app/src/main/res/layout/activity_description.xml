@@ -38,11 +38,11 @@
                     android:layout_width="40dp"
                     android:layout_height="60dp"
                     android:layout_alignParentEnd="true"
+                    android:layout_marginStart="80dp"
                     android:src="@drawable/menu"
-                    android:layout_marginStart="70dp"
                     app:layout_constraintStart_toEndOf="@+id/textView6"
-                    tools:layout_editor_absoluteY="10dp"
-                    tools:ignore="MissingConstraints" />
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteY="20dp" />
 
                 <ImageView
                     android:id="@+id/imageView3"
@@ -107,12 +107,12 @@
                     android:id="@+id/textView5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="256dp"
                     android:fontFamily="@font/poppins_bold"
-                    android:text="₱600/per day"
+                    android:text="₱1200/per day"
                     android:textColor="#182981"
                     android:textSize="17sp"
-                    app:layout_constraintStart_toStartOf="@+id/imageView3"
+                    android:layout_marginEnd="30dp"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
 
@@ -234,7 +234,7 @@
 
 
             <androidx.cardview.widget.CardView
-                android:layout_width="250dp"
+                android:layout_width="240dp"
                 android:layout_height="140dp"
                 android:layout_marginBottom="20dp"
                 android:layout_marginStart="17dp"
@@ -270,7 +270,7 @@
             </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="115dp"
+                    android:layout_width="125dp"
                     android:layout_height="140dp"
                     android:layout_marginBottom="20dp"
                     android:layout_marginStart="13dp"
@@ -280,7 +280,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="18dp"
+                        android:layout_marginStart="23dp"
                         android:layout_marginTop="38dp"
                         android:fontFamily="@font/poppins"
                         android:text="Map\nPreview"
@@ -293,14 +293,14 @@
             </GridLayout>
 
             <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="380dp"
+                android:layout_width="370dp"
                 android:layout_height="60dp"
                 android:text="Select"
                 android:textAllCaps="false"
                 android:textColor="#f2f2f2"
                 android:fontFamily="@font/poppins_bold"
                 android:backgroundTint="#182981"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="21dp"
                 android:layout_marginTop="20dp" />
 
 

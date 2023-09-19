@@ -17,12 +17,16 @@ class CarsActivity : AppCompatActivity() {
 
     fun carDetails(view: View) {
 
+
         val moreInfo = findViewById<ImageView>(R.id.carDetails)
 
         moreInfo.setOnClickListener() {
             val carDescription = Intent(this, DescriptionActivity::class.java)
             startActivity(carDescription)
         }
+
+
+
     }
 }
 //        Toast.makeText(applicationContext, "this image is clicked", Toast.LENGTH_SHORT).show()
