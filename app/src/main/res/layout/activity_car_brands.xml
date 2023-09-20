@@ -262,14 +262,14 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:src="@drawable/toyotavios"
+                        android:src="@drawable/toyota_landcruiser"
                         android:layout_width="120dp"
                         android:layout_height="90dp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Toyota Vios"
+                        android:text="Toyota Land\n\t\t\t\tCruiser"
                         android:fontFamily="@font/poppins_bold"
                         android:textSize="18sp"
                         android:textColor="#f2f2f2"
@@ -300,14 +300,14 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:src="@drawable/toyotavios"
+                        android:src="@drawable/toyota_landcruiser2"
                         android:layout_width="120dp"
                         android:layout_height="90dp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Honda Civic"
+                        android:text="Toyota Land\n\t\t\t\tCruiser"
                         android:fontFamily="@font/poppins_bold"
                         android:textSize="18sp"
                         android:textColor="#f2f2f2"
