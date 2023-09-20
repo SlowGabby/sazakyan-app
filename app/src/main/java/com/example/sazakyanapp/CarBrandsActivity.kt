@@ -4,8 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.sazakyanapp.databinding.ActivityCarBrandsBinding
+import com.example.sazakyanapp.databinding.ActivityCarHondaBinding
 
-class CarBrandsActivity : AppCompatActivity() {
+class CarToyotaActivity : AppCompatActivity() {
 
     private lateinit var Binding : ActivityCarBrandsBinding
 
@@ -14,12 +15,19 @@ class CarBrandsActivity : AppCompatActivity() {
 
         Binding = ActivityCarBrandsBinding.inflate(layoutInflater)
 
-        Binding.toyotaOnly.setOnClickListener() {
+        Binding.toyotaOnly2.setOnClickListener() {
 
-            val carBrands = Intent(this, CarBrandsActivity::class.java)
+            val carBrands = Intent(this, CarToyotaActivity::class.java)
             startActivity(carBrands)
         }
 
-        setContentView(R.layout.activity_car_brands)
+        Binding.hondaOnly2.setOnClickListener() {
+
+            val carHonda = Intent(this, CarHondaActivity::class.java)
+            startActivity(carHonda)
+
+        }
+
+        setContentView(Binding.root)
     }
 }

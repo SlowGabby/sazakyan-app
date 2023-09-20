@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/second_bg"
-    tools:context=".CarToyotaActivity">
+    tools:context=".CarHondaActivity">
 
     <LinearLayout
         android:orientation="vertical"
@@ -86,7 +86,7 @@
                 android:layout_marginTop="40dp"
                 android:layout_marginBottom="20dp"
                 app:cardCornerRadius="12dp"
-                android:onClick="carBrands">
+                android:onClick="carHonda">
 
                 <ImageView
                     android:layout_width="40dp"
@@ -194,7 +194,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Toyota Vios"
+                        android:text="Honda Civic"
                         android:fontFamily="@font/poppins_bold"
                         android:textSize="18sp"
                         android:textColor="#f2f2f2"

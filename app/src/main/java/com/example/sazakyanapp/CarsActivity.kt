@@ -25,7 +25,7 @@ class CarsActivity : AppCompatActivity() {
 
         Binding.toyotaOnly.setOnClickListener() {
 
-            val carBrands = Intent(this, CarBrandsActivity::class.java)
+            val carBrands = Intent(this, CarToyotaActivity::class.java)
             startActivity(carBrands)
         }
 
@@ -62,8 +62,9 @@ class CarsActivity : AppCompatActivity() {
 
         Binding.hondaOnly.setOnClickListener() {
 
-            val carBrands = Intent(this, CarBrandsActivity::class.java)
+            val carBrands = Intent(this, CarHondaActivity::class.java)
             startActivity(carBrands)
+
         }
 
         Binding.honda1.setOnClickListener() {
@@ -95,7 +96,6 @@ class CarsActivity : AppCompatActivity() {
         }
 
         setContentView(Binding.root)
-
     }
 }
 //        Toast.makeText(applicationContext, "this image is clicked", Toast.LENGTH_SHORT).show()
