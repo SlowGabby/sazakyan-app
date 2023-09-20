@@ -32,7 +32,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/available_cars"
-                android:fontFamily="@font/poppins"
+                android:fontFamily="@font/poppins_bold"
                 android:textSize="14sp"
                 android:textColor="#233BBD"
                 android:layout_below="@+id/txtdashboard"/>
