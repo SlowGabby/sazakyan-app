@@ -12,44 +12,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SazakyanApp"
         tools:targetApi="31">
-        <activity
-            android:name=".CarHondaActivity"
-            android:exported="false" />
-        <activity
-            android:name=".CarToyotaActivity"
-            android:exported="false" />
-        <activity
-            android:name=".CarBrands"
-            android:exported="false" />
+
         <activity
             android:name=".MainActivity"
-            android:exported="false"
-            android:theme="@style/Theme.SazakyanApp">
+            android:exported="true"
+            android:theme="@style/Theme.App.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".SplashScreen"
-            android:exported="false"
-            android:theme="@style/Base.Theme.SazakyanApp" />
-        <activity
-            android:name=".ReceiptActivity"
-            android:exported="false" />
-        <activity
-            android:name=".DriversDescriptionActivity"
-            android:exported="false" />
-        <activity
-            android:name=".DescriptionActivity"
-            android:exported="false" />
-        <activity
-            android:name=".CarsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".IntroActivity"
-            android:exported="false" />
+
 
         <meta-data
             android:name="preloaded_fonts"

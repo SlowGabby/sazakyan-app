@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/second_bg"
-    tools:context=".CarToyotaActivity">
+    tools:context=".HondaFragment">
 
     <LinearLayout
         android:orientation="vertical"
@@ -32,7 +32,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/available_cars"
-                android:fontFamily="@font/poppins"
+                android:fontFamily="@font/poppins_bold"
                 android:textSize="14sp"
                 android:textColor="#233BBD"
                 android:layout_below="@+id/txtdashboard"/>
@@ -86,7 +86,7 @@
                 android:layout_marginTop="40dp"
                 android:layout_marginBottom="20dp"
                 app:cardCornerRadius="12dp"
-                android:onClick="carBrands">
+                android:onClick="carHonda">
 
                 <ImageView
                     android:layout_width="40dp"
@@ -194,7 +194,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Toyota Vios"
+                        android:text="Honda Civic"
                         android:fontFamily="@font/poppins_bold"
                         android:textSize="18sp"
                         android:textColor="#f2f2f2"
@@ -225,14 +225,14 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:src="@drawable/toyotahiace"
+                        android:src="@drawable/honda_odyssey"
                         android:layout_width="120dp"
                         android:layout_height="90dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Toyota Hiace"
+                        android:text="Honda Odyssey"
                         android:fontFamily="@font/poppins_bold"
                         android:textSize="18sp"
                         android:textColor="#f2f2f2"
@@ -262,14 +262,14 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:src="@drawable/toyota_landcruiser"
+                        android:src="@drawable/honda_mpg"
                         android:layout_width="120dp"
                         android:layout_height="90dp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Toyota Land\n\t\t\t\tCruiser"
+                        android:text="Honda MPG"
                         android:fontFamily="@font/poppins_bold"
                         android:textSize="18sp"
                         android:textColor="#f2f2f2"
@@ -300,14 +300,14 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:src="@drawable/toyota_landcruiser2"
+                        android:src="@drawable/honda_jazz"
                         android:layout_width="120dp"
                         android:layout_height="90dp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Toyota Land\n\t\t\t\tCruiser"
+                        android:text="Honda Jazz"
                         android:fontFamily="@font/poppins_bold"
                         android:textSize="18sp"
                         android:textColor="#f2f2f2"

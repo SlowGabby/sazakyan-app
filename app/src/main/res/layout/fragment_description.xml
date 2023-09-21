@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DescriptionActivity"
+    tools:context=".DescriptionFragment"
     android:background="#E6E6E6">
 
     <ScrollView
@@ -233,41 +233,41 @@
 
 
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="240dp"
-                android:layout_height="140dp"
-                android:layout_marginBottom="20dp"
-                android:layout_marginStart="17dp"
-                app:cardCornerRadius="12dp">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="240dp"
+                    android:layout_height="140dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginStart="17dp"
+                    app:cardCornerRadius="12dp">
 
-                <ImageView
-                    android:src="@drawable/location_pin"
-                    android:layout_width="40dp"
-                    android:layout_height="70dp"
-                    android:layout_marginStart="14dp"
-                    android:layout_marginTop="11dp"/>
+                    <ImageView
+                        android:src="@drawable/location_pin"
+                        android:layout_width="40dp"
+                        android:layout_height="70dp"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="11dp"/>
 
-                <TextView
-                    android:layout_width="250dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="75dp"
-                    android:fontFamily="@font/poppins_bold"
-                    android:text="Dagupan City, Pangasinan"
-                    android:textColor="#182981"
-                    android:textSize="16sp" />
+                    <TextView
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="75dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="Dagupan City, Pangasinan"
+                        android:textColor="#182981"
+                        android:textSize="16sp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="100dp"
-                    android:fontFamily="@font/poppins"
-                    android:text="Arellano Street"
-                    android:textColor="#182981"
-                    android:textSize="13sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="100dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="Arellano Street"
+                        android:textColor="#182981"
+                        android:textSize="13sp" />
 
-            </androidx.cardview.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="125dp"

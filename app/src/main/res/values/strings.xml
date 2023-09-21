@@ -65,4 +65,6 @@
     <string name="brands">Brands</string>
     <string name="toyota_vios">Toyota Vios</string>
     <string name="don_t_have_a_account">Don\'t have a account?</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

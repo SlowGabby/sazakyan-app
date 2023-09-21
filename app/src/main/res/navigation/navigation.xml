@@ -1,6 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/navigation">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
 
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.sazakyanapp.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/carsFragment"
+        android:name="com.example.sazakyanapp.CarsFragment"
+        android:label="fragment_cars"
+        tools:layout="@layout/fragment_cars" >
+        <action
+            android:id="@+id/action_carsFragment_to_toyotaFragment"
+            app:destination="@id/toyotaFragment" />
+        <action
+            android:id="@+id/action_carsFragment_to_hondaFragment"
+            app:destination="@id/hondaFragment" />
+        <action
+            android:id="@+id/action_carsFragment_to_descriptionFragment"
+            app:destination="@id/descriptionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/descriptionFragment"
+        android:name="com.example.sazakyanapp.DescriptionFragment"
+        android:label="fragment_description"
+        tools:layout="@layout/fragment_description" />
+    <fragment
+        android:id="@+id/hondaFragment"
+        android:name="com.example.sazakyanapp.HondaFragment"
+        android:label="fragment_honda"
+        tools:layout="@layout/fragment_honda" >
+        <action
+            android:id="@+id/action_hondaFragment_to_descriptionFragment"
+            app:destination="@id/descriptionFragment" />
+        <action
+            android:id="@+id/action_hondaFragment_to_toyotaFragment"
+            app:destination="@id/toyotaFragment" />
+        <action
+            android:id="@+id/action_hondaFragment_self"
+            app:destination="@id/hondaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/toyotaFragment"
+        android:name="com.example.sazakyanapp.ToyotaFragment"
+        android:label="fragment_toyota"
+        tools:layout="@layout/fragment_toyota" >
+        <action
+            android:id="@+id/action_toyotaFragment_to_descriptionFragment"
+            app:destination="@id/descriptionFragment" />
+        <action
+            android:id="@+id/action_toyotaFragment_to_hondaFragment"
+            app:destination="@id/hondaFragment" />
+        <action
+            android:id="@+id/action_toyotaFragment_self"
+            app:destination="@id/toyotaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.sazakyanapp.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_carsFragment"
+            app:destination="@id/carsFragment" />
+    </fragment>
 </navigation>
