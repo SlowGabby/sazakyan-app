@@ -20,15 +20,16 @@ class HondaFragment : Fragment() {
 
         Binding = FragmentHondaBinding.inflate(inflater, container, false)
 
-        Binding.hondaOnly2.setOnClickListener() {
 
-            findNavController().navigate(HondaFragmentDirections.actionHondaFragmentToToyotaFragment())
+        Binding.hondaOnly2.setOnClickListener {
+
+            findNavController().navigate(HondaFragmentDirections.actionHondaFragment2ToHondaToToyotaFragment())
 
         }
 
-        Binding.toyotaOnly2.setOnClickListener() {
+        Binding.hondaOnly2.setOnClickListener {
 
-            findNavController().navigate(ToyotaFragmentDirections.actionToyotaFragmentToHondaFragment())
+            findNavController().navigate(HondaFragmentDirections.actionHondaFragment2ToHondaToToyotaFragment())
 
         }
 

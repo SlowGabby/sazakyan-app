@@ -6,25 +6,22 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.example.sazakyanapp.databinding.FragmentHondaBinding
-import com.example.sazakyanapp.databinding.FragmentToyotaBinding
+import com.example.sazakyanapp.databinding.FragmentToyotaToHondaBinding
 
-class ToyotaFragment : Fragment() {
 
-    private lateinit var Binding : FragmentToyotaBinding
+class ToyotaToHondaFragment : Fragment() {
 
+    private lateinit var Binding : FragmentToyotaToHondaBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
-        Binding = FragmentToyotaBinding.inflate(inflater, container, false)
-
-
+        Binding = FragmentToyotaToHondaBinding.inflate(inflater, container, false)
 
         Binding.toyotaOnly2.setOnClickListener {
 
-            findNavController().navigate(ToyotaFragmentDirections.actionToyotaFragment3ToToyotaToHondaFragment())
+            findNavController().navigate(ToyotaToHondaFragmentDirections.actionToyotaToHondaFragmentToToyotaFragment3())
 
         }
 
