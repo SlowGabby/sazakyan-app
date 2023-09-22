@@ -47,7 +47,7 @@
         tools:layout="@layout/fragment_description" />
     <fragment
         android:id="@+id/hondaFragment2"
-        android:name="com.example.sazakyanapp.HondaFragment"
+        android:name="com.example.sazakyanapp.honda.HondaFragment"
         android:label="fragment_honda"
         tools:layout="@layout/fragment_honda" >
         <action
@@ -62,7 +62,7 @@
     </fragment>
     <fragment
         android:id="@+id/toyotaFragment3"
-        android:name="com.example.sazakyanapp.ToyotaFragment"
+        android:name="com.example.sazakyanapp.toyota.ToyotaFragment"
         android:label="fragment_toyota"
         tools:layout="@layout/fragment_toyota" >
         <action
@@ -77,7 +77,7 @@
     </fragment>
     <fragment
         android:id="@+id/hondaToToyotaFragment"
-        android:name="com.example.sazakyanapp.HondaToToyotaFragment"
+        android:name="com.example.sazakyanapp.honda.HondaToToyotaFragment"
         android:label="fragment_honda_to_toyota"
         tools:layout="@layout/fragment_honda_to_toyota" >
         <action
@@ -86,7 +86,7 @@
     </fragment>
     <fragment
         android:id="@+id/toyotaToHondaFragment"
-        android:name="com.example.sazakyanapp.ToyotaToHondaFragment"
+        android:name="com.example.sazakyanapp.toyota.ToyotaToHondaFragment"
         android:label="fragment_toyota_to_honda"
         tools:layout="@layout/fragment_toyota_to_honda" >
         <action
@@ -98,7 +98,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.sazakyanapp.LoginFragment"
+        android:name="com.example.sazakyanapp.profile.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -107,7 +107,7 @@
     </fragment>
     <fragment
         android:id="@+id/signupFragment"
-        android:name="com.example.sazakyanapp.SignupFragment"
+        android:name="com.example.sazakyanapp.profile.SignupFragment"
         android:label="fragment_signup"
         tools:layout="@layout/fragment_signup" >
         <action

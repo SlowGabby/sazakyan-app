@@ -1,5 +1,4 @@
-package com.example.sazakyanapp
-import android.content.Context
+package com.example.sazakyanapp.profile
 import android.os.Bundle
 import android.text.TextUtils
 import androidx.fragment.app.Fragment
@@ -10,6 +9,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
+import com.example.sazakyanapp.database.DBHelper
+import com.example.sazakyanapp.R
 import com.example.sazakyanapp.databinding.FragmentSignupBinding
 
 class SignupFragment : Fragment() {

@@ -1,4 +1,4 @@
-package com.example.sazakyanapp
+package com.example.sazakyanapp.database
 
 import android.content.ContentValues
 import android.content.Context
