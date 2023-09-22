@@ -15,15 +15,22 @@ class HomeFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         Binding = FragmentHomeBinding.inflate(inflater, container, false)
 
         Binding.btnLogin.setOnClickListener {
 
-            findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToCarsFragment())
+            findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToLoginFragment())
 
         }
+
+        Binding.btnSignup.setOnClickListener {
+
+            findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToSignupFragment())
+
+        }
+
 
         return Binding.root
 

@@ -6,22 +6,22 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.example.sazakyanapp.databinding.FragmentSignupBinding
+import com.example.sazakyanapp.databinding.FragmentLoginBinding
 
-class SignupFragment : Fragment() {
+class LoginFragment : Fragment() {
 
-    private lateinit var Binding : FragmentSignupBinding
+    private lateinit var Binding : FragmentLoginBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
 
-        Binding = FragmentSignupBinding.inflate(inflater, container, false)
+        Binding = FragmentLoginBinding.inflate(inflater, container, false)
 
-        Binding.confirmBtn.setOnClickListener {
+        Binding.confirmBtn2.setOnClickListener {
 
-            findNavController().navigate(SignupFragmentDirections.actionSignupFragmentToCarsFragment())
+            findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToCarsFragment())
 
         }
 

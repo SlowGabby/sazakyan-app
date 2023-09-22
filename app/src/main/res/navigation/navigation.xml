@@ -33,6 +33,12 @@
         <action
             android:id="@+id/action_homeFragment_to_carsFragment"
             app:destination="@id/carsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_signupFragment"
+            app:destination="@id/signupFragment" />
     </fragment>
     <fragment
         android:id="@+id/descriptionFragment2"
@@ -89,5 +95,23 @@
         <action
             android:id="@+id/action_toyotaToHondaFragment_to_toyotaFragment3"
             app:destination="@id/toyotaFragment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.sazakyanapp.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_carsFragment"
+            app:destination="@id/carsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="com.example.sazakyanapp.SignupFragment"
+        android:label="fragment_signup"
+        tools:layout="@layout/fragment_signup" >
+        <action
+            android:id="@+id/action_signupFragment_to_carsFragment"
+            app:destination="@id/carsFragment" />
     </fragment>
 </navigation>
