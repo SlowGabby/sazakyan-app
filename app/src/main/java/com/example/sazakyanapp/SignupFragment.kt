@@ -1,4 +1,5 @@
 package com.example.sazakyanapp
+import android.content.Context
 import android.os.Bundle
 import android.text.TextUtils
 import androidx.fragment.app.Fragment
@@ -46,17 +47,23 @@ class SignupFragment : Fragment() {
             } else {
 
                 if (passWordText.equals(checkPassword)) {
+
                     if (saveData == true) {
+
                         Toast.makeText(SignupFragment().context, "Signup Successfully", Toast.LENGTH_SHORT).show()
                         findNavController().navigate(SignupFragmentDirections.actionSignupFragmentToCarsFragment())
+
                     } else {
+
                         Toast.makeText(SignupFragment().context, "User Exists", Toast.LENGTH_SHORT).show()
+
                     }
                 } else {
+
                     Toast.makeText(SignupFragment().context, "Password not matched", Toast.LENGTH_SHORT).show()
+
                 }
             }
-
         }
 
 
