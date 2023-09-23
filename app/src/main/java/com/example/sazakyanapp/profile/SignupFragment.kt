@@ -1,26 +1,24 @@
 package com.example.sazakyanapp.profile
+
 import android.os.Bundle
-import android.text.TextUtils
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.example.sazakyanapp.database.DBHelper
-import com.example.sazakyanapp.R
-import com.example.sazakyanapp.databinding.FragmentSignupBinding
+import com.example.sazakyanapp.databinding.FragmentLoginBinding
 
 class SignupFragment : Fragment() {
 
-    private lateinit var Binding : FragmentSignupBinding
-    private lateinit var userName : EditText
-    private lateinit var passWord : EditText
-    private lateinit var checkPassword : EditText
-    private lateinit var confirmBtn : Button
-    private lateinit var db : DBHelper
+
+    private lateinit var Binding : FragmentLoginBinding
+    private lateinit var databaseHelper : DBHelper
+    private lateinit var signupUsername : EditText
+    private lateinit var signupPassword : EditText
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,55 +26,43 @@ class SignupFragment : Fragment() {
     ): View {
 
 
-        userName.findViewById<EditText>(R.id.etName)
-        passWord.findViewById<EditText>(R.id.etPassword)
-        checkPassword.findViewById<EditText>(R.id.etConPassword)
-        confirmBtn.findViewById<Button>(R.id.confirmBtn)
-        db = DBHelper(this)
+        Binding = FragmentLoginBinding.inflate(inflater, container, false)
 
-        confirmBtn.setOnClickListener {
+        databaseHelper = DBHelper(this)
 
-            val userNameText = userName.text.toString()
-            val passWordText = passWord.text.toString()
-            val checkPassword = checkPassword.text.toString()
-            val saveData = db.insertData(userNameText, passWordText)
+        Binding.confirmBtn2.setOnClickListener {
 
-            if (TextUtils.isEmpty(userNameText) || TextUtils.isEmpty(passWordText) || TextUtils.isEmpty(checkPassword)) {
+            val signupUsername = signupUsername.text.toString()
+            val signupPassword = signupPassword.text.toString()
+            signupDatabase(signupUsername, signupPassword)
 
-                Toast.makeText(SignupFragment().context, "Add Username, Password and Check Password", Toast.LENGTH_SHORT).show()
-
-            } else {
-
-                if (passWordText.equals(checkPassword)) {
-
-                    if (saveData == true) {
-
-                        Toast.makeText(SignupFragment().context, "Signup Successfully", Toast.LENGTH_SHORT).show()
-                        findNavController().navigate(SignupFragmentDirections.actionSignupFragmentToCarsFragment())
-
-                    } else {
-
-                        Toast.makeText(SignupFragment().context, "User Exists", Toast.LENGTH_SHORT).show()
-
-                    }
-                } else {
-
-                    Toast.makeText(SignupFragment().context, "Password not matched", Toast.LENGTH_SHORT).show()
-
-                }
-            }
         }
 
+        Binding.confirmBtn2.setOnClickListener {
 
-        Binding = FragmentSignupBinding.inflate(inflater, container, false)
-
-        Binding.confirmBtn.setOnClickListener {
-
-            findNavController().navigate(SignupFragmentDirections.actionSignupFragmentToCarsFragment())
+            findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToCarsFragment())
 
         }
 
         return Binding.root
+
+
+    }
+
+    private fun signupDatabase (username: String, password: String) {
+
+        val insertedRowId = databaseHelper.insertUser(username, password)
+
+        if (insertedRowId != -1L) {
+
+            Toast.makeText(context, "Signup Successfully", Toast.LENGTH_SHORT).show()
+            findNavController().navigate(SignupFragmentDirections.actionSignupFragmentToCarsFragment())
+
+        } else {
+
+            Toast.makeText(context, "Signup Failed", Toast.LENGTH_SHORT).show()
+
+        }
 
     }
 

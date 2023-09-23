@@ -5,47 +5,64 @@ import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 
-class DBHelper(context: Context):SQLiteOpenHelper(context, "Userdata", null, 1) {
-    override fun onCreate(p0: SQLiteDatabase?) {
-        p0?.execSQL("create table Userdata (username TEXT primary key, password TEXT)")
+
+class DBHelper ( context: Context):
+        SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
+
+            companion object {
+
+                private const val DATABASE_NAME = "userDatabase.db"
+                private const val DATABASE_VERSION = 1
+                private const val TABLE_NAME = "data"
+                private const val COLUMN_ID = "id"
+                private const val COLUMN_USERNAME = "username"
+                private const val COLUMN_PASSWORD = "password"
+
+            }
+
+    override fun onCreate(db: SQLiteDatabase?) {
+
+        val createTableQuery = ("CREATE_TABLE " + " $TABLE_NAME (" +
+                " $COLUMN_ID INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                " $COLUMN_USERNAME TEXT, " +
+                " $COLUMN_PASSWORD TEXT) ")
+
+        db?.execSQL(createTableQuery)
     }
 
-    override fun onUpgrade(p0: SQLiteDatabase?, p1: Int, p2: Int) {
-        p0?.execSQL("drop table if exists Userdata")
+    override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
+
+        val dropTableQuery = "DROP TABLE IF EXISTS $TABLE_NAME"
+        db?.execSQL(dropTableQuery)
+        onCreate(db)
+
     }
 
-    fun insertData (username: String, password: String): Boolean {
+    fun insertUser (username: String, password: String) : Long {
 
-        val p0 = this.writableDatabase
-        val cv = ContentValues()
-        cv.put("username", username)
-        cv.put("password", password)
-        val result = p0.insert("Userdata", null, cv)
+        val values = ContentValues().apply {
 
-        if (result == -1 .toLong()) {
-            return false
+            put (COLUMN_USERNAME, username)
+            put (COLUMN_PASSWORD, password)
+
         }
 
-        return true
+        val db = writableDatabase
+        return db.insert(TABLE_NAME, null, values)
 
     }
 
-    fun checkUserPassword (username: String, password: String) : Boolean {
+    fun readUser (username: String, password: String) : Boolean {
 
-        val p0 = this.writableDatabase
-        val query = "select * from Userdata where username= '$username' and password= '$password'"
-        val cursor = p0.rawQuery(query, null)
+        val db = readableDatabase
+        val selection = "$COLUMN_USERNAME = ? AND $COLUMN_PASSWORD = ?"
+        val selectionArgs = arrayOf(username, password)
+        val cursor = db.query(TABLE_NAME, null, selection, selectionArgs, null, null, null)
 
-        if (cursor.count <= 0) {
-            cursor.close()
-            return false
-        }
-
+        val userExists = cursor.count > 0
         cursor.close()
-        return true
+        return userExists
 
     }
-
-
 
 }

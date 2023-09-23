@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:fontFamily="@font/poppins"
-        android:text="Rent a affordable car for you travel\nwhenever you want with your device"
+        android:text="Rent an affordable car for you travel\nwhenever you want with your device"
         android:textSize="15sp"
         android:textColor="#f2f2f2"
         app:layout_constraintStart_toStartOf="parent"
