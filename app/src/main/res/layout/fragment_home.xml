@@ -9,15 +9,16 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="313dp"
+        android:layout_height="152dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="70dp"
-        android:fontFamily="@font/poppins_bold"
+        android:fontFamily="@font/alfa_slab_one"
         android:lineHeight="60sp"
         android:text="Sazakyan\nRental App"
         android:textColor="#f2f2f2"
         android:textSize="50sp"
+        android:textStyle="italic"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -26,11 +27,11 @@
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="28dp"
         android:fontFamily="@font/poppins"
         android:text="Rent an affordable car for you travel\nwhenever you want with your device"
-        android:textSize="15sp"
         android:textColor="#f2f2f2"
+        android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textView" />
 
@@ -50,7 +51,7 @@
         android:background="@drawable/getstarted"
         android:elevation="0dp"
         android:fontFamily="@font/poppins_bold"
-        android:text="Login"
+        android:text="Get Started"
         android:textAllCaps="false"
         android:textColor="#0e0e0e"
         app:layout_constraintEnd_toEndOf="parent"
@@ -58,20 +59,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imageView"/>
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnSignup"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/getstarted"
-        android:elevation="0dp"
-        android:fontFamily="@font/poppins_bold"
-        android:text="Signup"
-        android:textAllCaps="false"
-        android:textColor="#0e0e0e"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnLogin"/>
+
 
 
 

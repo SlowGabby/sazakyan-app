@@ -22,13 +22,11 @@ class HondaFragment : Fragment() {
 
         Binding.hondaOnly2.setOnClickListener {
 
-            findNavController().navigate(HondaFragmentDirections.actionHondaFragment2ToHondaToToyotaFragment())
 
         }
 
         Binding.hondaOnly2.setOnClickListener {
 
-            findNavController().navigate(HondaFragmentDirections.actionHondaFragment2ToHondaToToyotaFragment())
 
         }
 

@@ -28,7 +28,7 @@ class LoginFragment : Fragment() {
 
         Binding = FragmentLoginBinding.inflate(inflater, container, false)
 
-        databaseHelper = DBHelper(this)
+//        databaseHelper = DBHelper(this)
 
         Binding.confirmBtn2.setOnClickListener {
 
@@ -39,8 +39,6 @@ class LoginFragment : Fragment() {
         }
 
         Binding.confirmBtn2.setOnClickListener {
-
-            findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToCarsFragment())
 
         }
 
@@ -54,7 +52,6 @@ class LoginFragment : Fragment() {
         if (userExists) {
 
             Toast.makeText(context, "Login Successful", Toast.LENGTH_SHORT).show()
-            findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToCarsFragment())
 
         } else {
 

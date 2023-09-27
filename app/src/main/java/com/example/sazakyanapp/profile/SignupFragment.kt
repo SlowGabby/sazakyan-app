@@ -28,7 +28,7 @@ class SignupFragment : Fragment() {
 
         Binding = FragmentLoginBinding.inflate(inflater, container, false)
 
-        databaseHelper = DBHelper(this)
+//        databaseHelper = DBHelper(this)
 
         Binding.confirmBtn2.setOnClickListener {
 
@@ -40,7 +40,6 @@ class SignupFragment : Fragment() {
 
         Binding.confirmBtn2.setOnClickListener {
 
-            findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToCarsFragment())
 
         }
 
@@ -56,7 +55,6 @@ class SignupFragment : Fragment() {
         if (insertedRowId != -1L) {
 
             Toast.makeText(context, "Signup Successfully", Toast.LENGTH_SHORT).show()
-            findNavController().navigate(SignupFragmentDirections.actionSignupFragmentToCarsFragment())
 
         } else {
 

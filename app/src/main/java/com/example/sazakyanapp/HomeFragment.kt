@@ -21,16 +21,8 @@ class HomeFragment : Fragment() {
 
         Binding.btnLogin.setOnClickListener {
 
-            findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToLoginFragment())
 
         }
-
-        Binding.btnSignup.setOnClickListener {
-
-            findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToSignupFragment())
-
-        }
-
 
         return Binding.root
 
