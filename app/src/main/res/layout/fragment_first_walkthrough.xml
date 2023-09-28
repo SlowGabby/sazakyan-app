@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_walkthrough"
+    tools:context=".walkthrough.FirstWalkthroughFragment">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="329dp"
+        android:layout_height="185dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="104dp"
+        android:fontFamily="@font/alfa_slab_one"
+        android:lineHeight="39sp"
+        android:text="Looking for an cheap rental within Dagupan?"
+        android:textAlignment="center"
+        android:textColor="#f2f2f2"
+        android:textSize="33sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="393dp"
+        android:layout_height="224dp"
+        android:fontFamily="@font/poppins"
+        android:text="wanting to explore more?  \nor having no service?  \nsee the diferent vehicles we offer that caught your eyes using our rental app and we can drive you to safety."
+        android:textAlignment="center"
+        android:textColor="#f2f2f2"
+        android:textSize="19sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="548dp"
+        android:layout_height="453dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView1" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLogin"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="124dp"
+        android:background="@drawable/getstarted"
+        android:elevation="0dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Get Started"
+        android:textAllCaps="false"
+        android:textColor="#0e0e0e"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,7 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/firstWalkthroughFragment">
+
+    <fragment
+        android:id="@+id/firstWalkthroughFragment"
+        android:name="com.example.sazakyanapp.walkthrough.FirstWalkthroughFragment"
+        android:label="fragment_first_walkthrough"
+        tools:layout="@layout/fragment_first_walkthrough" />
+    <fragment
+        android:id="@+id/secondWalkthroughFragment"
+        android:name="com.example.sazakyanapp.walkthrough.SecondWalkthroughFragment"
+        android:label="fragment_second_walkthrough"
+        tools:layout="@layout/fragment_second_walkthrough" />
+    <fragment
+        android:id="@+id/thirdWalkthroughFragment"
+        android:name="com.example.sazakyanapp.walkthrough.ThirdWalkthroughFragment"
+        android:label="fragment_third_walkthrough"
+        tools:layout="@layout/fragment_third_walkthrough" />
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.sazakyanapp.HomeFragment"

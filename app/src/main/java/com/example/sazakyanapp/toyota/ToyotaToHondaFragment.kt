@@ -21,7 +21,6 @@ class ToyotaToHondaFragment : Fragment() {
 
         Binding.toyotaOnly2.setOnClickListener {
 
-            findNavController().navigate(ToyotaToHondaFragmentDirections.actionToyotaToHondaFragmentToToyotaFragment3())
 
         }
 
