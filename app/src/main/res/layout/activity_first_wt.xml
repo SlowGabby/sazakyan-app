@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_walkthrough"
-    tools:context=".walkthrough.ThirdWalkthroughFragment">
+    tools:context=".walkthrough.FirstWT">
 
 
     <TextView
@@ -15,27 +15,25 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="104dp"
         android:fontFamily="@font/alfa_slab_one"
-        android:lineHeight="35sp"
-        android:text="Car and time Availability?"
+        android:lineHeight="39sp"
+        android:text="Looking for an cheap rental within Dagupan?"
         android:textAlignment="center"
         android:textColor="#f2f2f2"
-        android:textSize="40sp"
+        android:textSize="33sp"
         android:textStyle="italic"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView1"
-        android:layout_width="357dp"
-        android:layout_height="111dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="393dp"
+        android:layout_height="224dp"
         android:fontFamily="@font/poppins"
-        android:text=" we open the door for you can ride with us anytime and anywhere, exposing different models of the two famous cars; honda, and toyota."
+        android:text="wanting to explore more?  \nor having no service?  \nsee the diferent vehicles we offer that caught your eyes using our rental app and we can drive you to safety."
         android:textAlignment="center"
         android:textColor="#f2f2f2"
         android:textSize="19sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.589"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textView" />
 

@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_rental3"
-    tools:context=".CarsFragment">
+    android:background="@color/second_bg"
+    tools:context=".honda.HondaActivity">
 
     <LinearLayout
         android:orientation="vertical"
@@ -23,18 +23,18 @@
                 android:id="@+id/txtdashboard"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/alfa_slab_one"
                 android:text="@string/car_section"
-                android:textColor="#f2f2f2"
-                android:textSize="24sp" />
+                android:fontFamily="@font/poppins_bold"
+                android:textSize="24sp"
+                android:textColor="#233BBD"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/available_cars"
-                android:fontFamily="@font/poppins"
+                android:fontFamily="@font/poppins_bold"
                 android:textSize="14sp"
-                android:textColor="#f2f2f2"
+                android:textColor="#233BBD"
                 android:layout_below="@+id/txtdashboard"/>
 
             <ImageView
@@ -51,13 +51,12 @@
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
             android:layout_marginStart="13dp"
-            app:cardCornerRadius="25dp"
-            app:cardBackgroundColor="#72212122">
+            app:cardCornerRadius="25dp">
 
             <SearchView
                 android:layout_width="370dp"
                 android:layout_height="match_parent"
-                android:layout_marginStart="10dp"/>
+                android:layout_marginStart="10dp" />
 
         </androidx.cardview.widget.CardView>
 
@@ -75,12 +74,31 @@
                 android:layout_marginStart="20dp"
                 android:fontFamily="@font/poppins_bold"
                 android:text="@string/brands"
-                android:textColor="#f2f2f2"
+                android:textColor="#233BBD"
                 android:textSize="18sp" />
 
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/hondaOnly"
+                android:id="@+id/hondaOnly2"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="12dp"
+                android:onClick="carHonda">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="14dp"
+                    android:src="@drawable/honda_logo" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/hyundaiOnly2"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_marginStart="18dp"
@@ -99,26 +117,7 @@
 
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/hyundaiOnly"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_marginStart="18dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginBottom="20dp"
-                app:cardCornerRadius="12dp"
-                android:onClick="carBrands">
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="70dp"
-                    android:layout_marginStart="14dp"
-                    android:src="@drawable/honda_logo" />
-
-            </androidx.cardview.widget.CardView>
-
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fotonOnly"
+                android:id="@+id/fotonOnly2"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_row="0"
@@ -138,7 +137,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/toyotaOnly"
+                android:id="@+id/toyotaOnly2"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_row="0"
@@ -177,7 +176,7 @@
                 app:cardElevation="6dp"
                 app:cardCornerRadius="12dp"
                 android:layout_margin="12dp"
-                app:cardBackgroundColor="#C4212122">
+                app:cardBackgroundColor="#182981">
 
 
                 <LinearLayout
@@ -188,16 +187,14 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/vios"
                         android:src="@drawable/toyotavios"
                         android:layout_width="120dp"
-                        android:layout_height="90dp"
-                        android:onClick="viosDetail"/>
+                        android:layout_height="90dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Toyota Vios"
+                        android:text="Honda Civic"
                         android:fontFamily="@font/poppins_bold"
                         android:textSize="18sp"
                         android:textColor="#f2f2f2"
@@ -216,7 +213,7 @@
                 app:cardElevation="6dp"
                 app:cardCornerRadius="12dp"
                 android:layout_margin="12dp"
-                app:cardBackgroundColor="#C4212122"
+                app:cardBackgroundColor="#182981"
                 android:onClick="carDetails">
 
 
@@ -228,14 +225,14 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:src="@drawable/toyotahiace"
+                        android:src="@drawable/honda_odyssey"
                         android:layout_width="120dp"
                         android:layout_height="90dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Toyota Hiace"
+                        android:text="Honda Odyssey"
                         android:fontFamily="@font/poppins_bold"
                         android:textSize="18sp"
                         android:textColor="#f2f2f2"
@@ -254,7 +251,7 @@
                 app:cardElevation="6dp"
                 app:cardCornerRadius="12dp"
                 android:layout_margin="12dp"
-                app:cardBackgroundColor="#C4212122"
+                app:cardBackgroundColor="#182981"
                 android:onClick="carDetails">
 
                 <LinearLayout
@@ -265,14 +262,14 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:src="@drawable/toyotavios"
+                        android:src="@drawable/honda_mpg"
                         android:layout_width="120dp"
                         android:layout_height="90dp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Toyota Vios"
+                        android:text="Honda MPG"
                         android:fontFamily="@font/poppins_bold"
                         android:textSize="18sp"
                         android:textColor="#f2f2f2"
@@ -291,120 +288,9 @@
                 app:cardElevation="6dp"
                 app:cardCornerRadius="12dp"
                 android:layout_margin="12dp"
-                app:cardBackgroundColor="#C4212122"
-                android:onClick="carDetails">
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:padding="16dp"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:src="@drawable/toyotavios"
-                        android:layout_width="120dp"
-                        android:layout_height="90dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Honda Civic"
-                        android:fontFamily="@font/poppins_bold"
-                        android:textSize="18sp"
-                        android:textColor="#f2f2f2"
-                        android:layout_marginTop="12dp"/>
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/honda1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                app:cardElevation="6dp"
-                app:cardCornerRadius="12dp"
-                android:layout_margin="12dp"
-                app:cardBackgroundColor="#C4212122"
-                android:onClick="carDetails">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:padding="16dp"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:src="@drawable/toyotavios"
-                        android:layout_width="120dp"
-                        android:layout_height="90dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Honda Civic"
-                        android:fontFamily="@font/poppins_bold"
-                        android:textSize="18sp"
-                        android:textColor="#f2f2f2"
-                        android:layout_marginTop="12dp"/>
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/honda2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                app:cardElevation="6dp"
-                app:cardCornerRadius="12dp"
-                android:layout_margin="12dp"
                 app:cardBackgroundColor="#182981"
                 android:onClick="carDetails">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:padding="16dp"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:src="@drawable/toyotavios"
-                        android:layout_width="120dp"
-                        android:layout_height="90dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Honda Civic"
-                        android:fontFamily="@font/poppins_bold"
-                        android:textSize="18sp"
-                        android:textColor="#f2f2f2"
-                        android:layout_marginTop="12dp"/>
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/honda3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                app:cardElevation="6dp"
-                app:cardCornerRadius="12dp"
-                android:layout_margin="12dp"
-                app:cardBackgroundColor="#182981"
-                android:onClick="carDetails">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -414,121 +300,14 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:src="@drawable/toyotavios"
+                        android:src="@drawable/honda_jazz"
                         android:layout_width="120dp"
                         android:layout_height="90dp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Honda Civic"
-                        android:fontFamily="@font/poppins_bold"
-                        android:textSize="18sp"
-                        android:textColor="#f2f2f2"
-                        android:layout_marginTop="12dp"/>
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/honda4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                app:cardElevation="6dp"
-                app:cardCornerRadius="12dp"
-                android:layout_margin="12dp"
-                app:cardBackgroundColor="#182981"
-                android:onClick="carDetails">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:padding="16dp"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:src="@drawable/toyotavios"
-                        android:layout_width="120dp"
-                        android:layout_height="90dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Honda Civic"
-                        android:fontFamily="@font/poppins_bold"
-                        android:textSize="18sp"
-                        android:textColor="#f2f2f2"
-                        android:layout_marginTop="12dp"/>
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                app:cardElevation="6dp"
-                app:cardCornerRadius="12dp"
-                android:layout_margin="12dp"
-                app:cardBackgroundColor="#182981">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:padding="16dp"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:src="@drawable/toyotavios"
-                        android:layout_width="120dp"
-                        android:layout_height="90dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Honda Civic"
-                        android:fontFamily="@font/poppins_bold"
-                        android:textSize="18sp"
-                        android:textColor="#f2f2f2"
-                        android:layout_marginTop="12dp"/>
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                app:cardElevation="6dp"
-                app:cardCornerRadius="12dp"
-                android:layout_margin="12dp"
-                app:cardBackgroundColor="#182981">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:padding="16dp"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:src="@drawable/toyotavios"
-                        android:layout_width="120dp"
-                        android:layout_height="90dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Honda Civic"
+                        android:text="Honda Jazz"
                         android:fontFamily="@font/poppins_bold"
                         android:textSize="18sp"
                         android:textColor="#f2f2f2"
