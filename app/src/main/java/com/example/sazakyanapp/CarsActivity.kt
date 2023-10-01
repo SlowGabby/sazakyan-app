@@ -12,6 +12,8 @@ class CarsActivity : AppCompatActivity() {
 
     private lateinit var toyotaOnly : CardView
     private lateinit var hondaOnly : CardView
+    private lateinit var fotonOnly : CardView
+    private lateinit var hyundaiOnly: CardView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,6 +22,8 @@ class CarsActivity : AppCompatActivity() {
 
         toyotaOnly = findViewById(R.id.toyotaOnly)
         hondaOnly = findViewById(R.id.hondaOnly)
+        fotonOnly = findViewById(R.id.fotonOnly)
+        hyundaiOnly = findViewById(R.id.hyundaiOnly)
 
         toyotaOnly.setOnClickListener {
 
@@ -31,6 +35,16 @@ class CarsActivity : AppCompatActivity() {
 
             startActivity(Intent(this@CarsActivity, HondaActivity::class.java))
 
+        }
+
+        fotonOnly.setOnClickListener {
+
+            startActivity(Intent(this@CarsActivity, FotonActivity::class.java))
+        }
+
+        hyundaiOnly.setOnClickListener {
+
+            startActivity(Intent(this@CarsActivity, HyundaiActivity::class.java))
         }
     }
 }
