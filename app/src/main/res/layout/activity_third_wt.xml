@@ -64,6 +64,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
+        android:id="@+id/skipButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Skip"

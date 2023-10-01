@@ -13,10 +13,10 @@
         android:theme="@style/Theme.SazakyanApp"
         tools:targetApi="31">
         <activity
-            android:name=".HyundaiActivity"
+            android:name=".hyundai.HyundaiActivity"
             android:exported="false" />
         <activity
-            android:name=".FotonActivity"
+            android:name=".foton.FotonActivity"
             android:exported="false" />
         <activity
             android:name=".profile.SignUpActivity"

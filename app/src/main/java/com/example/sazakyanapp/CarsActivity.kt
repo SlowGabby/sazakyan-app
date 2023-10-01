@@ -4,7 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.cardview.widget.CardView
+import com.example.sazakyanapp.foton.FotonActivity
 import com.example.sazakyanapp.honda.HondaActivity
+import com.example.sazakyanapp.hyundai.HyundaiActivity
 import com.example.sazakyanapp.toyota.ToyotaActivity
 
 class CarsActivity : AppCompatActivity() {
@@ -40,11 +42,13 @@ class CarsActivity : AppCompatActivity() {
         fotonOnly.setOnClickListener {
 
             startActivity(Intent(this@CarsActivity, FotonActivity::class.java))
+
         }
 
         hyundaiOnly.setOnClickListener {
 
             startActivity(Intent(this@CarsActivity, HyundaiActivity::class.java))
+
         }
     }
 }

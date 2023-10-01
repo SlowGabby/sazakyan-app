@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_rental3"
+    android:background="@color/main_background"
     tools:context=".CarsActivity">
 
     <LinearLayout
@@ -43,6 +43,7 @@
                 android:layout_alignParentEnd="true"
                 android:src="@drawable/menu" />
 
+
         </RelativeLayout>
 
         <androidx.cardview.widget.CardView
@@ -50,7 +51,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
-            android:layout_marginStart="13dp"
+            android:layout_marginStart="26dp"
             app:cardCornerRadius="25dp"
             app:cardBackgroundColor="#72212122">
 
@@ -87,7 +88,8 @@
                 android:layout_marginTop="40dp"
                 android:layout_marginBottom="20dp"
                 app:cardCornerRadius="12dp"
-                android:onClick="carBrands">
+                android:onClick="carBrands"
+                app:cardBackgroundColor="#C4212122">
 
                 <ImageView
                     android:layout_width="40dp"
@@ -106,7 +108,8 @@
                 android:layout_marginTop="40dp"
                 android:layout_marginBottom="20dp"
                 app:cardCornerRadius="12dp"
-                android:onClick="carBrands">
+                android:onClick="carBrands"
+                app:cardBackgroundColor="#C4212122">
 
                 <ImageView
                     android:layout_width="40dp"
@@ -127,7 +130,8 @@
                 android:layout_marginTop="40dp"
                 android:layout_marginBottom="0dp"
                 app:cardCornerRadius="12dp"
-                android:onClick="carBrands">
+                android:onClick="carBrands"
+                app:cardBackgroundColor="#C4212122">
 
                 <ImageView
                     android:layout_width="40dp"
@@ -143,11 +147,12 @@
                 android:layout_height="70dp"
                 android:layout_row="0"
                 android:layout_column="0"
-                android:layout_marginStart="25dp"
+                android:layout_marginStart="40dp"
                 android:layout_marginTop="40dp"
                 android:layout_marginBottom="20dp"
                 app:cardCornerRadius="12dp"
-                android:onClick="carBrands">
+                android:onClick="carBrands"
+                app:cardBackgroundColor="#C4212122">
 
                 <ImageView
                     android:layout_width="40dp"
@@ -366,8 +371,8 @@
                 app:cardElevation="6dp"
                 app:cardCornerRadius="12dp"
                 android:layout_margin="12dp"
-                app:cardBackgroundColor="#182981"
-                android:onClick="carDetails">
+                android:onClick="carDetails"
+                app:cardBackgroundColor="#C4212122">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -403,7 +408,7 @@
                 app:cardElevation="6dp"
                 app:cardCornerRadius="12dp"
                 android:layout_margin="12dp"
-                app:cardBackgroundColor="#182981"
+                app:cardBackgroundColor="#C4212122"
                 android:onClick="carDetails">
 
                 <LinearLayout
@@ -440,7 +445,7 @@
                 app:cardElevation="6dp"
                 app:cardCornerRadius="12dp"
                 android:layout_margin="12dp"
-                app:cardBackgroundColor="#182981"
+                app:cardBackgroundColor="#C4212122"
                 android:onClick="carDetails">
 
                 <LinearLayout
@@ -476,7 +481,7 @@
                 app:cardElevation="6dp"
                 app:cardCornerRadius="12dp"
                 android:layout_margin="12dp"
-                app:cardBackgroundColor="#182981">
+                app:cardBackgroundColor="#C4212122">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -511,7 +516,7 @@
                 app:cardElevation="6dp"
                 app:cardCornerRadius="12dp"
                 android:layout_margin="12dp"
-                app:cardBackgroundColor="#182981">
+                app:cardBackgroundColor="#C4212122">
 
                 <LinearLayout
                     android:layout_width="match_parent"

@@ -1,21 +1,37 @@
 package com.example.sazakyanapp.walkthrough
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
+import android.widget.TextView
+import com.example.sazakyanapp.HomeActivity
 import com.example.sazakyanapp.R
 
 class SecondWT : AppCompatActivity() {
 
 
-    private lateinit var
-
+    private lateinit var nextBtn : Button
+    private lateinit var skipBtn : TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second_wt)
 
 
+        nextBtn = findViewById(R.id.btnNext2)
+        skipBtn = findViewById(R.id.skipButton)
 
+        nextBtn.setOnClickListener {
 
+            startActivity(Intent(this@SecondWT, ThirdWT::class.java))
+
+        }
+
+        skipBtn.setOnClickListener {
+
+            startActivity(Intent(this@SecondWT, HomeActivity::class.java))
+
+        }
     }
 }
