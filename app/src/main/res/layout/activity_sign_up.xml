@@ -26,7 +26,7 @@
         app:layout_constraintTop_toTopOf="@+id/textView8" />
 
     <EditText
-        android:id="@+id/etName"
+        android:id="@+id/signupUsername"
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:layout_marginTop="50dp"
@@ -45,7 +45,7 @@
         app:layout_constraintTop_toBottomOf="@+id/SignUp"/>
 
     <EditText
-        android:id="@+id/etPassword"
+        android:id="@+id/signupPassword"
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
@@ -83,7 +83,7 @@
         app:layout_constraintTop_toBottomOf="@+id/etPassword" />
 
     <Button
-        android:id="@+id/confirmBtn"
+        android:id="@+id/signupBtn"
         android:layout_width="250dp"
         android:layout_height="60dp"
         android:layout_marginTop="50dp"
