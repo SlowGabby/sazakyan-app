@@ -34,5 +34,24 @@ class ThirdWT : AppCompatActivity() {
             startActivity(Intent(this@ThirdWT, SignUpActivity::class.java))
 
         }
+
+        findViewById<Button>(R.id.btnNext3).setOnClickListener {
+
+            startActivity(Intent(this, HomeActivity::class.java))
+            this@ThirdWT.overridePendingTransition(
+                R.anim.animate_slide_left_enter,
+                R.anim.animate_slide_left_exit
+            )
+        }
+
+        fun onBackPressed() {
+            super.onBackPressed()
+
+            this@ThirdWT.overridePendingTransition(
+                R.anim.animate_fade_enter,
+                R.anim.animate_fade_exit
+            )
+
+        }
     }
 }

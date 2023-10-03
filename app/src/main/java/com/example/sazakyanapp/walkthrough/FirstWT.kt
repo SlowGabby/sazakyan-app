@@ -33,5 +33,14 @@ class FirstWT : AppCompatActivity() {
             startActivity(Intent(this@FirstWT, HomeActivity::class.java))
 
         }
+
+        findViewById<Button>(R.id.btnNext).setOnClickListener {
+
+            startActivity(Intent(this, SecondWT::class.java))
+            this@FirstWT.overridePendingTransition(
+                R.anim.animate_slide_left_enter,
+                R.anim.animate_slide_left_exit
+            )
+        }
     }
 }

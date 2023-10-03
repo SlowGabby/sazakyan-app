@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.example.sazakyanapp.walkthrough.SecondWT
 
 class HomeActivity : AppCompatActivity() {
 
@@ -20,6 +21,25 @@ class HomeActivity : AppCompatActivity() {
         getStarted.setOnClickListener {
 
             startActivity(Intent(this@HomeActivity, CarsActivity::class.java))
+
+        }
+
+        findViewById<Button>(R.id.btnGetStarted).setOnClickListener {
+
+            startActivity(Intent(this, SecondWT::class.java))
+            this@HomeActivity.overridePendingTransition(
+                R.anim.animate_fade_enter,
+                R.anim.animate_fade_exit
+            )
+        }
+
+        fun onBackPressed() {
+            super.onBackPressed()
+
+            this@HomeActivity.overridePendingTransition(
+                R.anim.animate_fade_enter,
+                R.anim.animate_fade_exit
+            )
 
         }
     }
