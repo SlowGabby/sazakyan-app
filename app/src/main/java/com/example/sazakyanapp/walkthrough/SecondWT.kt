@@ -46,9 +46,11 @@ class SecondWT : AppCompatActivity() {
         fun onBackPressed() {
             super.onBackPressed()
 
+            startActivity(Intent(this, FirstWT::class.java))
             this@SecondWT.overridePendingTransition(
                 R.anim.animate_fade_enter,
                 R.anim.animate_fade_exit
+
             )
 
         }

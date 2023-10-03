@@ -42,5 +42,17 @@ class FirstWT : AppCompatActivity() {
                 R.anim.animate_slide_left_exit
             )
         }
+
+        fun onBackPressed() {
+            super.onBackPressed()
+
+            startActivity(Intent(this, FirstWT::class.java))
+            this@FirstWT.overridePendingTransition(
+                R.anim.animate_fade_enter,
+                R.anim.animate_fade_exit
+
+            )
+
+        }
     }
 }

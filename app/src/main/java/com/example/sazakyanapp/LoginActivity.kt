@@ -29,7 +29,8 @@ class LoginActivity : AppCompatActivity() {
 
             val loginUsername = binding.loginUsername.text.toString()
             val loginPassword = binding.loginPassword.text.toString()
-            loginDatabase(loginUsername, loginPassword)
+            val loginCpassword = binding.loginCPassword.text.toString()
+            loginDatabase(loginUsername, loginPassword, loginCpassword)
 
         }
 
@@ -42,9 +43,9 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    private fun loginDatabase (username : String, password : String) {
+    private fun loginDatabase (username : String, password : String, cpassword : String) {
 
-        val userExists = dbHelper.readUser(username, password)
+        val userExists = dbHelper.readUser(username, password, cpassword)
         if (userExists) {
             Toast.makeText(this, "Login Successful", Toast.LENGTH_LONG).show()
             startActivity(Intent(this@LoginActivity, CarsActivity::class.java))

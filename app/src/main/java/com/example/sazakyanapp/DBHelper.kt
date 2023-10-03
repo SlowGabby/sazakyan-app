@@ -17,6 +17,7 @@ class DBHelper ( context: Context):
                 private const val COLUMN_ID = "id"
                 private const val COLUMN_USERNAME = "username"
                 private const val COLUMN_PASSWORD = "password"
+                private const val COLUMN_CPASSWORD = "cpassword"
 
             }
 
@@ -25,7 +26,8 @@ class DBHelper ( context: Context):
         val createTableQuery = ("CREATE_TABLE " + " $TABLE_NAME (" +
                 " $COLUMN_ID INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 " $COLUMN_USERNAME TEXT, " +
-                " $COLUMN_PASSWORD TEXT) ")
+                " $COLUMN_PASSWORD TEXT) " +
+                " $COLUMN_CPASSWORD TEXT ")
 
         db?.execSQL(createTableQuery)
     }
@@ -44,6 +46,7 @@ class DBHelper ( context: Context):
 
             put (COLUMN_USERNAME, username)
             put (COLUMN_PASSWORD, password)
+            put (COLUMN_CPASSWORD, confirmPassword)
 
         }
 
@@ -52,11 +55,11 @@ class DBHelper ( context: Context):
 
     }
 
-    fun readUser (username: String, password: String) : Boolean {
+    fun readUser (username: String, password: String, cpassword : String) : Boolean {
 
         val db = readableDatabase
-        val selection = "$COLUMN_USERNAME = ? AND $COLUMN_PASSWORD = ?"
-        val selectionArgs = arrayOf(username, password)
+        val selection = "$COLUMN_USERNAME = ? AND $COLUMN_PASSWORD = ? AND $COLUMN_CPASSWORD = ?"
+        val selectionArgs = arrayOf(username, password, cpassword)
         val cursor = db.query(TABLE_NAME, null, selection, selectionArgs, null, null, null)
 
         val userExists = cursor.count > 0

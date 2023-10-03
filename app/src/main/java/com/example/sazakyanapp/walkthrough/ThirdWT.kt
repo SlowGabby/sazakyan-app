@@ -6,10 +6,9 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import com.example.sazakyanapp.HomeActivity
-import com.example.sazakyanapp.MainHomeActivity
 import com.example.sazakyanapp.R
-import com.example.sazakyanapp.profile.LoginActivity
-import com.example.sazakyanapp.profile.SignUpActivity
+import com.example.sazakyanapp.LoginActivity
+import com.example.sazakyanapp.SignUpActivity
 
 class ThirdWT : AppCompatActivity() {
 
@@ -47,6 +46,7 @@ class ThirdWT : AppCompatActivity() {
         fun onBackPressed() {
             super.onBackPressed()
 
+            startActivity(Intent(this, SecondWT::class.java))
             this@ThirdWT.overridePendingTransition(
                 R.anim.animate_fade_enter,
                 R.anim.animate_fade_exit
