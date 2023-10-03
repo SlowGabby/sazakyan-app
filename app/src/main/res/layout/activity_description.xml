@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DescriptionActivityt"
+    tools:context=".DescriptionActivity"
     android:background="#E6E6E6">
 
     <ScrollView

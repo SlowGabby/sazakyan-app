@@ -38,7 +38,7 @@ class DBHelper ( context: Context):
 
     }
 
-    fun insertUser (username: String, password: String) : Long {
+    fun insertUser (username: String, password: String, confirmPassword: String) : Long {
 
         val values = ContentValues().apply {
 

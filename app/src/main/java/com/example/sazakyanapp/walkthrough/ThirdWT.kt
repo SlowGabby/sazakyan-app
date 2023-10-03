@@ -6,7 +6,10 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import com.example.sazakyanapp.HomeActivity
+import com.example.sazakyanapp.MainHomeActivity
 import com.example.sazakyanapp.R
+import com.example.sazakyanapp.profile.LoginActivity
+import com.example.sazakyanapp.profile.SignUpActivity
 
 class ThirdWT : AppCompatActivity() {
 
@@ -22,13 +25,13 @@ class ThirdWT : AppCompatActivity() {
 
         nextBtn.setOnClickListener {
 
-            startActivity(Intent(this@ThirdWT, HomeActivity::class.java))
+            startActivity(Intent(this@ThirdWT, LoginActivity::class.java))
 
         }
 
         skipBtn.setOnClickListener {
 
-            startActivity(Intent(this@ThirdWT, HomeActivity::class.java))
+            startActivity(Intent(this@ThirdWT, SignUpActivity::class.java))
 
         }
     }
