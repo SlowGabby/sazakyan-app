@@ -7,8 +7,8 @@ import android.widget.Button
 import android.widget.TextView
 import com.example.sazakyanapp.HomeActivity
 import com.example.sazakyanapp.R
-import com.example.sazakyanapp.LoginActivity
-import com.example.sazakyanapp.SignUpActivity
+import com.example.sazakyanapp.profile.LoginActivity
+import com.example.sazakyanapp.profile.SignUpActivity
 
 class ThirdWT : AppCompatActivity() {
 

@@ -26,7 +26,7 @@ class HomeActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.btnGetStarted).setOnClickListener {
 
-            startActivity(Intent(this, SecondWT::class.java))
+            startActivity(Intent(this, MainHomeActivity::class.java))
             this@HomeActivity.overridePendingTransition(
                 R.anim.animate_fade_enter,
                 R.anim.animate_fade_exit

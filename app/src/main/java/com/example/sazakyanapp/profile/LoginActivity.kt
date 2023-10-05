@@ -5,8 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.example.sazakyanapp.CarsActivity
-import com.example.sazakyanapp.HomeActivity
-import com.example.sazakyanapp.MainHomeActivity
 import com.example.sazakyanapp.R
 import com.example.sazakyanapp.database.DBHelper
 import com.example.sazakyanapp.databinding.ActivityLoginBinding

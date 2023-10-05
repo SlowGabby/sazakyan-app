@@ -32,7 +32,7 @@ class CarsActivity : AppCompatActivity() {
             startActivity(Intent(this@CarsActivity, ToyotaActivity::class.java))
 
         }
-
+2
         hondaOnly.setOnClickListener {
 
             startActivity(Intent(this@CarsActivity, HondaActivity::class.java))
