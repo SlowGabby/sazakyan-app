@@ -24,24 +24,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/alfa_slab_one"
-                android:text="@string/car_section"
+                android:text="Discover"
                 android:textColor="#f2f2f2"
                 android:textSize="24sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/available_cars"
+                android:text="What car do you need?"
                 android:fontFamily="@font/poppins"
                 android:textSize="14sp"
                 android:textColor="#f2f2f2"
                 android:layout_below="@+id/txtdashboard"/>
-
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="53dp"
-                android:layout_alignParentEnd="true"
-                android:src="@drawable/menu" />
 
 
         </RelativeLayout>
@@ -75,7 +69,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:fontFamily="@font/poppins_bold"
-                android:text="@string/brands"
+                android:text="Services Offered"
                 android:textColor="#f2f2f2"
                 android:textSize="18sp" />
 

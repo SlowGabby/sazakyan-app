@@ -63,6 +63,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginUsername" />
 
+    <EditText
+        android:id="@+id/loginCPassword"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+        android:background="@drawable/et_bg"
+        android:inputType="textPassword"
+        android:paddingStart="15dp"
+        android:hint="Confirm Password"
+        android:textColor="@color/primary_font_color"
+        android:textColorHint="#FFFFFF"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginPassword" />
+
     <Button
         android:id="@+id/loginBtn"
         android:layout_width="250dp"
@@ -71,11 +90,10 @@
         android:text="Confirm"
         android:paddingStart="8dp"
         android:textAllCaps="true"
-        android:background="@drawable/confirm_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintTop_toBottomOf="@id/loginPassword"/>
+        app:layout_constraintTop_toBottomOf="@id/loginCPassword"/>
 
     <TextView
         android:id="@+id/signupRedirect"
