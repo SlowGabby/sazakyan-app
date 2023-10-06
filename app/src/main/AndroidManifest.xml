@@ -13,10 +13,28 @@
         android:theme="@style/Theme.SazakyanApp"
         tools:targetApi="31">
         <activity
+            android:name=".suv.SuvActivity"
+            android:exported="false" />
+        <activity
+            android:name=".vans.VansAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".VanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity2"
+            android:exported="false" />
+        <activity
             android:name=".walkthrough.VeryFirstWT"
             android:exported="false" />
         <activity
-            android:name=".MainHomeActivity"
+            android:name=".SecondMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".walkthrough.VeryFirstWT"
+            android:exported="false" />
+        <activity
+            android:name=".sedan.MainHomeActivity"
             android:exported="false" />
         <activity
             android:name=".hyundai.HyundaiActivity"

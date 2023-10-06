@@ -1,4 +1,4 @@
-package com.example.sazakyanapp
+package com.example.sazakyanapp.sedan
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.sazakyanapp.R
 
 class CarsAdapter (var mList : List<CarsData>) : RecyclerView.Adapter<CarsAdapter.CarsViewHolder>() {
 

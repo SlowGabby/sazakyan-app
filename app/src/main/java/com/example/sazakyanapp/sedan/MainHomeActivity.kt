@@ -1,4 +1,4 @@
-package com.example.sazakyanapp
+package com.example.sazakyanapp.sedan
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,6 +6,7 @@ import android.widget.Toast
 import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.sazakyanapp.R
 import java.util.Locale
 
 class MainHomeActivity : AppCompatActivity() {
@@ -80,12 +81,6 @@ class MainHomeActivity : AppCompatActivity() {
     private fun addDataToList() {
 
         mList.add(CarsData("Vios", R.drawable.toyotavios))
-        mList.add(CarsData("Hi Ace", R.drawable.toyotahiace))
-        mList.add(CarsData("Land Cruiser", R.drawable.toyota_landcruiser))
-        mList.add(CarsData("Land Cruiser", R.drawable.toyota_landcruiser2))
-        mList.add(CarsData("Jazz", R.drawable.honda_jazz))
-        mList.add(CarsData("MPG", R.drawable.honda_mpg))
-        mList.add(CarsData("Oddysey", R.drawable.honda_odyssey))
 
     }
 }

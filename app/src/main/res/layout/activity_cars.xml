@@ -49,10 +49,13 @@
             app:cardCornerRadius="25dp"
             app:cardBackgroundColor="#72212122">
 
-            <SearchView
-                android:layout_width="370dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="10dp"/>
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/searchView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:queryHint="Search Here"
+                app:iconifiedByDefault="false"
+                app:queryBackground="@android:color/transparent"/>
 
         </androidx.cardview.widget.CardView>
 
