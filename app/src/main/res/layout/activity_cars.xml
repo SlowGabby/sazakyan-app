@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/main_background"
+    android:background="#E5E5E5"
     tools:context=".CarsActivity">
+
 
     <LinearLayout
         android:orientation="vertical"
@@ -19,13 +20,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+
             <TextView
                 android:id="@+id/txtdashboard"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/alfa_slab_one"
+                android:fontFamily="@font/poppins_bold"
                 android:text="Discover"
-                android:textColor="#f2f2f2"
+                android:textColor="#0e0e0e"
                 android:textSize="24sp" />
 
             <TextView
@@ -34,8 +36,9 @@
                 android:text="What car do you need?"
                 android:fontFamily="@font/poppins"
                 android:textSize="14sp"
-                android:textColor="#f2f2f2"
+                android:textColor="#0e0e0e"
                 android:layout_below="@+id/txtdashboard"/>
+
 
 
         </RelativeLayout>
@@ -71,9 +74,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:fontFamily="@font/poppins_bold"
+                android:fontFamily="@font/poppins"
                 android:text="Services Offered"
-                android:textColor="#f2f2f2"
+                android:textColor="#0e0e0e"
                 android:textSize="18sp" />
 
 
@@ -541,5 +544,6 @@
             </androidx.cardview.widget.CardView>
 
         </GridLayout>
+
     </LinearLayout>
 </ScrollView>

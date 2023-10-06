@@ -4,18 +4,470 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E5E5E5"
     tools:context=".MainActivity">
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNav"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:layout_alignParentBottom="true"
-        android:background="#182981"
+        android:background="#f2f2f2"
         app:itemTextColor="@drawable/select"
         app:itemIconTint="@drawable/select"
         app:menu="@menu/nav_menu"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_marginTop="32dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/txtdashboard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Discover"
+                    android:textColor="#0e0e0e"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="What car do you need?"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="14sp"
+                    android:textColor="#0e0e0e"
+                    android:layout_below="@+id/txtdashboard"/>
+
+
+
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="395dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginStart="16dp"
+                app:cardCornerRadius="25dp"
+                app:cardBackgroundColor="#f2f2f2"
+                >
+
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/searchView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:queryHint="Search Here"
+                    app:iconifiedByDefault="false"
+                    app:queryBackground="@android:color/transparent"/>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/poppins"
+                android:text="Services Offered"
+                android:textColor="#0e0e0e"
+                android:textSize="19sp" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="4"
+                android:orientation="horizontal"
+                android:rowCount="1">
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/hondaOnly"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:onClick="carBrands"
+                    app:cardCornerRadius="12dp"
+                    app:cardBackgroundColor="#f2f2f2">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="70dp"
+                        android:layout_marginStart="14dp"
+                        android:src="@drawable/honda_logo" />
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/hyundaiOnly"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_row="0"
+                    android:layout_column="2"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:onClick="carBrands"
+                    app:cardCornerRadius="12dp"
+                    app:cardBackgroundColor="#f2f2f2">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="70dp"
+                        android:layout_marginStart="14dp"
+                        android:src="@drawable/honda_logo" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fotonOnly"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_row="0"
+                    android:layout_column="3"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="0dp"
+                    app:cardCornerRadius="12dp"
+                    android:onClick="carBrands"
+                    app:cardBackgroundColor="#f2f2f2">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="70dp"
+                        android:layout_marginStart="14dp"
+                        android:src="@drawable/toyota_logo" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/toyotaOnly"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    app:cardCornerRadius="12dp"
+                    android:onClick="carBrands"
+                    app:cardBackgroundColor="#f2f2f2">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="70dp"
+                        android:layout_marginStart="14dp"
+                        android:src="@drawable/toyota_logo" />
+
+                </androidx.cardview.widget.CardView>
+
+
+
+            </GridLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="Popular"
+                android:textColor="#0e0e0e"
+                android:fontFamily="@font/poppins"
+                android:textSize="19dp"/>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnOrderPreserved="false"
+                android:alignmentMode="alignMargins"
+                android:rowCount="3"
+                android:columnCount="2">
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/vios"
+                    android:layout_width="wrap_content"
+                    android:layout_height="250dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardCornerRadius="12dp"
+                    android:layout_margin="12dp"
+                    app:cardBackgroundColor="#f2f2f2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Toyota Vios"
+                            android:fontFamily="@font/poppins_bold"
+                            android:textSize="10sp"
+                            android:textColor="#0e0e0e"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Starting Price at ₱2500"
+                            android:fontFamily="@font/poppins"
+                            android:textSize="10sp"
+                            android:textColor="#0e0e0e" />
+
+
+                        <ImageView
+                            android:id="@+id/viosImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:onClick="viosDetail"
+                            android:src="@drawable/vios_bg"
+                            android:scaleType="fitXY"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/hiAce"
+                    android:layout_width="wrap_content"
+                    android:layout_height="250dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardCornerRadius="12dp"
+                    android:layout_margin="12dp"
+                    app:cardBackgroundColor="#f2f2f2"
+                    android:onClick="carDetails">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Toyota Hiace"
+                            android:fontFamily="@font/poppins_bold"
+                            android:textSize="10sp"
+                            android:textColor="#0e0e0e"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Starting Price at ₱2900"
+                            android:fontFamily="@font/poppins"
+                            android:textSize="10sp"
+                            android:textColor="#0e0e0e" />
+
+                        <ImageView
+                            android:id="@+id/hiAceImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:onClick="hiaceDetail"
+                            android:src="@drawable/hiace_bg"
+                            android:scaleType="fitXY"/>
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/landCruiser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="250dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardCornerRadius="12dp"
+                    android:layout_margin="12dp"
+                    android:onClick="carDetails"
+                    app:cardBackgroundColor="#f2f2f2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Toyota Land Cruiser"
+                            android:fontFamily="@font/poppins_bold"
+                            android:textSize="10sp"
+                            android:textColor="#0e0e0e"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Starting Price at ₱3100"
+                            android:fontFamily="@font/poppins"
+                            android:textSize="10sp"
+                            android:textColor="#0e0e0e" />
+
+                        <ImageView
+                            android:id="@+id/landCruiserImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:onClick="landCruiserDetail"
+                            android:src="@drawable/landcruiser_bg"
+                            android:scaleType="fitXY"/>
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fordRaptor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="250dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardCornerRadius="12dp"
+                    android:layout_margin="12dp"
+                    android:onClick="carDetails"
+                    app:cardBackgroundColor="#f2f2f2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ford Raptor"
+                            android:fontFamily="@font/poppins_bold"
+                            android:textSize="10sp"
+                            android:textColor="#0e0e0e"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Starting Price at ₱3100"
+                            android:fontFamily="@font/poppins"
+                            android:textSize="10sp"
+                            android:textColor="#0e0e0e" />
+
+                        <ImageView
+                            android:id="@+id/fordRaptorImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:onClick="fordRaptorDetail"
+                            android:src="@drawable/raptor_bg"
+                            android:scaleType="fitXY"/>
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/honda1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="250dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardCornerRadius="12dp"
+                    android:layout_marginBottom="90dp"
+                    android:layout_margin="12dp"
+                    android:onClick="carDetails">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:padding="16dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:src="@drawable/toyotavios"
+                            android:layout_width="120dp"
+                            android:layout_height="90dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Honda Civic"
+                            android:fontFamily="@font/poppins_bold"
+                            android:textSize="18sp"
+                            android:textColor="#f2f2f2"
+                            android:layout_marginTop="12dp"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/honda2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardCornerRadius="12dp"
+                    android:layout_margin="12dp"
+                    android:layout_marginBottom="90dp"
+                    android:onClick="carDetails">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:padding="16dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:src="@drawable/toyotavios"
+                            android:layout_width="120dp"
+                            android:layout_height="90dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Honda Civic"
+                            android:fontFamily="@font/poppins_bold"
+                            android:textSize="18sp"
+                            android:textColor="#f2f2f2"
+                            android:layout_marginTop="12dp"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </GridLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 
 </RelativeLayout>
