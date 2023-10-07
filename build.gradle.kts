@@ -3,7 +3,12 @@ buildscript {
     dependencies {
         classpath ("androidx.navigation:navigation-safe-args-generator:2.7.3")
     }
+
+    repositories {
+        maven ( "https://jitpack.io")
+    }
 }
+
 
 plugins {
     id("com.android.application") version "8.1.1" apply false
