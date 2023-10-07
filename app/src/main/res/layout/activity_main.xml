@@ -40,14 +40,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_bold"
-                    android:text="Discover"
+                    android:text="Good Morning!"
                     android:textColor="#0e0e0e"
                     android:textSize="24sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="What car do you need?"
+                    android:text="What are you looking for?"
                     android:fontFamily="@font/poppins"
                     android:textSize="14sp"
                     android:textColor="#0e0e0e"
@@ -82,117 +82,173 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:fontFamily="@font/poppins"
-                android:text="Services Offered"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Browse By Location"
                 android:textColor="#0e0e0e"
                 android:textSize="19sp" />
 
-            <GridLayout
+
+
+            <HorizontalScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:columnCount="4"
-                android:orientation="horizontal"
-                android:rowCount="1">
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+                
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:columnCount="4"
+                        android:orientation="horizontal"
+                        android:rowCount="1">
 
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/hondaOnly"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_row="0"
-                    android:layout_column="1"
-                    android:layout_marginStart="30dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="20dp"
-                    android:onClick="carBrands"
-                    app:cardCornerRadius="12dp"
-                    app:cardBackgroundColor="#f2f2f2">
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/MakatiOnly"
+                            android:layout_width="150dp"
+                            android:layout_height="70dp"
+                            android:layout_row="0"
+                            android:layout_column="1"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="20dp"
+                            android:onClick="carBrands"
+                            app:cardCornerRadius="12dp"
+                            app:cardBackgroundColor="#f2f2f2">
 
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="70dp"
-                        android:layout_marginStart="14dp"
-                        android:src="@drawable/honda_logo" />
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/makati_bg"/>
 
-                </androidx.cardview.widget.CardView>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Makati"
+                                android:textSize="18sp"
+                                android:textColor="#f2f2f2"
+                                android:fontFamily="@font/poppins_bold"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="5dp"/>
 
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/hyundaiOnly"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_row="0"
-                    android:layout_column="2"
-                    android:layout_marginStart="30dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="20dp"
-                    android:onClick="carBrands"
-                    app:cardCornerRadius="12dp"
-                    app:cardBackgroundColor="#f2f2f2">
-
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="70dp"
-                        android:layout_marginStart="14dp"
-                        android:src="@drawable/honda_logo" />
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fotonOnly"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_row="0"
-                    android:layout_column="3"
-                    android:layout_marginStart="30dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="0dp"
-                    app:cardCornerRadius="12dp"
-                    android:onClick="carBrands"
-                    app:cardBackgroundColor="#f2f2f2">
-
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="70dp"
-                        android:layout_marginStart="14dp"
-                        android:src="@drawable/toyota_logo" />
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/toyotaOnly"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_row="0"
-                    android:layout_column="0"
-                    android:layout_marginStart="25dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="20dp"
-                    app:cardCornerRadius="12dp"
-                    android:onClick="carBrands"
-                    app:cardBackgroundColor="#f2f2f2">
-
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="70dp"
-                        android:layout_marginStart="14dp"
-                        android:src="@drawable/toyota_logo" />
-
-                </androidx.cardview.widget.CardView>
+                        </androidx.cardview.widget.CardView>
 
 
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/manilaOnly"
+                            android:layout_width="150dp"
+                            android:layout_height="70dp"
+                            android:layout_row="0"
+                            android:layout_column="2"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="20dp"
+                            android:onClick="carBrands"
+                            app:cardCornerRadius="12dp"
+                            app:cardBackgroundColor="#f2f2f2">
 
-            </GridLayout>
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/manila_bg"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Manila"
+                                android:textSize="18sp"
+                                android:textColor="#f2f2f2"
+                                android:fontFamily="@font/poppins_bold"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="5dp"/>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/viganOnly"
+                            android:layout_width="150dp"
+                            android:layout_height="70dp"
+                            android:layout_row="0"
+                            android:layout_column="3"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="0dp"
+                            android:layout_marginEnd="20dp"
+                            app:cardCornerRadius="12dp"
+                            android:onClick="carBrands"
+                            app:cardBackgroundColor="#f2f2f2">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/vigan_bg"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Vigan"
+                                android:textSize="18sp"
+                                android:textColor="#f2f2f2"
+                                android:fontFamily="@font/poppins_bold"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="5dp"/>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/dagupanOnly"
+                            android:layout_width="150dp"
+                            android:layout_height="70dp"
+                            android:layout_row="0"
+                            android:layout_column="0"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="20dp"
+                            app:cardCornerRadius="12dp"
+                            android:onClick="carBrands"
+                            app:cardBackgroundColor="#f2f2f2">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/dagupan_bg"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Dagupan"
+                                android:textSize="18sp"
+                                android:textColor="#f2f2f2"
+                                android:fontFamily="@font/poppins_bold"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="5dp"/>
+
+                        </androidx.cardview.widget.CardView>
+
+
+
+                    </GridLayout>
+
+                </LinearLayout>
+
+
+            </HorizontalScrollView>
 
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
                 android:text="Popular"
                 android:textColor="#0e0e0e"
-                android:fontFamily="@font/poppins"
-                android:textSize="19dp"/>
+                android:fontFamily="@font/poppins_bold"
+                android:textSize="18dp"/>
 
             <GridLayout
                 android:layout_width="match_parent"
@@ -206,7 +262,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/vios"
                     android:layout_width="wrap_content"
-                    android:layout_height="250dp"
+                    android:layout_height="280dp"
                     android:layout_columnWeight="1"
                     android:layout_rowWeight="1"
                     app:cardCornerRadius="12dp"
@@ -216,15 +272,25 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:gravity="center"
                         android:orientation="vertical">
+
+
+
+                        <ImageView
+                            android:id="@+id/viosImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:onClick="viosDetail"
+                            android:src="@drawable/vios_bg"
+                            android:scaleType="fitXY"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Toyota Vios"
                             android:fontFamily="@font/poppins_bold"
-                            android:textSize="10sp"
+                            android:textSize="15sp"
+                            android:layout_marginStart="10dp"
                             android:textColor="#0e0e0e"
                             />
 
@@ -233,64 +299,18 @@
                             android:layout_height="wrap_content"
                             android:text="Starting Price at ₱2500"
                             android:fontFamily="@font/poppins"
+                            android:layout_marginStart="10dp"
                             android:textSize="10sp"
-                            android:textColor="#0e0e0e" />
-
-
-                        <ImageView
-                            android:id="@+id/viosImage"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:onClick="viosDetail"
-                            android:src="@drawable/vios_bg"
-                            android:scaleType="fitXY"/>
-
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/hiAce"
-                    android:layout_width="wrap_content"
-                    android:layout_height="250dp"
-                    android:layout_columnWeight="1"
-                    android:layout_rowWeight="1"
-                    app:cardCornerRadius="12dp"
-                    android:layout_margin="12dp"
-                    app:cardBackgroundColor="#f2f2f2"
-                    android:onClick="carDetails">
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical">
+                            android:textColor="#182981" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Toyota Hiace"
-                            android:fontFamily="@font/poppins_bold"
-                            android:textSize="10sp"
-                            android:textColor="#0e0e0e"
-                            />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Starting Price at ₱2900"
+                            android:text="Dagupan City, Pangasinan"
+                            android:layout_marginStart="10dp"
                             android:fontFamily="@font/poppins"
-                            android:textSize="10sp"
+                            android:textSize="8sp"
                             android:textColor="#0e0e0e" />
-
-                        <ImageView
-                            android:id="@+id/hiAceImage"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:onClick="hiaceDetail"
-                            android:src="@drawable/hiace_bg"
-                            android:scaleType="fitXY"/>
 
 
                     </LinearLayout>
@@ -298,174 +318,336 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/landCruiser"
+                    android:id="@+id/raptorCardView"
                     android:layout_width="wrap_content"
-                    android:layout_height="250dp"
+                    android:layout_height="280dp"
                     android:layout_columnWeight="1"
                     android:layout_rowWeight="1"
                     app:cardCornerRadius="12dp"
                     android:layout_margin="12dp"
-                    android:onClick="carDetails"
                     app:cardBackgroundColor="#f2f2f2">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:gravity="center"
                         android:orientation="vertical">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Toyota Land Cruiser"
-                            android:fontFamily="@font/poppins_bold"
-                            android:textSize="10sp"
-                            android:textColor="#0e0e0e"
-                            />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Starting Price at ₱3100"
-                            android:fontFamily="@font/poppins"
-                            android:textSize="10sp"
-                            android:textColor="#0e0e0e" />
 
                         <ImageView
-                            android:id="@+id/landCruiserImage"
+                            android:id="@+id/raptorImage"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:onClick="landCruiserDetail"
-                            android:src="@drawable/landcruiser_bg"
+                            android:layout_height="200dp"
+                            android:onClick="raptorDetail"
+                            android:src="@drawable/raptor_bg"
                             android:scaleType="fitXY"/>
-
-
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fordRaptor"
-                    android:layout_width="wrap_content"
-                    android:layout_height="250dp"
-                    android:layout_columnWeight="1"
-                    android:layout_rowWeight="1"
-                    app:cardCornerRadius="12dp"
-                    android:layout_margin="12dp"
-                    android:onClick="carDetails"
-                    app:cardBackgroundColor="#f2f2f2">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Ford Raptor"
                             android:fontFamily="@font/poppins_bold"
-                            android:textSize="10sp"
+                            android:textSize="15sp"
+                            android:layout_marginStart="10dp"
                             android:textColor="#0e0e0e"
                             />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Starting Price at ₱3100"
+                            android:text="Starting Price at ₱2500"
                             android:fontFamily="@font/poppins"
+                            android:layout_marginStart="10dp"
                             android:textSize="10sp"
+                            android:textColor="#182981" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Dagupan City, Pangasinan"
+                            android:layout_marginStart="10dp"
+                            android:fontFamily="@font/poppins"
+                            android:textSize="8sp"
                             android:textColor="#0e0e0e" />
 
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/hiaceCardView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="280dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardCornerRadius="12dp"
+                    android:layout_margin="12dp"
+                    android:layout_marginBottom="20dp"
+                    app:cardBackgroundColor="#f2f2f2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+
+
                         <ImageView
-                            android:id="@+id/fordRaptorImage"
+                            android:id="@+id/hiaceImage"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:onClick="fordRaptorDetail"
-                            android:src="@drawable/raptor_bg"
+                            android:layout_height="200dp"
+                            android:onClick="hiaceDetail"
+                            android:src="@drawable/hiace_bg"
                             android:scaleType="fitXY"/>
 
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Toyota Hiace"
+                            android:fontFamily="@font/poppins_bold"
+                            android:textSize="15sp"
+                            android:layout_marginStart="10dp"
+                            android:textColor="#0e0e0e"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Starting Price at ₱2500"
+                            android:fontFamily="@font/poppins"
+                            android:layout_marginStart="10dp"
+                            android:textSize="10sp"
+                            android:textColor="#182981" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Dagupan City, Pangasinan"
+                            android:layout_marginStart="10dp"
+                            android:fontFamily="@font/poppins"
+                            android:textSize="8sp"
+                            android:textColor="#0e0e0e" />
+
 
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/honda1"
+                    android:id="@+id/landcruiserCardView"
                     android:layout_width="wrap_content"
-                    android:layout_height="250dp"
+                    android:layout_height="280dp"
                     android:layout_columnWeight="1"
                     android:layout_rowWeight="1"
                     app:cardCornerRadius="12dp"
-                    android:layout_marginBottom="90dp"
                     android:layout_margin="12dp"
-                    android:onClick="carDetails">
+                    android:layout_marginBottom="20dp"
+                    app:cardBackgroundColor="#f2f2f2">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:padding="16dp"
                         android:orientation="vertical">
 
+
+
                         <ImageView
-                            android:src="@drawable/toyotavios"
-                            android:layout_width="120dp"
-                            android:layout_height="90dp"/>
+                            android:id="@+id/landcruiserImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:onClick="landcruiserDetail"
+                            android:src="@drawable/landcruiser_bg"
+                            android:scaleType="fitXY"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Honda Civic"
+                            android:text="Land Cruiser"
                             android:fontFamily="@font/poppins_bold"
-                            android:textSize="18sp"
-                            android:textColor="#f2f2f2"
-                            android:layout_marginTop="12dp"/>
+                            android:textSize="15sp"
+                            android:layout_marginStart="10dp"
+                            android:textColor="#0e0e0e"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Starting Price at ₱2500"
+                            android:fontFamily="@font/poppins"
+                            android:layout_marginStart="10dp"
+                            android:textSize="10sp"
+                            android:textColor="#182981" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Dagupan City, Pangasinan"
+                            android:layout_marginStart="10dp"
+                            android:fontFamily="@font/poppins"
+                            android:textSize="8sp"
+                            android:textColor="#0e0e0e" />
+
 
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/honda2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_columnWeight="1"
-                    android:layout_rowWeight="1"
-                    app:cardCornerRadius="12dp"
-                    android:layout_margin="12dp"
-                    android:layout_marginBottom="90dp"
-                    android:onClick="carDetails">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:padding="16dp"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:src="@drawable/toyotavios"
-                            android:layout_width="120dp"
-                            android:layout_height="90dp"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Honda Civic"
-                            android:fontFamily="@font/poppins_bold"
-                            android:textSize="18sp"
-                            android:textColor="#f2f2f2"
-                            android:layout_marginTop="12dp"/>
-
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
 
             </GridLayout>
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sazakyan Exclusive Promos"
+                android:textSize="18sp"
+                android:textColor="#0e0e0e"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/poppins_bold"/>
+            
+            <com.denzcoskun.imageslider.ImageSlider
+                android:id="@+id/imageSlider"
+                android:layout_width="380dp"
+                android:layout_height="120dp"
+                app:iss_auto_cycle="true"
+                app:iss_period="1000"
+                app:iss_text_align="CENTER"
+                android:layout_marginStart="13dp"
+                />
+
+
+
+            <RelativeLayout
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_shield_24"/>
+
+                <TextView
+                    android:id="@+id/firstText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Secure payment everytime"
+                    android:textSize="15sp"
+                    android:textColor="#0e0e0e"
+                    android:fontFamily="@font/poppins_bold"
+                    android:layout_marginBottom="200dp"
+                    android:layout_marginStart="30dp"
+                    />
+
+                <TextView
+                    android:layout_width="330dp"
+                    android:layout_height="wrap_content"
+                    android:text="We work with GCash, a trusted payment gateway, to keep all payment transactions secure and convenient."
+                    android:textSize="15sp"
+                    android:textColor="#0e0e0e"
+                    android:fontFamily="@font/poppins"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="25dp"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_calendar_month_24"/>
+
+                <TextView
+                    android:id="@+id/secondText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Easily rent a car"
+                    android:textSize="15sp"
+                    android:textColor="#0e0e0e"
+                    android:fontFamily="@font/poppins_bold"
+                    android:layout_marginBottom="200dp"
+                    android:layout_marginStart="30dp"
+                    />
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:text="Browse through our listing, reserve your vehicle of your choice, and pay within the app."
+                    android:textSize="15sp"
+                    android:textColor="#0e0e0e"
+                    android:fontFamily="@font/poppins"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="25dp"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="110dp"
+                android:layout_marginBottom="80dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_vpn_key_24"/>
+
+                <TextView
+                    android:id="@+id/thirdText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rent from verified drivers"
+                    android:textSize="15sp"
+                    android:textColor="#0e0e0e"
+                    android:fontFamily="@font/poppins_bold"
+                    android:layout_marginBottom="200dp"
+                    android:layout_marginStart="30dp"
+                    />
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:text="All registered drivers undergo a strict verification process to ensure safe renting of all passengers or users experience within the app."
+                    android:textSize="15sp"
+                    android:textColor="#0e0e0e"
+                    android:fontFamily="@font/poppins"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="25dp"
+                    />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/design_default_color_background">
+
+                <TextView
+                    android:id="@+id/helpCenter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Need any help? Visit our FAQs"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginBottom="150dp"
+                    android:layout_marginTop="10dp"
+                    android:textAlignment="center"/>
+
+            </RelativeLayout>
+
+
         </LinearLayout>
+
 
     </ScrollView>
 
