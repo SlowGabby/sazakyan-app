@@ -19,20 +19,14 @@
             android:name=".vans.VansAdapter"
             android:exported="false" />
         <activity
-            android:name=".VanActivity"
+            android:name=".vans.VansActivity"
             android:exported="false" />
-        <activity
-            android:name=".MainActivity2"
-            android:exported="false" />
+
         <activity
             android:name=".walkthrough.VeryFirstWT"
             android:exported="false" />
-        <activity
-            android:name=".SecondMainActivity"
-            android:exported="false" />
-        <activity
-            android:name=".walkthrough.VeryFirstWT"
-            android:exported="false" />
+
+
         <activity
             android:name=".sedan.MainHomeActivity"
             android:exported="false" />

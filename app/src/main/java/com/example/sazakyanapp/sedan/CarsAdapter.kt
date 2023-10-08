@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.sazakyanapp.R
 
+
 class CarsAdapter (var mList : List<CarsData>) : RecyclerView.Adapter<CarsAdapter.CarsViewHolder>() {
 
     inner class CarsViewHolder (itemView : View) : RecyclerView.ViewHolder(itemView) {
@@ -23,6 +24,7 @@ class CarsAdapter (var mList : List<CarsData>) : RecyclerView.Adapter<CarsAdapte
         notifyDataSetChanged()
 
     }
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CarsViewHolder {
 
@@ -43,5 +45,8 @@ class CarsAdapter (var mList : List<CarsData>) : RecyclerView.Adapter<CarsAdapte
         holder.tvCars.text = mList[position].title
 
     }
+
 }
+
+
 
