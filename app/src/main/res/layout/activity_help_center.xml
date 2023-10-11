@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2"
+    tools:context=".HelpCenterActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/helpCenter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins"
+            android:text="Help Center"
+            android:textColor="#0e0e0e"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/helpCenterBackBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="19dp"
+            android:src="@drawable/baseline_arrow_back_ios_24"
+            app:layout_constraintHorizontal_bias="0.062"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/helpCenterFAQs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="FAQs"
+            android:textColor="#182981"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.056"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/helpCenterBackBtn" />
+
+
+        <TextView
+            android:id="@+id/helpCenterWhat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="What is Sazakyan?"
+            android:textColor="#2548FF"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.077"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/helpCenterFAQs" />
+
+        <TextView
+            android:id="@+id/sazakyanDescription1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:justificationMode="inter_word"
+            android:text="A brand new rental application has made for everyone who's in need. \n\nCreated by skilled students of PHINMA - University of Pangasinan with mission of helping people to keep them safe and sound."
+            android:textColor="#0e0e0e"
+            android:textSize="12sp"
+            android:padding="22dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.178"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/helpCenterWhat" />
+
+        <TextView
+            android:id="@+id/sazakyanDescription2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:text="How can we rent in this app?"
+            android:textColor="#2548FF"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.11"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sazakyanDescription1" />
+
+        <TextView
+            android:id="@+id/sazakyanDescription3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="By going to the app it self, it's like other renting app that there is a Rent button you can press and it will automatically put you on another page which you find the receipt. \n\nBy checking thoroughly and finding your desired car to rent, we also advise to verify the car that you are renting so that the receipt will be provided in a correct form with the correct information right away."
+            android:textColor="#0e0e0e"
+            android:textSize="12sp"
+            android:padding="22dp"
+            android:justificationMode="inter_word"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sazakyanDescription2"/>
+
+        <TextView
+            android:id="@+id/sazakyanDescription4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="What's in the receipt?"
+            android:textColor="#2548FF"
+            android:textSize="16sp"
+            android:fontFamily="@font/poppins_bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.10"
+            app:layout_constraintTop_toBottomOf="@id/sazakyanDescription3"/>
+
+        <TextView
+            android:id="@+id/sazakyanDescription5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:justificationMode="inter_word"
+            android:padding="22dp"
+            android:text="The drivers information is the important thing on the receipt, by having the information of the driver we can assure you that he/she is a professional and safe driver and can drive you around safely. \n\nIn the receipt you can also find your payment, and some of the information of yours. We, the creators suggest that filling your personal information not only help you but also the driver so that if there are any questions or issues we can easily contact you."
+            android:textColor="#0e0e0e"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sazakyanDescription4" />
+
+        <TextView
+            android:id="@+id/sazakyanDescription6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="For individuals, we encourage you to ask your customers/renters to rate and review your account \nafter successful transactions. This will help us evaluate your account"
+            android:textSize="12sp"
+            android:textColor="#737373"
+            android:fontFamily="@font/poppins"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sazakyanDescription5"
+            android:padding="22dp"/>
+
+        <TextView
+            android:id="@+id/sazakyanRateandReview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="If you have other inquiries or concerns you may reach at sazakyan@rentalapp.com"
+            android:textSize="12sp"
+            android:textColor="#0e0e0e"
+            android:fontFamily="@font/poppins"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sazakyanDescription6"
+            android:padding="22dp"/>
+
+        <TextView
+            android:id="@+id/sazakyanVisitSocialMedia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="Visit our Social Media"
+            android:textColor="#182981"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.091"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sazakyanRateandReview" />
+
+        <ImageView
+            android:id="@+id/facebookIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/facebook_32px"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sazakyanVisitSocialMedia"
+            android:layout_marginStart="22dp"/>
+
+        <ImageView
+            android:id="@+id/instagramIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/instagram_32px"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/sazakyanVisitSocialMedia"
+            app:layout_constraintStart_toEndOf="@id/facebookIcon"
+            android:layout_marginStart="15dp"/>
+
+        <ImageView
+            android:id="@+id/githubIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/github_32px"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/sazakyanVisitSocialMedia"
+            app:layout_constraintStart_toEndOf="@id/instagramIcon"
+            android:layout_marginStart="15dp"
+            android:paddingBottom="25dp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

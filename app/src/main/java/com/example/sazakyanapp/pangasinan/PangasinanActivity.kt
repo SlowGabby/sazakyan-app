@@ -1,26 +1,23 @@
-package com.example.sazakyanapp.sedan
+package com.example.sazakyanapp.pangasinan
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.sazakyanapp.DescriptionActivity
 import com.example.sazakyanapp.MainActivity
 import com.example.sazakyanapp.R
 import java.util.Locale
 
-class MainHomeActivity : AppCompatActivity() {
+class PangasinanActivity : AppCompatActivity() {
 
     private lateinit var recyclerView : RecyclerView
     private lateinit var searchView : SearchView
-    private var mList = ArrayList<CarsData>()
-    private lateinit var adapter : CarsAdapter
+    private var mList = ArrayList<PangasinanData>()
+    private lateinit var adapter : PangasinanAdapter
 
     //    button
 
@@ -32,11 +29,8 @@ class MainHomeActivity : AppCompatActivity() {
 
         findViewById<ImageView>(R.id.backBtn).setOnClickListener {
 
-            startActivity(Intent(this@MainHomeActivity, MainActivity::class.java))
-//            this@MainHomeActivity.overridePendingTransition(
-//                R.anim.animate_slide_in_left,
-//                R.anim.animate_slide_out_right
-//            )
+            startActivity(Intent(this@PangasinanActivity, MainActivity::class.java))
+
         }
 
 
@@ -49,7 +43,7 @@ class MainHomeActivity : AppCompatActivity() {
         recyclerView.layoutManager = GridLayoutManager(this, 1)
 
         addDataToList()
-        adapter = CarsAdapter(mList)
+        adapter = PangasinanAdapter(mList)
         recyclerView.adapter = adapter
 
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
@@ -77,7 +71,7 @@ class MainHomeActivity : AppCompatActivity() {
 
         if (query != null) {
 
-            val filteredList = ArrayList<CarsData>()
+            val filteredList = ArrayList<PangasinanData>()
 
             for (i in mList) {
 
@@ -103,10 +97,10 @@ class MainHomeActivity : AppCompatActivity() {
 
     private fun addDataToList() {
 
-        mList.add(CarsData("Vios", R.drawable.toyotavios))
-        mList.add(CarsData("Hiace", R.drawable.toyotahiace))
-        mList.add(CarsData("Land Cruiser", R.drawable.toyota_landcruiser))
-        mList.add(CarsData("Jazz", R.drawable.honda_jazz))
+        mList.add(PangasinanData("Vios", R.drawable.toyotavios))
+        mList.add(PangasinanData("Hiace", R.drawable.toyotahiace))
+        mList.add(PangasinanData("Land Cruiser", R.drawable.toyota_landcruiser))
+        mList.add(PangasinanData("Jazz", R.drawable.honda_jazz))
 
     }
 

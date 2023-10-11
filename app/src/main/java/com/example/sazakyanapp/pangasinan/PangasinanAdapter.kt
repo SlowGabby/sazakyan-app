@@ -1,4 +1,4 @@
-package com.example.sazakyanapp.sedan
+package com.example.sazakyanapp.pangasinan
 
 import android.view.LayoutInflater
 import android.view.View
@@ -9,16 +9,16 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.sazakyanapp.R
 
 
-class CarsAdapter (var mList : List<CarsData>) : RecyclerView.Adapter<CarsAdapter.CarsViewHolder>() {
+class PangasinanAdapter (var mList : List<PangasinanData>) : RecyclerView.Adapter<PangasinanAdapter.PangasinanViewHolder>() {
 
-    inner class CarsViewHolder (itemView : View) : RecyclerView.ViewHolder(itemView) {
+    inner class PangasinanViewHolder (itemView : View) : RecyclerView.ViewHolder(itemView) {
 
         val image : ImageView = itemView.findViewById(R.id.iv_images)
         val tvCars : TextView = itemView.findViewById(R.id.tv_cars)
 
     }
 
-    fun setFilteredList(mList : List<CarsData>) {
+    fun setFilteredList(mList : List<PangasinanData>) {
 
         this.mList = mList
         notifyDataSetChanged()
@@ -26,10 +26,10 @@ class CarsAdapter (var mList : List<CarsData>) : RecyclerView.Adapter<CarsAdapte
     }
 
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CarsViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PangasinanViewHolder {
 
         val view = LayoutInflater.from(parent.context).inflate(R.layout.cars, parent, false)
-        return CarsViewHolder(view)
+        return PangasinanViewHolder(view)
 
     }
 
@@ -39,7 +39,7 @@ class CarsAdapter (var mList : List<CarsData>) : RecyclerView.Adapter<CarsAdapte
 
     }
 
-    override fun onBindViewHolder(holder: CarsViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: PangasinanViewHolder, position: Int) {
 
         holder.image.setImageResource(mList[position].images)
         holder.tvCars.text = mList[position].title
