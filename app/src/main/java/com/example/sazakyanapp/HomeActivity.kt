@@ -4,7 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import com.example.sazakyanapp.pangasinan.MainHomeActivity
+import com.example.sazakyanapp.pangasinan.PangasinanActivity
 
 class HomeActivity : AppCompatActivity() {
 
@@ -26,7 +26,7 @@ class HomeActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.btnGetStarted).setOnClickListener {
 
-            startActivity(Intent(this, MainHomeActivity::class.java))
+            startActivity(Intent(this, PangasinanActivity::class.java))
             this@HomeActivity.overridePendingTransition(
                 R.anim.animate_fade_enter,
                 R.anim.animate_fade_exit
