@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.sazakyanapp.HomeActivity
 import com.example.sazakyanapp.MainActivity
 import com.example.sazakyanapp.R
 import java.util.Locale
@@ -23,13 +24,13 @@ class PangasinanActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main_home)
+        setContentView(R.layout.activity_pangasinan)
 
         //  button
 
         findViewById<ImageView>(R.id.backBtn).setOnClickListener {
 
-            startActivity(Intent(this@PangasinanActivity, MainActivity::class.java))
+            startActivity(Intent(this@PangasinanActivity, HomeActivity::class.java))
 
         }
 

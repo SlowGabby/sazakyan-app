@@ -2,18 +2,12 @@ package com.example.sazakyanapp
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.TextView
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import androidx.cardview.widget.CardView
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import com.denzcoskun.imageslider.ImageSlider
-import com.denzcoskun.imageslider.constants.ScaleTypes
-import com.denzcoskun.imageslider.models.SlideModel
-import com.example.sazakyanapp.pangasinan.PangasinanActivity
+
 
 class MainActivity : AppCompatActivity() {
-
-    private lateinit var imageSlider : ImageSlider
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,33 +17,25 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_main)
 
-//        IMAGE SLIDER
 
-        imageSlider = findViewById(R.id.imageSlider)
+        findViewById<Button>(R.id.btnGetStarted).setOnClickListener {
 
-        val imagesList = ArrayList<SlideModel>()
-        imagesList.add(SlideModel(R.drawable.first_promo))
-        imagesList.add(SlideModel(R.drawable.promo_bg))
-        imagesList.add(SlideModel(R.drawable.me))
-
-        imageSlider.setImageList(imagesList, ScaleTypes.CENTER_INSIDE)
-
-
-//        BROWSE BY LOCATION FUNCTIONS/INTENTS
-
-
-        findViewById<CardView>(R.id.dagupanOnly).setOnClickListener {
-
-            startActivity(Intent(this@MainActivity, PangasinanActivity::class.java))
-
+            startActivity(Intent(this, HomeActivity::class.java))
+            this@MainActivity.overridePendingTransition(
+                R.anim.animate_fade_enter,
+                R.anim.animate_fade_exit
+            )
         }
 
-        findViewById<TextView>(R.id.helpCenter).setOnClickListener {
+        fun onBackPressed() {
+            super.onBackPressed()
 
-            startActivity(Intent(this@MainActivity, HelpCenterActivity::class.java))
+            this@MainActivity.overridePendingTransition(
+                R.anim.animate_fade_enter,
+                R.anim.animate_fade_exit
+            )
 
         }
-
     }
 
 }

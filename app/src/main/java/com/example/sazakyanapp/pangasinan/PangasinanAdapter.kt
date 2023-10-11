@@ -45,7 +45,6 @@ class PangasinanAdapter (var mList : List<PangasinanData>) : RecyclerView.Adapte
         holder.tvCars.text = mList[position].title
 
     }
-
 }
 
 
