@@ -15,37 +15,41 @@ class HelpCenterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_help_center)
 
+        val githubIcon : ImageView = findViewById(R.id.githubIcon)
+        val facebookIcon : ImageView = findViewById(R.id.facebookIcon)
+        val instagramIcon : ImageView = findViewById(R.id.instagramIcon)
+        val helpcenterBackBtn : ImageView = findViewById(R.id.helpCenterBackBtn)
+
         binding = ActivityHelpCenterBinding.inflate(layoutInflater)
 
-        binding.facebookIcon.setOnClickListener {
+        facebookIcon.setOnClickListener {
 
-            openUrl("https://facebook.com/rdaavee")
+            val openURL = Intent(android.content.Intent.ACTION_VIEW)
+            openURL.data = Uri.parse("https://www.facebook.com/profile.php?id=61551931515185&mibextid=2JQ9oc")
+            startActivity(openURL)
+
         }
 
-        binding.instagramIcon.setOnClickListener {
+        instagramIcon.setOnClickListener {
 
-            openUrl("https://instagram.com/rdaavee")
+            val openURL = Intent(android.content.Intent.ACTION_VIEW)
+            openURL.data = Uri.parse("https://github.com/Rdavee/sazakyan-app")
+            startActivity(openURL)
+
         }
 
-        binding.githubIcon.setOnClickListener {
+        githubIcon.setOnClickListener {
 
-            openUrl("https://github.com/Rdavee/sazakyan-app")
+            val openURL = Intent(android.content.Intent.ACTION_VIEW)
+            openURL.data = Uri.parse("https://github.com/Rdavee/sazakyan-app")
+            startActivity(openURL)
+
         }
 
-
-        findViewById<ImageView>(R.id.helpCenterBackBtn).setOnClickListener {
+        helpcenterBackBtn.setOnClickListener {
 
             startActivity(Intent(this@HelpCenterActivity, MainActivity::class.java))
 
         }
-    }
-
-    private fun openUrl(link: String) {
-
-        val uri = Uri.parse(link)
-        val intent = Intent(Intent.ACTION_VIEW, uri)
-
-        startActivity(intent)
-
     }
 }

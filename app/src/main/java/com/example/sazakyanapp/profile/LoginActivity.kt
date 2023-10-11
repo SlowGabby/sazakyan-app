@@ -3,53 +3,53 @@ package com.example.sazakyanapp.profile
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.TextUtils
+import android.widget.Button
+import android.widget.EditText
 import android.widget.Toast
-import com.example.sazakyanapp.CarsActivity
+import com.example.sazakyanapp.MainActivity
 import com.example.sazakyanapp.R
-import com.example.sazakyanapp.database.DBHelper
-import com.example.sazakyanapp.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
 
-    private lateinit var binding : ActivityLoginBinding
-    private lateinit var dbHelper : DBHelper
+    private lateinit var loginBtn : Button
+    private lateinit var editUser : EditText
+    private lateinit var editPassword : EditText
+    private lateinit var databaseHelper : DBHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        binding = ActivityLoginBinding.inflate(layoutInflater)
-
         setContentView(R.layout.activity_login)
 
-        dbHelper = DBHelper(this)
+        loginBtn = findViewById(R.id.button4)
+        editUser = findViewById(R.id.editTextPersonName2)
+        editPassword = findViewById(R.id.editTextPassword3)
+        databaseHelper = DBHelper(this)
 
-        binding.loginBtn.setOnClickListener {
+        loginBtn.setOnClickListener {
 
-            val loginUsername = binding.loginUsername.text.toString()
-            val loginPassword = binding.loginPassword.text.toString()
-            val loginCpassword = binding.loginCPassword.text.toString()
-            loginDatabase(loginUsername, loginPassword, loginCpassword)
+            val useredtx = editUser.text.toString()
+            val passedtx = editPassword.text.toString()
 
-        }
+            if (TextUtils.isEmpty(useredtx) || TextUtils.isEmpty(passedtx)) {
 
-        binding.signupRedirect.setOnClickListener {
+                Toast.makeText(this, "Add Username & Password!", Toast.LENGTH_SHORT).show()
 
-            val intent = Intent(this, SignUpActivity::class.java)
-            startActivity(intent)
-            finish()
+            } else {
 
-        }
-    }
+                val checkUser = databaseHelper.checkuserpass(useredtx, passedtx)
+                if (checkUser == true) {
 
-    private fun loginDatabase (username : String, password : String, cpassword : String) {
+                    Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(applicationContext, MainActivity::class.java)
+                    startActivity(intent)
 
-        val userExists = dbHelper.readUser(username, password, cpassword)
-        if (userExists) {
-            Toast.makeText(this, "Login Successful", Toast.LENGTH_LONG).show()
-            startActivity(Intent(this@LoginActivity, CarsActivity::class.java))
+                } else {
 
-        } else {
-            Toast.makeText(this, "Login Failed!", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Wrong Credentials!", Toast.LENGTH_SHORT).show()
+
+                }
+            }
         }
     }
 }
