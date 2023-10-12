@@ -7,6 +7,7 @@ import android.text.TextUtils
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.example.sazakyanapp.HomeActivity
 import com.example.sazakyanapp.MainActivity
 import com.example.sazakyanapp.R
 
@@ -31,6 +32,7 @@ class LoginActivity : AppCompatActivity() {
             val useredtx = editUser.text.toString()
             val passedtx = editPassword.text.toString()
 
+
             if (TextUtils.isEmpty(useredtx) || TextUtils.isEmpty(passedtx)) {
 
                 Toast.makeText(this, "Add Username & Password!", Toast.LENGTH_SHORT).show()
@@ -41,7 +43,7 @@ class LoginActivity : AppCompatActivity() {
                 if (checkUser == true) {
 
                     Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show()
-                    val intent = Intent(applicationContext, MainActivity::class.java)
+                    val intent = Intent(applicationContext, HomeActivity::class.java)
                     startActivity(intent)
 
                 } else {

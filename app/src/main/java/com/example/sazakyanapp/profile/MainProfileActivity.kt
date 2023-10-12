@@ -14,8 +14,8 @@ class MainProfileActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_profile)
 
-        btnsignup = findViewById(R.id.button)
-        btnlogin = findViewById(R.id.button2)
+        btnsignup = findViewById(R.id.button2)
+        btnlogin = findViewById(R.id.button)
 
         btnsignup.setOnClickListener {
 
