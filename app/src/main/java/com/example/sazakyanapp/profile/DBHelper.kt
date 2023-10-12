@@ -39,7 +39,7 @@ class DBHelper (context: Context) : SQLiteOpenHelper (context, "userData.db", nu
     fun checkuserpass(username : String, password : String) : Boolean {
 
         val p0 = this.writableDatabase
-        val query = "select * from userData.db where username = '$username' and password = '$password'"
+        val query = "select * from userData where username = '$username' and password = '$password'"
         val cursor = p0.rawQuery(query, null)
 
         if (cursor.count <= 0) {
