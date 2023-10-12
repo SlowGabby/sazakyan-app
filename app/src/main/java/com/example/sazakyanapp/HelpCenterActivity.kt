@@ -48,7 +48,7 @@ class HelpCenterActivity : AppCompatActivity() {
 
         helpcenterBackBtn.setOnClickListener {
 
-            startActivity(Intent(this@HelpCenterActivity, MainActivity::class.java))
+            startActivity(Intent(this@HelpCenterActivity, HomeActivity::class.java))
 
         }
     }

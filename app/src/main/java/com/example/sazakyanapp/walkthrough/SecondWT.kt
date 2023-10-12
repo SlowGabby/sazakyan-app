@@ -5,8 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
-import com.example.sazakyanapp.HomeActivity
 import com.example.sazakyanapp.R
+import com.example.sazakyanapp.profile.MainProfileActivity
 
 class SecondWT : AppCompatActivity() {
 
@@ -30,7 +30,7 @@ class SecondWT : AppCompatActivity() {
 
         skipBtn.setOnClickListener {
 
-            startActivity(Intent(this@SecondWT, HomeActivity::class.java))
+            startActivity(Intent(this@SecondWT, MainProfileActivity::class.java))
 
         }
 

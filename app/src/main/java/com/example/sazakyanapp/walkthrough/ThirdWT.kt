@@ -8,6 +8,7 @@ import android.widget.TextView
 import com.example.sazakyanapp.HomeActivity
 import com.example.sazakyanapp.R
 import com.example.sazakyanapp.profile.LoginActivity
+import com.example.sazakyanapp.profile.MainProfileActivity
 import com.example.sazakyanapp.profile.SignupActivity
 
 class ThirdWT : AppCompatActivity() {
@@ -24,34 +25,34 @@ class ThirdWT : AppCompatActivity() {
 
         nextBtn.setOnClickListener {
 
-            startActivity(Intent(this@ThirdWT, LoginActivity::class.java))
+            startActivity(Intent(this@ThirdWT, MainProfileActivity::class.java))
 
         }
 
         skipBtn.setOnClickListener {
 
-            startActivity(Intent(this@ThirdWT, SignupActivity::class.java))
+            startActivity(Intent(this@ThirdWT, MainProfileActivity::class.java))
 
         }
 
-        findViewById<Button>(R.id.btnNext3).setOnClickListener {
-
-            startActivity(Intent(this, HomeActivity::class.java))
-            this@ThirdWT.overridePendingTransition(
-                R.anim.animate_slide_left_enter,
-                R.anim.animate_slide_left_exit
-            )
-        }
-
-        fun onBackPressed() {
-            super.onBackPressed()
-
-            startActivity(Intent(this, SecondWT::class.java))
-            this@ThirdWT.overridePendingTransition(
-                R.anim.animate_fade_enter,
-                R.anim.animate_fade_exit
-            )
-
-        }
+//        findViewById<Button>(R.id.btnNext3).setOnClickListener {
+//
+//            startActivity(Intent(this, HomeActivity::class.java))
+//            this@ThirdWT.overridePendingTransition(
+//                R.anim.animate_slide_left_enter,
+//                R.anim.animate_slide_left_exit
+//            )
+//        }
+//
+//        fun onBackPressed() {
+//            super.onBackPressed()
+//
+//            startActivity(Intent(this, SecondWT::class.java))
+//            this@ThirdWT.overridePendingTransition(
+//                R.anim.animate_fade_enter,
+//                R.anim.animate_fade_exit
+//            )
+//
+//        }
     }
 }
