@@ -4,19 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E5E5E5"
+    android:background="#191A21"
     tools:context=".HomeActivity">
 
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNav"
+    <androidx.drawerlayout.widget.DrawerLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_alignParentBottom="true"
-        android:background="#f2f2f2"
-        app:itemTextColor="@drawable/select"
-        app:itemIconTint="@drawable/select"
-        app:menu="@menu/nav_menu"/>
+        android:layout_height="match_parent"
+        android:id="@+id/drawerLayout">
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:headerLayout="@layout/nav_header"
+            app:menu="@menu/nav_menu"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"/>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+
+
 
     <ScrollView
         android:layout_width="match_parent"
@@ -41,7 +49,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_bold"
                     android:text="Good Morning!"
-                    android:textColor="#0e0e0e"
+                    android:textColor="#f2f2f2"
                     android:textSize="24sp" />
 
                 <TextView
@@ -50,32 +58,13 @@
                     android:text="What are you looking for?"
                     android:fontFamily="@font/poppins"
                     android:textSize="14sp"
-                    android:textColor="#0e0e0e"
-                    android:layout_below="@+id/txtdashboard"/>
+                    android:textColor="#f2f2f2"
+                    android:layout_below="@+id/txtdashboard"
+                    android:layout_marginBottom="50dp"/>
 
 
 
             </RelativeLayout>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="395dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
-                android:layout_marginStart="16dp"
-                app:cardCornerRadius="25dp"
-                app:cardBackgroundColor="#f2f2f2"
-                >
-
-                <androidx.appcompat.widget.SearchView
-                    android:id="@+id/searchView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:queryHint="Search Here"
-                    app:iconifiedByDefault="false"
-                    app:queryBackground="@android:color/transparent"/>
-
-            </androidx.cardview.widget.CardView>
 
 
             <TextView
@@ -84,7 +73,7 @@
                 android:layout_marginStart="20dp"
                 android:fontFamily="@font/poppins_bold"
                 android:text="Browse By Location"
-                android:textColor="#0e0e0e"
+                android:textColor="#f2f2f2"
                 android:textSize="19sp" />
 
 
@@ -246,7 +235,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"
                 android:text="Popular"
-                android:textColor="#0e0e0e"
+                android:textColor="#f2f2f2"
                 android:fontFamily="@font/poppins_bold"
                 android:textSize="18dp"/>
 
@@ -260,14 +249,14 @@
 
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/vios"
+                    android:id="@+id/viosCardView"
                     android:layout_width="wrap_content"
                     android:layout_height="280dp"
                     android:layout_columnWeight="1"
                     android:layout_rowWeight="1"
                     app:cardCornerRadius="12dp"
                     android:layout_margin="12dp"
-                    app:cardBackgroundColor="#f2f2f2">
+                    app:cardBackgroundColor="#191A21">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -275,14 +264,13 @@
                         android:orientation="vertical">
 
 
-
                         <ImageView
                             android:id="@+id/viosImage"
+                            android:background="#353840"
                             android:layout_width="match_parent"
                             android:layout_height="200dp"
                             android:onClick="viosDetail"
-                            android:src="@drawable/vios_bg"
-                            android:scaleType="fitXY"/>
+                            android:src="@drawable/toyotavios" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -290,8 +278,9 @@
                             android:text="Toyota Vios"
                             android:fontFamily="@font/poppins_bold"
                             android:textSize="15sp"
+                            android:layout_marginTop="10dp"
                             android:layout_marginStart="10dp"
-                            android:textColor="#0e0e0e"
+                            android:textColor="#f2f2f2"
                             />
 
                         <TextView
@@ -310,7 +299,7 @@
                             android:layout_marginStart="10dp"
                             android:fontFamily="@font/poppins"
                             android:textSize="8sp"
-                            android:textColor="#0e0e0e" />
+                            android:textColor="#f2f2f2" />
 
 
                     </LinearLayout>
@@ -325,7 +314,7 @@
                     android:layout_rowWeight="1"
                     app:cardCornerRadius="12dp"
                     android:layout_margin="12dp"
-                    app:cardBackgroundColor="#f2f2f2">
+                    app:cardBackgroundColor="#191A21">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -336,11 +325,11 @@
 
                         <ImageView
                             android:id="@+id/raptorImage"
+                            android:background="#353840"
                             android:layout_width="match_parent"
                             android:layout_height="200dp"
                             android:onClick="raptorDetail"
-                            android:src="@drawable/raptor_bg"
-                            android:scaleType="fitXY"/>
+                            android:src="@drawable/toyotahiace" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -348,8 +337,9 @@
                             android:text="Ford Raptor"
                             android:fontFamily="@font/poppins_bold"
                             android:textSize="15sp"
+                            android:layout_marginTop="10dp"
                             android:layout_marginStart="10dp"
-                            android:textColor="#0e0e0e"
+                            android:textColor="#f2f2f2"
                             />
 
                         <TextView
@@ -368,7 +358,7 @@
                             android:layout_marginStart="10dp"
                             android:fontFamily="@font/poppins"
                             android:textSize="8sp"
-                            android:textColor="#0e0e0e" />
+                            android:textColor="#f2f2f2" />
 
 
                     </LinearLayout>
@@ -384,7 +374,7 @@
                     app:cardCornerRadius="12dp"
                     android:layout_margin="12dp"
                     android:layout_marginBottom="20dp"
-                    app:cardBackgroundColor="#f2f2f2">
+                    app:cardBackgroundColor="#191A21">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -395,11 +385,11 @@
 
                         <ImageView
                             android:id="@+id/hiaceImage"
+                            android:background="#353840"
                             android:layout_width="match_parent"
                             android:layout_height="200dp"
                             android:onClick="hiaceDetail"
-                            android:src="@drawable/hiace_bg"
-                            android:scaleType="fitXY"/>
+                            android:src="@drawable/toyotahiace" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -407,8 +397,9 @@
                             android:text="Toyota Hiace"
                             android:fontFamily="@font/poppins_bold"
                             android:textSize="15sp"
+                            android:layout_marginTop="10dp"
                             android:layout_marginStart="10dp"
-                            android:textColor="#0e0e0e"
+                            android:textColor="#f2f2f2"
                             />
 
                         <TextView
@@ -427,7 +418,7 @@
                             android:layout_marginStart="10dp"
                             android:fontFamily="@font/poppins"
                             android:textSize="8sp"
-                            android:textColor="#0e0e0e" />
+                            android:textColor="#f2f2f2" />
 
 
                     </LinearLayout>
@@ -443,7 +434,7 @@
                     app:cardCornerRadius="12dp"
                     android:layout_margin="12dp"
                     android:layout_marginBottom="20dp"
-                    app:cardBackgroundColor="#f2f2f2">
+                    app:cardBackgroundColor="#191A21">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -454,11 +445,11 @@
 
                         <ImageView
                             android:id="@+id/landcruiserImage"
+                            android:background="#353840"
                             android:layout_width="match_parent"
                             android:layout_height="200dp"
                             android:onClick="landcruiserDetail"
-                            android:src="@drawable/landcruiser_bg"
-                            android:scaleType="fitXY"/>
+                            android:src="@drawable/toyota_landcruiser" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -466,8 +457,9 @@
                             android:text="Land Cruiser"
                             android:fontFamily="@font/poppins_bold"
                             android:textSize="15sp"
+                            android:layout_marginTop="10dp"
                             android:layout_marginStart="10dp"
-                            android:textColor="#0e0e0e"
+                            android:textColor="#f2f2f2"
                             />
 
                         <TextView
@@ -486,7 +478,7 @@
                             android:layout_marginStart="10dp"
                             android:fontFamily="@font/poppins"
                             android:textSize="8sp"
-                            android:textColor="#0e0e0e" />
+                            android:textColor="#f2f2f2" />
 
 
                     </LinearLayout>
@@ -502,7 +494,7 @@
                 android:layout_height="wrap_content"
                 android:text="Sazakyan Exclusive Promos"
                 android:textSize="18sp"
-                android:textColor="#0e0e0e"
+                android:textColor="#f2f2f2"
                 android:layout_marginStart="10dp"
                 android:fontFamily="@font/poppins_bold"/>
 
@@ -535,7 +527,7 @@
                     android:layout_height="wrap_content"
                     android:text="Secure payment everytime"
                     android:textSize="15sp"
-                    android:textColor="#0e0e0e"
+                    android:textColor="#f2f2f2"
                     android:fontFamily="@font/poppins_bold"
                     android:layout_marginBottom="200dp"
                     android:layout_marginStart="30dp"
@@ -546,7 +538,7 @@
                     android:layout_height="wrap_content"
                     android:text="We work with GCash, a trusted payment gateway, to keep all payment transactions secure and convenient."
                     android:textSize="15sp"
-                    android:textColor="#0e0e0e"
+                    android:textColor="#f2f2f2"
                     android:fontFamily="@font/poppins"
                     android:layout_marginStart="30dp"
                     android:layout_marginTop="25dp"
@@ -571,7 +563,7 @@
                     android:layout_height="wrap_content"
                     android:text="Easily rent a car"
                     android:textSize="15sp"
-                    android:textColor="#0e0e0e"
+                    android:textColor="#f2f2f2"
                     android:fontFamily="@font/poppins_bold"
                     android:layout_marginBottom="200dp"
                     android:layout_marginStart="30dp"
@@ -582,7 +574,7 @@
                     android:layout_height="match_parent"
                     android:text="Browse through our listing, reserve your vehicle of your choice, and pay within the app."
                     android:textSize="15sp"
-                    android:textColor="#0e0e0e"
+                    android:textColor="#f2f2f2"
                     android:fontFamily="@font/poppins"
                     android:layout_marginStart="30dp"
                     android:layout_marginTop="25dp"
@@ -608,7 +600,7 @@
                     android:layout_height="wrap_content"
                     android:text="Rent from verified drivers"
                     android:textSize="15sp"
-                    android:textColor="#0e0e0e"
+                    android:textColor="#f2f2f2"
                     android:fontFamily="@font/poppins_bold"
                     android:layout_marginBottom="200dp"
                     android:layout_marginStart="30dp"
@@ -619,7 +611,7 @@
                     android:layout_height="wrap_content"
                     android:text="All registered drivers undergo a strict verification process to ensure safe renting of all passengers or users experience within the app."
                     android:textSize="15sp"
-                    android:textColor="#0e0e0e"
+                    android:textColor="#f2f2f2"
                     android:fontFamily="@font/poppins"
                     android:layout_marginStart="30dp"
                     android:layout_marginTop="25dp"
@@ -631,17 +623,43 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/design_default_color_background">
+                android:background="#f2f2f2"
+                android:padding="10dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/needAnyHelp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp"
+                    android:text="Need any help?"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/poppins"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.094"
+                    app:layout_constraintStart_toStartOf="parent" />
 
                 <TextView
                     android:id="@+id/helpCenter"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Need any help? Visit our FAQs"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginBottom="150dp"
-                    android:layout_marginTop="10dp"
-                    android:textAlignment="center"/>
+                    android:layout_marginStart="2dp"
+                    android:text="Visit our FAQs"
+                    android:textAlignment="center"
+                    android:textColor="#182981"
+                    android:fontFamily="@font/poppins"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.013"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/needAnyHelp"
+                    android:layout_marginBottom="30dp"
+                    tools:layout_editor_absoluteY="0dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             </RelativeLayout>
 

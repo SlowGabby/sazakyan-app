@@ -1,12 +1,12 @@
-package com.example.sazakyanapp.foton
+package com.example.sazakyanapp.descriptions
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.sazakyanapp.R
 
-class FotonActivity : AppCompatActivity() {
+class LandcruiserDescription : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_foton)
+        setContentView(R.layout.activity_landcruiser_description)
     }
 }

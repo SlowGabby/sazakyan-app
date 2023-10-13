@@ -45,4 +45,3 @@ class SuvAdapter (var mList : List<SuvData>) : RecyclerView.Adapter<SuvAdapter.S
 
     }
 }
-

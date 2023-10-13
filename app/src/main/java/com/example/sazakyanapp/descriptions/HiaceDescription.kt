@@ -1,12 +1,12 @@
-package com.example.sazakyanapp.hyundai
+package com.example.sazakyanapp.descriptions
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.sazakyanapp.R
 
-class HyundaiActivity : AppCompatActivity() {
+class HiaceDescription : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_hyundai)
+        setContentView(R.layout.activity_hiace_description)
     }
 }

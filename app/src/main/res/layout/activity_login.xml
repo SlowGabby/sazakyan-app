@@ -60,7 +60,7 @@
 
 
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button4"
         android:layout_width="250dp"
         android:layout_height="60dp"
@@ -68,6 +68,7 @@
         android:text="Confirm"
         android:paddingStart="8dp"
         android:textAllCaps="true"
+        android:background="@drawable/getstarted"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

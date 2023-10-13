@@ -1,11 +1,13 @@
-package com.example.sazakyanapp
+package com.example.sazakyanapp.descriptions
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.sazakyanapp.R
 
-class DescriptionActivity : AppCompatActivity() {
+class ViosDescription : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_description)
+        setContentView(R.layout.description_vios)
     }
 }
