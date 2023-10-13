@@ -7,6 +7,6 @@ import com.example.sazakyanapp.R
 class RaptorDescription : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_raptor_description)
+        setContentView(R.layout.description_raptor)
     }
 }

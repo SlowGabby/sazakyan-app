@@ -7,6 +7,6 @@ import com.example.sazakyanapp.R
 class LandcruiserDescription : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_landcruiser_description)
+        setContentView(R.layout.description_landcruiser)
     }
 }

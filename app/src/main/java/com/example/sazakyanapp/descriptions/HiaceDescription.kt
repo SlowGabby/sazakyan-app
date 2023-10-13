@@ -7,6 +7,6 @@ import com.example.sazakyanapp.R
 class HiaceDescription : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_hiace_description)
+        setContentView(R.layout.description_hiace)
     }
 }
