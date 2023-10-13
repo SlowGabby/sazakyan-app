@@ -47,6 +47,10 @@ class SignupActivity : AppCompatActivity() {
                         Toast.makeText(this, "Signup Successful", Toast.LENGTH_SHORT).show()
                         val intent = Intent(applicationContext, LoginActivity::class.java)
                         startActivity(intent)
+                        this@SignupActivity.overridePendingTransition(
+                            R.anim.animate_fade_enter,
+                            R.anim.animate_fade_exit
+                        )
 
                     } else {
 

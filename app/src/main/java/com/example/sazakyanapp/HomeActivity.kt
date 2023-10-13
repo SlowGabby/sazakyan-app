@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -48,6 +49,10 @@ class HomeActivity : AppCompatActivity() {
         findViewById<CardView>(R.id.dagupanOnly).setOnClickListener {
 
             startActivity(Intent(this@HomeActivity, PangasinanActivity::class.java))
+            this@HomeActivity.overridePendingTransition(
+                R.anim.animate_fade_enter,
+                R.anim.animate_fade_exit
+            )
 
         }
 
@@ -56,24 +61,44 @@ class HomeActivity : AppCompatActivity() {
         findViewById<CardView>(R.id.viosCardView).setOnClickListener {
 
             startActivity(Intent(this@HomeActivity, ViosDescription::class.java))
+            this@HomeActivity.overridePendingTransition(
+                R.anim.animate_fade_enter,
+                R.anim.animate_fade_exit
+            )
+
 
         }
 
         findViewById<CardView>(R.id.raptorCardView).setOnClickListener {
 
             startActivity(Intent(this@HomeActivity, RaptorDescription::class.java))
+            this@HomeActivity.overridePendingTransition(
+                R.anim.animate_fade_enter,
+                R.anim.animate_fade_exit
+            )
+
 
         }
 
         findViewById<CardView>(R.id.hiaceCardView).setOnClickListener {
 
             startActivity(Intent(this@HomeActivity, HiaceDescription::class.java))
+            this@HomeActivity.overridePendingTransition(
+                R.anim.animate_fade_enter,
+                R.anim.animate_fade_exit
+            )
+
 
         }
 
         findViewById<CardView>(R.id.landcruiserCardView).setOnClickListener {
 
             startActivity(Intent(this@HomeActivity, LandcruiserDescription::class.java))
+            this@HomeActivity.overridePendingTransition(
+                R.anim.animate_fade_enter,
+                R.anim.animate_fade_exit
+            )
+
 
         }
 
@@ -84,6 +109,11 @@ class HomeActivity : AppCompatActivity() {
         findViewById<TextView>(R.id.helpCenter).setOnClickListener {
 
             startActivity(Intent(this@HomeActivity, HelpCenterActivity::class.java))
+            this@HomeActivity.overridePendingTransition(
+                R.anim.animate_fade_enter,
+                R.anim.animate_fade_exit
+            )
+
 
         }
 

@@ -34,7 +34,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/helpCenterBackBtn"
+            android:id="@+id/viosDescriptionBackBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -202,8 +202,89 @@
 
         </RelativeLayout>
 
+        <RelativeLayout
+            android:id="@+id/relativeVersion"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/viosIcon5"
+            tools:layout_editor_absoluteX="99dp">
+
+            <TextView
+                android:id="@+id/toyotaViosVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/poppins"
+                android:text="2021 Toyota Vios \nWhite Pearl Crystal Shine \nDual VVT-I, 4-Cylinder In-Line \nDOHC 16V EFI"
+                android:textColor="#f2f2f2"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.077"
+                app:layout_constraintStart_toStartOf="parent" />
 
 
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/viosSchedule"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="25dp"
+            app:layout_constraintTop_toBottomOf="@id/relativeVersion">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/calendar"
+                android:layout_marginStart="27dp"
+                />
+
+            <TextView
+                android:id="@+id/schedText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Schedule Availability"
+                android:textSize="14sp"
+                android:textColor="#f2f2f2"
+                android:fontFamily="@font/poppins"
+                android:layout_marginStart="65dp"/>
+
+            <TextView
+                android:id="@+id/schedText2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Available slots are marked in green"
+                android:textSize="12sp"
+                android:textColor="#A9F2F2F2"
+                android:fontFamily="@font/poppins"
+                android:layout_marginStart="65dp"
+                android:layout_marginTop="17dp"/>
+
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/reservationBtn"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Ask for reservation"
+            android:fontFamily="@font/poppins_bold"
+            android:background="@drawable/getstarted"
+            android:textColor="#0e0e0e"
+            android:layout_marginTop="60dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viosSchedule"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/reservationBtn"
+            android:layout_marginTop="30dp"/>
 
 
 

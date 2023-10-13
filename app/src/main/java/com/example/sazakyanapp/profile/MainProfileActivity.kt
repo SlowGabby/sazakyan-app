@@ -21,6 +21,10 @@ class MainProfileActivity : AppCompatActivity() {
 
             val intent = Intent(this@MainProfileActivity, SignupActivity::class.java)
             startActivity(intent)
+            this@MainProfileActivity.overridePendingTransition(
+                R.anim.animate_fade_enter,
+                R.anim.animate_fade_exit
+            )
 
         }
 
@@ -28,6 +32,10 @@ class MainProfileActivity : AppCompatActivity() {
 
             val intent = Intent(this@MainProfileActivity, LoginActivity::class.java)
             startActivity(intent)
+            this@MainProfileActivity.overridePendingTransition(
+                R.anim.animate_fade_enter,
+                R.anim.animate_fade_exit
+            )
 
         }
     }

@@ -31,6 +31,10 @@ class PangasinanActivity : AppCompatActivity() {
         findViewById<ImageView>(R.id.backBtn).setOnClickListener {
 
             startActivity(Intent(this@PangasinanActivity, HomeActivity::class.java))
+            this@PangasinanActivity.overridePendingTransition(
+                R.anim.animate_fade_enter,
+                R.anim.animate_fade_exit
+            )
 
         }
 

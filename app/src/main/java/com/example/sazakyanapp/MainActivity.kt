@@ -28,12 +28,20 @@ class MainActivity : AppCompatActivity() {
         nextBtn.setOnClickListener {
 
             startActivity(Intent(this@MainActivity, SecondWT::class.java))
+            this@MainActivity.overridePendingTransition(
+                R.anim.animate_slide_left_enter,
+                R.anim.animate_slide_left_exit
+            )
 
         }
 
         skipBtn.setOnClickListener {
 
             startActivity(Intent(this@MainActivity, MainProfileActivity::class.java))
+            this@MainActivity.overridePendingTransition(
+                R.anim.animate_slide_left_enter,
+                R.anim.animate_slide_left_exit
+            )
 
         }
 

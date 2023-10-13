@@ -27,6 +27,10 @@ class HelpCenterActivity : AppCompatActivity() {
             val openURL = Intent(android.content.Intent.ACTION_VIEW)
             openURL.data = Uri.parse("https://www.facebook.com/profile.php?id=61551931515185&mibextid=2JQ9oc")
             startActivity(openURL)
+            this@HelpCenterActivity.overridePendingTransition(
+                R.anim.animate_fade_enter,
+                R.anim.animate_fade_exit
+            )
 
         }
 
@@ -35,6 +39,11 @@ class HelpCenterActivity : AppCompatActivity() {
             val openURL = Intent(android.content.Intent.ACTION_VIEW)
             openURL.data = Uri.parse("https://github.com/Rdavee/sazakyan-app")
             startActivity(openURL)
+            this@HelpCenterActivity.overridePendingTransition(
+                R.anim.animate_fade_enter,
+                R.anim.animate_fade_exit
+            )
+
 
         }
 
@@ -43,12 +52,20 @@ class HelpCenterActivity : AppCompatActivity() {
             val openURL = Intent(android.content.Intent.ACTION_VIEW)
             openURL.data = Uri.parse("https://github.com/Rdavee/sazakyan-app")
             startActivity(openURL)
+            this@HelpCenterActivity.overridePendingTransition(
+                R.anim.animate_fade_enter,
+                R.anim.animate_fade_exit
+            )
 
         }
 
         helpcenterBackBtn.setOnClickListener {
 
             startActivity(Intent(this@HelpCenterActivity, HomeActivity::class.java))
+            this@HelpCenterActivity.overridePendingTransition(
+                R.anim.animate_fade_enter,
+                R.anim.animate_fade_exit
+            )
 
         }
     }

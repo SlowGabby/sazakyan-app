@@ -84,6 +84,7 @@
         android:layout_marginTop="50dp"
         android:text="Confirm"
         android:paddingStart="8dp"
+        android:textColor="#0e0e0e"
         android:textAllCaps="true"
         android:background="@drawable/confirm_btn"
         app:layout_constraintEnd_toEndOf="parent"

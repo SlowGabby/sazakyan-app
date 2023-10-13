@@ -36,21 +36,22 @@ class FirstWT : AppCompatActivity() {
 
         findViewById<Button>(R.id.btnNext).setOnClickListener {
 
-            startActivity(Intent(this, SecondWT::class.java))
+            startActivity(Intent(this@FirstWT, SecondWT::class.java))
             this@FirstWT.overridePendingTransition(
-                R.anim.animate_slide_left_enter,
-                R.anim.animate_slide_left_exit
+                R.anim.animate_fade_enter,
+                R.anim.animate_fade_exit
             )
+
+
         }
 
         fun onBackPressed() {
             super.onBackPressed()
 
-            startActivity(Intent(this, FirstWT::class.java))
+            startActivity(Intent(this@FirstWT, FirstWT::class.java))
             this@FirstWT.overridePendingTransition(
                 R.anim.animate_fade_enter,
                 R.anim.animate_fade_exit
-
             )
 
         }

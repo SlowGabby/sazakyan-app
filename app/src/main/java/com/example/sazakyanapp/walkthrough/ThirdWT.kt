@@ -26,12 +26,20 @@ class ThirdWT : AppCompatActivity() {
         nextBtn.setOnClickListener {
 
             startActivity(Intent(this@ThirdWT, MainProfileActivity::class.java))
+            this@ThirdWT.overridePendingTransition(
+                R.anim.animate_slide_left_enter,
+                R.anim.animate_slide_left_exit
+            )
 
         }
 
         skipBtn.setOnClickListener {
 
             startActivity(Intent(this@ThirdWT, MainProfileActivity::class.java))
+            this@ThirdWT.overridePendingTransition(
+                R.anim.animate_slide_left_enter,
+                R.anim.animate_slide_left_exit
+            )
 
         }
 

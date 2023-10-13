@@ -45,6 +45,10 @@ class LoginActivity : AppCompatActivity() {
                     Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show()
                     val intent = Intent(applicationContext, HomeActivity::class.java)
                     startActivity(intent)
+                    this@LoginActivity.overridePendingTransition(
+                        R.anim.animate_fade_enter,
+                        R.anim.animate_fade_exit
+                    )
 
                 } else {
 

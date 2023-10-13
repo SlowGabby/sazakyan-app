@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#191A21"
+    android:background="@drawable/gradient_color_bg2dark"
     tools:context=".HomeActivity">
 
     <androidx.drawerlayout.widget.DrawerLayout
@@ -18,7 +18,7 @@
             android:layout_height="match_parent"
             app:headerLayout="@layout/nav_header"
             app:menu="@menu/nav_menu"
-            android:layout_gravity="start"
+            android:layout_gravity="end"
             android:fitsSystemWindows="true"/>
 
     </androidx.drawerlayout.widget.DrawerLayout>
@@ -269,7 +269,6 @@
                             android:background="#353840"
                             android:layout_width="match_parent"
                             android:layout_height="200dp"
-                            android:onClick="viosDetail"
                             android:src="@drawable/toyotavios" />
 
                         <TextView
