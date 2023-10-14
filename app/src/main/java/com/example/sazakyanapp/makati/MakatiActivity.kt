@@ -1,4 +1,4 @@
-package com.example.sazakyanapp.suv
+package com.example.sazakyanapp.makati
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,16 +9,16 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.sazakyanapp.R
 import java.util.Locale
 
-class SuvActivity : AppCompatActivity() {
+class MakatiActivity : AppCompatActivity() {
 
     private lateinit var recyclerView : RecyclerView
     private lateinit var searchView : SearchView
-    private var mList = ArrayList<SuvData>()
-    private lateinit var adapter : SuvAdapter
+    private var mList = ArrayList<MakatiData>()
+    private lateinit var adapter : MakatiAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_suv)
+        setContentView(R.layout.activity_makati)
 
         recyclerView = findViewById(R.id.recyclerView)
         searchView = findViewById(R.id.searchView)
@@ -27,7 +27,7 @@ class SuvActivity : AppCompatActivity() {
         recyclerView.layoutManager = GridLayoutManager(this, 2)
 
         addDataToList()
-        adapter = SuvAdapter(mList)
+        adapter = MakatiAdapter(mList)
         recyclerView.adapter = adapter
 
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
@@ -54,11 +54,11 @@ class SuvActivity : AppCompatActivity() {
 
         if (query != null) {
 
-            val filteredList = ArrayList<SuvData>()
+            val filteredList = ArrayList<MakatiData>()
 
             for (i in mList) {
 
-                if (i.suvTitle.lowercase(Locale.ROOT).contains(query)) {
+                if (i.vanTitle.lowercase(Locale.ROOT).contains(query)) {
                     filteredList.add(i)
 
                 }
@@ -80,7 +80,8 @@ class SuvActivity : AppCompatActivity() {
 
     private fun addDataToList() {
 
-        mList.add(SuvData("MPG", R.drawable.honda_mpg))
+        mList.add(MakatiData("Hi Ace", R.drawable.toyotahiace))
+
 
     }
 }

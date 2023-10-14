@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" >
+    xmlns:tools="http://schemas.android.com/tools">
 
     <application
         android:allowBackup="true"
@@ -11,9 +11,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SazakyanApp"
-        tools:targetApi="31" >
+        tools:targetApi="31">
         <activity
-            android:name=".ReservationActivity"
+            android:name=".reservations.ReservationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".reservations.LandcruiserReservationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".reservations.RaptorReservationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".reservations.HiaceReservationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".reservations.ViosReservationActivity"
             android:exported="false" />
         <activity
             android:name=".descriptions.ViosDescription"
@@ -40,13 +52,10 @@
             android:name=".HelpCenterActivity"
             android:exported="false" />
         <activity
-            android:name=".suv.SuvActivity"
+            android:name=".vigan.ViganActivity"
             android:exported="false" />
         <activity
-            android:name=".vans.VansAdapter"
-            android:exported="false" />
-        <activity
-            android:name=".vans.VansActivity"
+            android:name=".makati.MakatiActivity"
             android:exported="false" />
         <activity
             android:name=".walkthrough.VeryFirstWT"
@@ -69,7 +78,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.App.SplashScreen" >
+            android:theme="@style/Theme.App.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

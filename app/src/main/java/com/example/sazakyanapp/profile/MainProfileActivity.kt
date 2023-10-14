@@ -8,16 +8,16 @@ import com.example.sazakyanapp.R
 
 class MainProfileActivity : AppCompatActivity() {
 
-    private lateinit var btnsignup : Button
-    private lateinit var btnlogin : Button
+    private lateinit var signupButton : Button
+    private lateinit var loginButton : Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_profile)
 
-        btnsignup = findViewById(R.id.button2)
-        btnlogin = findViewById(R.id.button)
+        signupButton = findViewById(R.id.button2)
+        loginButton = findViewById(R.id.button)
 
-        btnsignup.setOnClickListener {
+        signupButton.setOnClickListener {
 
             val intent = Intent(this@MainProfileActivity, SignupActivity::class.java)
             startActivity(intent)
@@ -28,7 +28,7 @@ class MainProfileActivity : AppCompatActivity() {
 
         }
 
-        btnlogin.setOnClickListener {
+        loginButton.setOnClickListener {
 
             val intent = Intent(this@MainProfileActivity, LoginActivity::class.java)
             startActivity(intent)

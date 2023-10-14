@@ -1,4 +1,4 @@
-package com.example.sazakyanapp.vans
+package com.example.sazakyanapp.makati
 
 import android.view.LayoutInflater
 import android.view.View
@@ -8,26 +8,26 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.sazakyanapp.R
 
-class VansAdapter (var mList : List<VansData>) : RecyclerView.Adapter<VansAdapter.VansViewHolder>() {
+class MakatiAdapter (var mList : List<MakatiData>) : RecyclerView.Adapter<MakatiAdapter.MakatiViewHolder>() {
 
-    inner class VansViewHolder (itemView : View) : RecyclerView.ViewHolder(itemView) {
+    inner class MakatiViewHolder (itemView : View) : RecyclerView.ViewHolder(itemView) {
 
         val image : ImageView = itemView.findViewById(R.id.iv_images)
         val tvCars : TextView = itemView.findViewById(R.id.tv_cars)
 
     }
 
-    fun setFilteredList(mList : List<VansData>) {
+    fun setFilteredList(mList : List<MakatiData>) {
 
         this.mList = mList
         notifyDataSetChanged()
 
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VansViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MakatiViewHolder {
 
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.vans, parent, false)
-        return VansViewHolder(view)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.makati, parent, false)
+        return MakatiViewHolder(view)
 
     }
 
@@ -37,7 +37,7 @@ class VansAdapter (var mList : List<VansData>) : RecyclerView.Adapter<VansAdapte
 
     }
 
-    override fun onBindViewHolder(holder: VansViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: MakatiViewHolder, position: Int) {
 
         holder.image.setImageResource(mList[position].vanImages)
         holder.tvCars.text = mList[position].vanTitle

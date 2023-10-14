@@ -5,7 +5,7 @@ import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 
-class DBHelper (context: Context) : SQLiteOpenHelper (context, "userData.db", null, 1){
+class Database (context: Context) : SQLiteOpenHelper (context, "profile.db", null, 1) {
     override fun onCreate(p0: SQLiteDatabase?) {
 
         p0?.execSQL("create table userData (username TEXT primary key, password TEXT)")
@@ -18,7 +18,7 @@ class DBHelper (context: Context) : SQLiteOpenHelper (context, "userData.db", nu
 
     }
 
-    fun insertdata(username : String, password : String) : Boolean {
+    fun insertdata(username: String, password: String): Boolean {
 
         val p0 = this.writableDatabase
         val cv = ContentValues()
@@ -36,7 +36,7 @@ class DBHelper (context: Context) : SQLiteOpenHelper (context, "userData.db", nu
 
     }
 
-    fun checkuserpass(username : String, password : String) : Boolean {
+    fun checkuserpass(username: String, password: String): Boolean {
 
         val p0 = this.writableDatabase
         val query = "select * from userData where username = '$username' and password = '$password'"

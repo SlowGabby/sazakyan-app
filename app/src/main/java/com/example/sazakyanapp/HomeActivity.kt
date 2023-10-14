@@ -23,8 +23,7 @@ import com.google.android.material.navigation.NavigationView
 class HomeActivity : AppCompatActivity() {
 
     private lateinit var imageSlider : ImageSlider
-    private lateinit var drawerLayout: DrawerLayout
-    private lateinit var toggle: ActionBarDrawerToggle
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -102,8 +101,6 @@ class HomeActivity : AppCompatActivity() {
 
         }
 
-
-
 //        HELP CENTER OR FAQS
 
         findViewById<TextView>(R.id.helpCenter).setOnClickListener {
@@ -113,44 +110,6 @@ class HomeActivity : AppCompatActivity() {
                 R.anim.animate_fade_enter,
                 R.anim.animate_fade_exit
             )
-
-
         }
-
-
-//        NAVIGATION DRAWER TODO: NEED TO FIX THIS NAVIGATION DJHASHDHSDHSJDAS
-
-        drawerLayout = findViewById<DrawerLayout>(R.id.drawerLayout)
-        val navView : NavigationView = findViewById(R.id.nav_view)
-
-        toggle = ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close)
-        drawerLayout.addDrawerListener(toggle)
-        toggle.syncState()
-
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
-        navView.setNavigationItemSelectedListener {
-
-            when(it.itemId) {
-
-                R.id.nav_home -> Toast.makeText(applicationContext, "Clicked Home", Toast.LENGTH_SHORT).show()
-                R.id.nav_map -> Toast.makeText(applicationContext, "Clicked Map", Toast.LENGTH_SHORT).show()
-                R.id.nav_settings -> Toast.makeText(applicationContext, "Clicked Settings", Toast.LENGTH_SHORT).show()
-                R.id.nav_login -> Toast.makeText(applicationContext, "Clicked login", Toast.LENGTH_SHORT).show()
-                R.id.nav_chat -> Toast.makeText(applicationContext, "Clicked Chat", Toast.LENGTH_SHORT).show()
-                R.id.nav_rate_us -> Toast.makeText(applicationContext, "Clicked Rate Us", Toast.LENGTH_SHORT).show()
-                R.id.nav_share -> Toast.makeText(applicationContext, "Clicked Share", Toast.LENGTH_SHORT).show()
-            }
-            true
-        }
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-
-        if (toggle.onOptionsItemSelected(item)) {
-            return true
-        }
-
-        return super.onOptionsItemSelected(item)
     }
 }

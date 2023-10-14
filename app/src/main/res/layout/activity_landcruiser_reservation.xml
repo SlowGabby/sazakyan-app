@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_color_bg2dark"
-    tools:context=".reservations.ReservationActivity">
+    tools:context=".reservations.LandcruiserReservationActivity">
 
     <ImageView
         android:id="@+id/reservationBackBtn"

@@ -1,4 +1,4 @@
-package com.example.sazakyanapp.vans
+package com.example.sazakyanapp.vigan
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,16 +9,16 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.sazakyanapp.R
 import java.util.Locale
 
-class VansActivity : AppCompatActivity() {
+class ViganActivity : AppCompatActivity() {
 
     private lateinit var recyclerView : RecyclerView
     private lateinit var searchView : SearchView
-    private var mList = ArrayList<VansData>()
-    private lateinit var adapter : VansAdapter
+    private var mList = ArrayList<ViganData>()
+    private lateinit var adapter : ViganAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_vans)
+        setContentView(R.layout.activity_vigan)
 
         recyclerView = findViewById(R.id.recyclerView)
         searchView = findViewById(R.id.searchView)
@@ -27,7 +27,7 @@ class VansActivity : AppCompatActivity() {
         recyclerView.layoutManager = GridLayoutManager(this, 2)
 
         addDataToList()
-        adapter = VansAdapter(mList)
+        adapter = ViganAdapter(mList)
         recyclerView.adapter = adapter
 
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
@@ -54,11 +54,11 @@ class VansActivity : AppCompatActivity() {
 
         if (query != null) {
 
-            val filteredList = ArrayList<VansData>()
+            val filteredList = ArrayList<ViganData>()
 
             for (i in mList) {
 
-                if (i.vanTitle.lowercase(Locale.ROOT).contains(query)) {
+                if (i.suvTitle.lowercase(Locale.ROOT).contains(query)) {
                     filteredList.add(i)
 
                 }
@@ -80,8 +80,7 @@ class VansActivity : AppCompatActivity() {
 
     private fun addDataToList() {
 
-        mList.add(VansData("Hi Ace", R.drawable.toyotahiace))
-
+        mList.add(ViganData("MPG", R.drawable.honda_mpg))
 
     }
 }

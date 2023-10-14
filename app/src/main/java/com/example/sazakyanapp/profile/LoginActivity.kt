@@ -6,17 +6,18 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import com.example.sazakyanapp.HomeActivity
-import com.example.sazakyanapp.MainActivity
 import com.example.sazakyanapp.R
+
 
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var loginBtn : Button
     private lateinit var editUser : EditText
     private lateinit var editPassword : EditText
-    private lateinit var databaseHelper : DBHelper
+    private lateinit var databaseHelper : Database
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,21 +26,21 @@ class LoginActivity : AppCompatActivity() {
         loginBtn = findViewById(R.id.button4)
         editUser = findViewById(R.id.editTextPersonName2)
         editPassword = findViewById(R.id.editTextPassword3)
-        databaseHelper = DBHelper(this)
+        databaseHelper = Database(this)
 
         loginBtn.setOnClickListener {
 
-            val useredtx = editUser.text.toString()
-            val passedtx = editPassword.text.toString()
+            val insertedUser = editUser.text.toString()
+            val insertedPass = editPassword.text.toString()
 
 
-            if (TextUtils.isEmpty(useredtx) || TextUtils.isEmpty(passedtx)) {
+            if (TextUtils.isEmpty(insertedUser) || TextUtils.isEmpty(insertedPass)) {
 
                 Toast.makeText(this, "Add Username & Password!", Toast.LENGTH_SHORT).show()
 
             } else {
 
-                val checkUser = databaseHelper.checkuserpass(useredtx, passedtx)
+                val checkUser = databaseHelper.checkuserpass(insertedUser, insertedPass)
                 if (checkUser == true) {
 
                     Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show()
@@ -56,6 +57,16 @@ class LoginActivity : AppCompatActivity() {
 
                 }
             }
+        }
+
+        findViewById<TextView>(R.id.signupRedirect).setOnClickListener {
+
+            startActivity(Intent(this@LoginActivity, SignupActivity::class.java))
+            this@LoginActivity.overridePendingTransition(
+                R.anim.animate_fade_enter,
+                R.anim.animate_fade_exit
+            )
+
         }
     }
 }

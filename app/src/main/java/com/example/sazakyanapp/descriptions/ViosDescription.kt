@@ -7,7 +7,7 @@ import android.widget.Button
 import android.widget.ImageView
 import com.example.sazakyanapp.HomeActivity
 import com.example.sazakyanapp.R
-import com.example.sazakyanapp.ReservationActivity
+import com.example.sazakyanapp.reservations.ReservationActivity
 
 class ViosDescription : AppCompatActivity() {
 

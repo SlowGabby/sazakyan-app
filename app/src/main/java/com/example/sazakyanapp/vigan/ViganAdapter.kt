@@ -1,4 +1,4 @@
-package com.example.sazakyanapp.suv
+package com.example.sazakyanapp.vigan
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,28 +7,27 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.sazakyanapp.R
-import com.example.sazakyanapp.suv.SuvData
 
-class SuvAdapter (var mList : List<SuvData>) : RecyclerView.Adapter<SuvAdapter.SuvViewHolder>() {
+class ViganAdapter (var mList : List<ViganData>) : RecyclerView.Adapter<ViganAdapter.ViganViewHolder>() {
 
-    inner class SuvViewHolder (itemView : View) : RecyclerView.ViewHolder(itemView) {
+    inner class ViganViewHolder (itemView : View) : RecyclerView.ViewHolder(itemView) {
 
         val suvImage : ImageView = itemView.findViewById(R.id.iv_images)
         val tvSuv : TextView = itemView.findViewById(R.id.tv_cars)
 
     }
 
-    fun setFilteredList(mList : List<SuvData>) {
+    fun setFilteredList(mList : List<ViganData>) {
 
         this.mList = mList
         notifyDataSetChanged()
 
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SuvViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViganViewHolder {
 
         val view = LayoutInflater.from(parent.context).inflate(R.layout.cars, parent, false)
-        return SuvViewHolder(view)
+        return ViganViewHolder(view)
 
     }
 
@@ -38,7 +37,7 @@ class SuvAdapter (var mList : List<SuvData>) : RecyclerView.Adapter<SuvAdapter.S
 
     }
 
-    override fun onBindViewHolder(holder: SuvViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViganViewHolder, position: Int) {
 
         holder.suvImage.setImageResource(mList[position].suvImages)
         holder.tvSuv.text = mList[position].suvTitle

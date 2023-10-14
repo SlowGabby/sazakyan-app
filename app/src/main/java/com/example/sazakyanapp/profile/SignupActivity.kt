@@ -14,7 +14,7 @@ class SignupActivity : AppCompatActivity() {
     private lateinit var username : EditText
     private lateinit var password : EditText
     private lateinit var checkPassword : EditText
-    private lateinit var database : DBHelper
+    private lateinit var database : Database
     private lateinit var signupBtn : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,22 +25,22 @@ class SignupActivity : AppCompatActivity() {
         password = findViewById(R.id.editTextPassword)
         checkPassword = findViewById(R.id.editTextPassword2)
         signupBtn = findViewById(R.id.button3)
-        database = DBHelper(this)
+        database = Database(this)
 
         signupBtn.setOnClickListener {
 
-            val userNameText = username.text.toString()
-            val passwordText = password.text.toString()
-            val checkPasswordText = checkPassword.text.toString()
-            val saveData = database.insertdata(userNameText, passwordText)
+            val signupUser = username.text.toString()
+            val signupPassword = password.text.toString()
+            val signupCpassword = checkPassword.text.toString()
+            val saveData = database.insertdata(signupUser, signupPassword)
 
-            if (TextUtils.isEmpty(userNameText) || TextUtils.isEmpty(passwordText) || TextUtils.isEmpty(checkPasswordText)) {
+            if (TextUtils.isEmpty(signupUser) || TextUtils.isEmpty(signupPassword) || TextUtils.isEmpty(signupCpassword)) {
 
                 Toast.makeText(this, "Add Username, Password & Confirm Password", Toast.LENGTH_SHORT).show()
 
             } else {
 
-                if (passwordText.equals(checkPasswordText)) {
+                if (signupPassword.equals(signupCpassword)) {
 
                     if (saveData == true) {
 
@@ -54,9 +54,10 @@ class SignupActivity : AppCompatActivity() {
 
                     } else {
 
-                        Toast.makeText(this, "User Exists", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "User Exists!", Toast.LENGTH_SHORT).show()
 
                     }
+
                 } else {
 
                     Toast.makeText(this, "Wrong Password!", Toast.LENGTH_SHORT).show()
