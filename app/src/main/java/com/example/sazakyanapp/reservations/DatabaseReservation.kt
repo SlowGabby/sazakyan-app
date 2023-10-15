@@ -16,19 +16,17 @@ class DatabaseReservation (context: Context) : SQLiteOpenHelper(context, "reserv
 
     }
 
-    fun insertReservationData(selectedCar: String): Boolean {
+    fun insertReservationData(selectedCar: String, pickUp : String, dropOff : String, pickUpLocation : String, dropOffLocation : String): Boolean {
 
         val p0 = this.writableDatabase
         val cv = ContentValues()
-        lateinit var pickUp: String
-        lateinit var dropOff: String
-        lateinit var pickUpLocation: String
-        lateinit var dropOffLocation: String
+
         cv.put("selectedCar", selectedCar)
         cv.put("PickUp", pickUp)
         cv.put("DropOff", dropOff)
         cv.put("PickUpLocation", pickUpLocation)
         cv.put("DropOffLocation", dropOffLocation)
+
         val result = p0.insert("reservation", null, cv)
 
         if (result == -1.toLong()) {
@@ -54,4 +52,6 @@ class DatabaseReservation (context: Context) : SQLiteOpenHelper(context, "reserv
         cursor.close()
         return true
     }
+
+
 }

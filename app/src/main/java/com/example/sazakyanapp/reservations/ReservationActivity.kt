@@ -38,20 +38,24 @@ class ReservationActivity : AppCompatActivity() {
             val dropDate = dropOffDate.text.toString()
             val pickLocation = pickUpLocation.text.toString()
             val dropLocation = dropOffLocation.text.toString()
-            val saveData = database.insertReservationData(reserveCar)
 
             if (TextUtils.isEmpty(reserveCar) || TextUtils.isEmpty(pickDate) || TextUtils.isEmpty(dropDate) || TextUtils.isEmpty(pickLocation) || TextUtils.isEmpty(dropLocation)) {
                 Toast.makeText(this, "Enter all the required credentials", Toast.LENGTH_SHORT).show()
-            }
-            else {
-                if (saveData) {
+            } else {
+
+                val saveData = database.insertReservationData(reserveCar, pickDate, dropDate, pickLocation, dropLocation)
+
+                if (saveData == true) {
+
                     Toast.makeText(this, "Reservation Successful", Toast.LENGTH_SHORT).show()
+
                 } else {
+
                     Toast.makeText(this, "Car Model already booked", Toast.LENGTH_SHORT).show()
                 }
             }
         }
 
-        
+
     }
 }
