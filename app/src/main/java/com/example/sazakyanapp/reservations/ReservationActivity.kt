@@ -18,6 +18,7 @@ class ReservationActivity : AppCompatActivity() {
     private lateinit var dropOffLocation : EditText
     private lateinit var submitButton: Button
     private lateinit var database : DatabaseReservation
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_reservation)
@@ -31,6 +32,7 @@ class ReservationActivity : AppCompatActivity() {
         database = DatabaseReservation(this)
 
         submitButton.setOnClickListener {
+
             val reserveCar = carModel.text.toString()
             val pickDate = pickUpDate.text.toString()
             val dropDate = dropOffDate.text.toString()
