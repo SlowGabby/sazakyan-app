@@ -4,6 +4,7 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import androidx.core.content.contentValuesOf
 
 class Database (context: Context) : SQLiteOpenHelper (context, "profile.db", null, 1) {
     override fun onCreate(p0: SQLiteDatabase?) {
@@ -52,4 +53,5 @@ class Database (context: Context) : SQLiteOpenHelper (context, "profile.db", nul
         return true
 
     }
+
 }
