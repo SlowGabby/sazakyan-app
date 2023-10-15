@@ -21,7 +21,6 @@ class HiaceDescription : AppCompatActivity() {
                 R.anim.animate_fade_enter,
                 R.anim.animate_fade_exit
             )
-
         }
 
         findViewById<Button>(R.id.reservationBtn).setOnClickListener {
@@ -31,7 +30,6 @@ class HiaceDescription : AppCompatActivity() {
                 R.anim.animate_fade_enter,
                 R.anim.animate_fade_exit
             )
-
         }
     }
 }

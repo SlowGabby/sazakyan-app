@@ -1,4 +1,4 @@
-package com.example.sazakyanapp.makati
+package com.example.sazakyanapp.manila
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,6 +7,8 @@ import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.sazakyanapp.R
+import com.example.sazakyanapp.makati.ManilaAdapter
+import com.example.sazakyanapp.makati.ManilaData
 import java.util.Locale
 
 class ManilaActivity : AppCompatActivity() {

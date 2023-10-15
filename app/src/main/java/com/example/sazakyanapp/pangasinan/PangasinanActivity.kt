@@ -103,6 +103,7 @@ class PangasinanActivity : AppCompatActivity() {
     private fun addDataToList() {
 
         mList.add(PangasinanData("Vios", R.drawable.toyotavios))
+        mList.add(PangasinanData("Vios 2", R.drawable.hiace_bg))
         mList.add(PangasinanData("Hiace", R.drawable.toyotahiace))
         mList.add(PangasinanData("Land Cruiser", R.drawable.toyota_landcruiser))
         mList.add(PangasinanData("Jazz", R.drawable.honda_jazz))

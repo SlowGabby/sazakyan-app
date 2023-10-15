@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.ImageView
 import com.example.sazakyanapp.HomeActivity
 import com.example.sazakyanapp.R
+import com.example.sazakyanapp.reservations.RaptorReservationActivity
 import com.example.sazakyanapp.reservations.ReservationActivity
 
 class RaptorDescription : AppCompatActivity() {
@@ -26,12 +27,11 @@ class RaptorDescription : AppCompatActivity() {
 
         findViewById<Button>(R.id.reservationBtn).setOnClickListener {
 
-            startActivity(Intent(this@RaptorDescription, ReservationActivity::class.java))
+            startActivity(Intent(this@RaptorDescription, RaptorReservationActivity::class.java))
             this@RaptorDescription.overridePendingTransition(
                 R.anim.animate_fade_enter,
                 R.anim.animate_fade_exit
             )
-
         }
     }
 }

@@ -91,6 +91,7 @@
                             app:cardBackgroundColor="#f2f2f2">
 
                             <ImageView
+                                android:id="@+id/makatiImage"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:background="@drawable/makati_bg"/>
@@ -122,6 +123,7 @@
                             app:cardBackgroundColor="#f2f2f2">
 
                             <ImageView
+                                android:id="@+id/manilaImage"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:background="@drawable/manila_bg"/>
@@ -153,6 +155,7 @@
                             app:cardBackgroundColor="#f2f2f2">
 
                             <ImageView
+                                android:id="@+id/viganImage"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:background="@drawable/vigan_bg"/>
@@ -309,12 +312,12 @@
                             android:layout_width="match_parent"
                             android:layout_height="200dp"
                             android:onClick="raptorDetail"
-                            android:src="@drawable/toyotahiace" />
+                            android:src="@drawable/toyota_hilux" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Ford Raptor"
+                            android:text="Toyota Hilux"
                             android:fontFamily="@font/poppins_bold"
                             android:textSize="15sp"
                             android:layout_marginTop="10dp"

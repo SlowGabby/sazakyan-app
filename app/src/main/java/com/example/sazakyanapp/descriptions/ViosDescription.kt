@@ -8,6 +8,7 @@ import android.widget.ImageView
 import com.example.sazakyanapp.HomeActivity
 import com.example.sazakyanapp.R
 import com.example.sazakyanapp.reservations.ReservationActivity
+import com.example.sazakyanapp.reservations.ViosReservationActivity
 
 class ViosDescription : AppCompatActivity() {
 
@@ -28,12 +29,11 @@ class ViosDescription : AppCompatActivity() {
 
         findViewById<Button>(R.id.reservationBtn).setOnClickListener {
 
-            startActivity(Intent(this@ViosDescription, ReservationActivity::class.java))
+            startActivity(Intent(this@ViosDescription, ViosReservationActivity::class.java))
             this@ViosDescription.overridePendingTransition(
                 R.anim.animate_fade_enter,
                 R.anim.animate_fade_exit
             )
-
         }
 
     }

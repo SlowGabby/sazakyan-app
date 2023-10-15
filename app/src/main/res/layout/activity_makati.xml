@@ -4,36 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_walkthrough"
+    android:background="#f2f2f2"
     tools:context=".makati.MakatiActivity">
 
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
-        android:layout_marginTop="32dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="20dp">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_arrow_back_ios_24"
+            android:layout_marginTop="45dp"
+            android:layout_marginStart="10dp"/>
 
         <TextView
-            android:layout_marginTop="20dp"
             android:id="@+id/txtCarSection"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/alfa_slab_one"
-            android:text="@string/car_section"
-            android:textColor="#f2f2f2"
-            android:textSize="24sp" />
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="42dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Vehicles in Makati"
+            android:textColor="#0e0e0e"
+            android:textSize="20sp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/available_cars"
-            android:fontFamily="@font/poppins"
-            android:textSize="14sp"
-            android:textColor="#f2f2f2"
-            android:layout_below="@+id/txtCarSection"/>
 
     </RelativeLayout>
 
@@ -44,7 +45,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:cardCornerRadius="8dp"
-        app:cardElevation="8dp"
+        app:strokeColor="#f2f2f2"
+        app:cardBackgroundColor="#BABABA"
         app:cardUseCompatPadding="true"
         app:layout_constraintTop_toBottomOf="@id/relativeLayout"
         app:layout_constraintHorizontal_bias="0.5">

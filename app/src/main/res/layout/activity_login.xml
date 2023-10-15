@@ -11,7 +11,7 @@
         android:id="@+id/TextView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="80dp"
         android:text="Login"
         android:textSize="50sp"
         android:textColor="@color/primary_font_color"
@@ -40,6 +40,44 @@
         app:layout_constraintTop_toBottomOf="@+id/TextView3"/>
 
     <EditText
+        android:id="@+id/editTextEmail2"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:hint="Email"
+        android:textColorHint="#FFFFFF"
+        android:textColor="@color/primary_font_color"
+        android:textSize="17sp"
+        android:fontFamily="@font/poppins"
+        android:background="@drawable/et_bg"
+        android:paddingStart="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPersonName2"/>
+
+    <EditText
+        android:id="@+id/editContactNumber2"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:hint="Contact Number"
+        android:textColorHint="#FFFFFF"
+        android:textColor="@color/primary_font_color"
+        android:textSize="17sp"
+        android:fontFamily="@font/poppins"
+        android:background="@drawable/et_bg"
+        android:paddingStart="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmail2"/>
+
+    <EditText
         android:id="@+id/editTextPassword3"
         android:layout_width="300dp"
         android:layout_height="60dp"
@@ -56,7 +94,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPersonName2" />
+        app:layout_constraintTop_toBottomOf="@+id/editContactNumber2" />
 
 
 
