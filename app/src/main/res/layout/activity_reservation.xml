@@ -40,7 +40,7 @@
         android:ems="10"
         android:fontFamily="@font/poppins"
         android:hint="Car Model"
-        android:inputType="date"
+        android:inputType="text"
         android:paddingStart="15dp"
         android:textColor="@color/primary_font_color"
         android:textColorHint="#FFFFFF"

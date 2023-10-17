@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_color_bg2dark"
+    tools:context=".ReceiptActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_marginTop="30dp"
+            android:id="@+id/receiptLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Receipt"
+            android:textColor="#f2f2f2"
+            android:gravity="center"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/carName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:textColor="#f2f2f2"
+            android:fontFamily="@font/poppins"
+            android:layout_marginTop="70dp"
+            android:layout_marginStart="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/receiptLabel"
+            />
+
+        <TextView
+            android:id="@+id/datePicked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:textColor="#f2f2f2"
+            android:fontFamily="@font/poppins"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="35dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/carName"
+            />
+
+        <TextView
+            android:id="@+id/dateDrop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:textColor="#f2f2f2"
+            android:fontFamily="@font/poppins"
+            android:layout_marginTop="35dp"
+            android:layout_marginStart="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/datePicked"
+            />
+
+        <TextView
+            android:id="@+id/locPick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:textColor="#f2f2f2"
+            android:fontFamily="@font/poppins"
+            android:layout_marginTop="35dp"
+            android:layout_marginStart="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dateDrop"
+            />
+
+        <TextView
+            android:id="@+id/locDrop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:textColor="#f2f2f2"
+            android:fontFamily="@font/poppins"
+            android:layout_marginTop="35dp"
+            android:layout_marginStart="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/locPick"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</RelativeLayout>

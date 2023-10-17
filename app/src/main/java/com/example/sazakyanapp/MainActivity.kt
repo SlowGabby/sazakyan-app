@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var skipBtn : TextView
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var toggle: ActionBarDrawerToggle
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -39,7 +40,6 @@ class MainActivity : AppCompatActivity() {
         toggle = ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close)
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
-
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         navView.setNavigationItemSelectedListener {
@@ -54,16 +54,21 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_rate_us -> Toast.makeText(applicationContext, "Clicked Rate Us", Toast.LENGTH_SHORT).show()
                 R.id.nav_share -> Toast.makeText(applicationContext, "Clicked Share", Toast.LENGTH_SHORT).show()
             }
+
             true
+
         }
 
         fun onOptionsItemSelected(item: MenuItem): Boolean {
 
             if (toggle.onOptionsItemSelected(item)) {
+
                 return true
+
             }
 
             return super.onOptionsItemSelected(item)
+
         }
 
         nextBtn.setOnClickListener {
@@ -73,7 +78,6 @@ class MainActivity : AppCompatActivity() {
                 R.anim.animate_slide_left_enter,
                 R.anim.animate_slide_left_exit
             )
-
         }
 
         skipBtn.setOnClickListener {
@@ -83,12 +87,6 @@ class MainActivity : AppCompatActivity() {
                 R.anim.animate_slide_left_enter,
                 R.anim.animate_slide_left_exit
             )
-
         }
-
-
     }
-
-
-
 }

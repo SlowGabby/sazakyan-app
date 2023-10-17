@@ -81,6 +81,7 @@ class ViganActivity : AppCompatActivity() {
     private fun addDataToList() {
 
         mList.add(ViganData("MPG", R.drawable.honda_mpg))
+        mList.add(ViganData("Jazz", R.drawable.honda_jazz))
 
     }
 }

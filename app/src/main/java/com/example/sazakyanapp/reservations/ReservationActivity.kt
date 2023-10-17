@@ -1,5 +1,6 @@
 package com.example.sazakyanapp.reservations
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
@@ -7,6 +8,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import com.example.sazakyanapp.R
+import com.example.sazakyanapp.ReceiptActivity
 
 
 class ReservationActivity : AppCompatActivity() {
@@ -31,6 +33,11 @@ class ReservationActivity : AppCompatActivity() {
         submitButton = findViewById(R.id.button4)
         database = DatabaseReservation(this)
 
+        findViewById<Button>(R.id.button4).setOnClickListener {
+
+
+        }
+
         submitButton.setOnClickListener {
 
             val reserveCar = carModel.text.toString()
@@ -47,15 +54,16 @@ class ReservationActivity : AppCompatActivity() {
 
                 if (saveData == true) {
 
+
                     Toast.makeText(this, "Reservation Successful", Toast.LENGTH_SHORT).show()
+
 
                 } else {
 
                     Toast.makeText(this, "Car Model already booked", Toast.LENGTH_SHORT).show()
+
                 }
             }
         }
-
-
     }
 }
