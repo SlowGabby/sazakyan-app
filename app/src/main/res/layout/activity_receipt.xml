@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_color_bg2dark"
+    android:background="#191A19"
     tools:context=".ReceiptActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -20,6 +20,7 @@
             android:textColor="#f2f2f2"
             android:gravity="center"
             android:textSize="30sp"
+            android:fontFamily="@font/poppins"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
@@ -31,7 +32,7 @@
             android:textSize="22sp"
             android:textColor="#f2f2f2"
             android:fontFamily="@font/poppins"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="90dp"
             android:layout_marginStart="50dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/receiptLabel"
@@ -45,7 +46,7 @@
             android:textColor="#f2f2f2"
             android:fontFamily="@font/poppins"
             android:layout_marginStart="50dp"
-            android:layout_marginTop="35dp"
+            android:layout_marginTop="40dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/carName"
             />
@@ -57,7 +58,7 @@
             android:textSize="22sp"
             android:textColor="#f2f2f2"
             android:fontFamily="@font/poppins"
-            android:layout_marginTop="35dp"
+            android:layout_marginTop="40dp"
             android:layout_marginStart="50dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/datePicked"
@@ -70,7 +71,7 @@
             android:textSize="22sp"
             android:textColor="#f2f2f2"
             android:fontFamily="@font/poppins"
-            android:layout_marginTop="35dp"
+            android:layout_marginTop="40dp"
             android:layout_marginStart="50dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/dateDrop"
@@ -83,7 +84,7 @@
             android:textSize="22sp"
             android:textColor="#f2f2f2"
             android:fontFamily="@font/poppins"
-            android:layout_marginTop="35dp"
+            android:layout_marginTop="40dp"
             android:layout_marginStart="50dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/locPick"

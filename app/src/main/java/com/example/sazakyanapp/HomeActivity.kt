@@ -119,9 +119,10 @@ class HomeActivity : AppCompatActivity() {
         imageSlider = findViewById(R.id.imageSlider)
 
         val imagesList = ArrayList<SlideModel>()
-        imagesList.add(SlideModel(R.drawable.first_promo))
-        imagesList.add(SlideModel(R.drawable.promo_bg))
-        imagesList.add(SlideModel(R.drawable.me))
+
+        imagesList.add(SlideModel(R.drawable.promo_one))
+        imagesList.add(SlideModel(R.drawable.promo_one))
+        imagesList.add(SlideModel(R.drawable.promo_one))
 
         imageSlider.setImageList(imagesList, ScaleTypes.CENTER_INSIDE)
 

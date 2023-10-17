@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_color_bg2dark"
+    android:background="#1A2030"
     tools:context=".HomeActivity">
 
     <ScrollView
@@ -240,7 +240,7 @@
                     android:layout_rowWeight="1"
                     app:cardCornerRadius="12dp"
                     android:layout_margin="12dp"
-                    app:cardBackgroundColor="#191A21">
+                    app:cardBackgroundColor="#1F334C">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -250,7 +250,7 @@
 
                         <ImageView
                             android:id="@+id/viosImage"
-                            android:background="#353840"
+                            android:background="#1F334C"
                             android:layout_width="match_parent"
                             android:layout_height="200dp"
                             android:src="@drawable/toyotavios" />
@@ -263,7 +263,7 @@
                             android:textSize="15sp"
                             android:layout_marginTop="10dp"
                             android:layout_marginStart="10dp"
-                            android:textColor="#f2f2f2"
+                            android:textColor="#00FF4C"
                             />
 
                         <TextView
@@ -273,7 +273,7 @@
                             android:fontFamily="@font/poppins"
                             android:layout_marginStart="10dp"
                             android:textSize="10sp"
-                            android:textColor="#182981" />
+                            android:textColor="#f2f2f2" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -297,7 +297,7 @@
                     android:layout_rowWeight="1"
                     app:cardCornerRadius="12dp"
                     android:layout_margin="12dp"
-                    app:cardBackgroundColor="#191A21">
+                    app:cardBackgroundColor="#1F334C">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -308,7 +308,7 @@
 
                         <ImageView
                             android:id="@+id/raptorImage"
-                            android:background="#353840"
+                            android:background="#1F334C"
                             android:layout_width="match_parent"
                             android:layout_height="200dp"
                             android:onClick="raptorDetail"
@@ -322,7 +322,7 @@
                             android:textSize="15sp"
                             android:layout_marginTop="10dp"
                             android:layout_marginStart="10dp"
-                            android:textColor="#f2f2f2"
+                            android:textColor="#00FF4C"
                             />
 
                         <TextView
@@ -332,7 +332,7 @@
                             android:fontFamily="@font/poppins"
                             android:layout_marginStart="10dp"
                             android:textSize="10sp"
-                            android:textColor="#182981" />
+                            android:textColor="#f2f2f2" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -357,7 +357,7 @@
                     app:cardCornerRadius="12dp"
                     android:layout_margin="12dp"
                     android:layout_marginBottom="20dp"
-                    app:cardBackgroundColor="#191A21">
+                    app:cardBackgroundColor="#1F334C">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -368,7 +368,7 @@
 
                         <ImageView
                             android:id="@+id/hiaceImage"
-                            android:background="#353840"
+                            android:background="#1F334C"
                             android:layout_width="match_parent"
                             android:layout_height="200dp"
                             android:onClick="hiaceDetail"
@@ -382,7 +382,7 @@
                             android:textSize="15sp"
                             android:layout_marginTop="10dp"
                             android:layout_marginStart="10dp"
-                            android:textColor="#f2f2f2"
+                            android:textColor="#00FF4C"
                             />
 
                         <TextView
@@ -392,7 +392,7 @@
                             android:fontFamily="@font/poppins"
                             android:layout_marginStart="10dp"
                             android:textSize="10sp"
-                            android:textColor="#182981" />
+                            android:textColor="#f2f2f2" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -417,7 +417,7 @@
                     app:cardCornerRadius="12dp"
                     android:layout_margin="12dp"
                     android:layout_marginBottom="20dp"
-                    app:cardBackgroundColor="#191A21">
+                    app:cardBackgroundColor="#1F334C">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -428,7 +428,7 @@
 
                         <ImageView
                             android:id="@+id/landcruiserImage"
-                            android:background="#353840"
+                            android:background="#1F334C"
                             android:layout_width="match_parent"
                             android:layout_height="200dp"
                             android:onClick="landcruiserDetail"
@@ -442,7 +442,7 @@
                             android:textSize="15sp"
                             android:layout_marginTop="10dp"
                             android:layout_marginStart="10dp"
-                            android:textColor="#f2f2f2"
+                            android:textColor="#00FF4C"
                             />
 
                         <TextView
@@ -452,7 +452,7 @@
                             android:fontFamily="@font/poppins"
                             android:layout_marginStart="10dp"
                             android:textSize="10sp"
-                            android:textColor="#182981" />
+                            android:textColor="#f2f2f2" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -502,7 +502,7 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/baseline_shield_24"/>
+                    android:src="@drawable/secure"/>
 
                 <TextView
                     android:id="@+id/firstText"
@@ -510,7 +510,7 @@
                     android:layout_height="wrap_content"
                     android:text="Secure payment everytime"
                     android:textSize="15sp"
-                    android:textColor="#f2f2f2"
+                    android:textColor="#00FF4C"
                     android:fontFamily="@font/poppins_bold"
                     android:layout_marginBottom="200dp"
                     android:layout_marginStart="30dp"
@@ -538,7 +538,7 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/baseline_calendar_month_24"/>
+                    android:src="@drawable/calendar"/>
 
                 <TextView
                     android:id="@+id/secondText"
@@ -546,7 +546,7 @@
                     android:layout_height="wrap_content"
                     android:text="Easily rent a car"
                     android:textSize="15sp"
-                    android:textColor="#f2f2f2"
+                    android:textColor="#00FF4C"
                     android:fontFamily="@font/poppins_bold"
                     android:layout_marginBottom="200dp"
                     android:layout_marginStart="30dp"
@@ -575,7 +575,7 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/baseline_vpn_key_24"/>
+                    android:src="@drawable/key"/>
 
                 <TextView
                     android:id="@+id/thirdText"
@@ -583,7 +583,7 @@
                     android:layout_height="wrap_content"
                     android:text="Rent from verified drivers"
                     android:textSize="15sp"
-                    android:textColor="#f2f2f2"
+                    android:textColor="#00FF4C"
                     android:fontFamily="@font/poppins_bold"
                     android:layout_marginBottom="200dp"
                     android:layout_marginStart="30dp"
@@ -606,7 +606,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#f2f2f2"
+                android:background="#1F334C"
                 android:padding="10dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -621,6 +621,7 @@
                     android:text="Need any help?"
                     android:textAlignment="center"
                     android:fontFamily="@font/poppins"
+                    android:textColor="#f2f2f2"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.094"
@@ -633,7 +634,7 @@
                     android:layout_marginStart="2dp"
                     android:text="Visit our FAQs"
                     android:textAlignment="center"
-                    android:textColor="#182981"
+                    android:textColor="#00FF4C"
                     android:fontFamily="@font/poppins"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.013"

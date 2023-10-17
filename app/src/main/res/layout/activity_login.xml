@@ -4,27 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_rental3"
+    android:background="#1A2030"
     tools:context=".profile.LoginActivity">
 
     <TextView
         android:id="@+id/TextView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:text="Login"
-        android:textSize="50sp"
-        android:textColor="@color/primary_font_color"
+        android:layout_marginTop="64dp"
         android:fontFamily="@font/poppins_bold"
+        android:text="Login"
+        android:textColor="#00FF4C"
+        android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTextPersonName2"
         android:layout_width="300dp"
         android:layout_height="60dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="45dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:hint="Name"
@@ -100,13 +101,15 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button4"
-        android:layout_width="250dp"
+        android:layout_width="255dp"
         android:layout_height="60dp"
         android:layout_marginTop="50dp"
         android:text="Confirm"
         android:paddingStart="8dp"
-        android:textColor="#0e0e0e"
-        android:textAllCaps="true"
+        android:textColor="#f2f2f2"
+        android:textAllCaps="false"
+        android:textAlignment="center"
+        android:gravity="center"
         android:background="@drawable/getstarted"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

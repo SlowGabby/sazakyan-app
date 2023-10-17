@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_color_bg2dark"
+    android:background="#1A2030"
     tools:context=".walkthrough.ThirdWT">
 
 
@@ -16,11 +16,10 @@
         android:layout_marginTop="104dp"
         android:fontFamily="@font/alfa_slab_one"
         android:lineHeight="35sp"
-        android:text="Car and time Availability?"
+        android:text="Your Road to Freedom"
         android:textAlignment="center"
-        android:textColor="#f2f2f2"
+        android:textColor="#00FF4C"
         android:textSize="40sp"
-        android:textStyle="italic"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -30,7 +29,7 @@
         android:layout_height="111dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/poppins"
-        android:text=" we open the door for you can ride with us anytime and anywhere, exposing different models of the two famous cars; honda, and toyota."
+        android:text="Experience the freedom to drive your dream car whenever you want with our car rental service. We make it easy to find, book, and enjoy!"
         android:textAlignment="center"
         android:textColor="#f2f2f2"
         android:textSize="19sp"
@@ -57,7 +56,7 @@
         android:fontFamily="@font/poppins_bold"
         android:text="Next"
         android:textAllCaps="false"
-        android:textColor="#0e0e0e"
+        android:textColor="#f2f2f2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
