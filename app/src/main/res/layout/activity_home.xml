@@ -263,7 +263,7 @@
                             android:textSize="15sp"
                             android:layout_marginTop="10dp"
                             android:layout_marginStart="10dp"
-                            android:textColor="#00FF4C"
+                            android:textColor="#00FFD9"
                             />
 
                         <TextView
@@ -322,7 +322,7 @@
                             android:textSize="15sp"
                             android:layout_marginTop="10dp"
                             android:layout_marginStart="10dp"
-                            android:textColor="#00FF4C"
+                            android:textColor="#00FFD9"
                             />
 
                         <TextView
@@ -382,7 +382,7 @@
                             android:textSize="15sp"
                             android:layout_marginTop="10dp"
                             android:layout_marginStart="10dp"
-                            android:textColor="#00FF4C"
+                            android:textColor="#00FFD9"
                             />
 
                         <TextView
@@ -442,7 +442,7 @@
                             android:textSize="15sp"
                             android:layout_marginTop="10dp"
                             android:layout_marginStart="10dp"
-                            android:textColor="#00FF4C"
+                            android:textColor="#00FFD9"
                             />
 
                         <TextView
@@ -510,7 +510,7 @@
                     android:layout_height="wrap_content"
                     android:text="Secure payment everytime"
                     android:textSize="15sp"
-                    android:textColor="#00FF4C"
+                    android:textColor="#00FFD9"
                     android:fontFamily="@font/poppins_bold"
                     android:layout_marginBottom="200dp"
                     android:layout_marginStart="30dp"
@@ -538,7 +538,7 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/calendar"/>
+                    android:src="@drawable/calendar_aqua"/>
 
                 <TextView
                     android:id="@+id/secondText"
@@ -546,7 +546,7 @@
                     android:layout_height="wrap_content"
                     android:text="Easily rent a car"
                     android:textSize="15sp"
-                    android:textColor="#00FF4C"
+                    android:textColor="#00FFD9"
                     android:fontFamily="@font/poppins_bold"
                     android:layout_marginBottom="200dp"
                     android:layout_marginStart="30dp"
@@ -583,7 +583,7 @@
                     android:layout_height="wrap_content"
                     android:text="Rent from verified drivers"
                     android:textSize="15sp"
-                    android:textColor="#00FF4C"
+                    android:textColor="#00FFD9"
                     android:fontFamily="@font/poppins_bold"
                     android:layout_marginBottom="200dp"
                     android:layout_marginStart="30dp"
@@ -634,7 +634,7 @@
                     android:layout_marginStart="2dp"
                     android:text="Visit our FAQs"
                     android:textAlignment="center"
-                    android:textColor="#00FF4C"
+                    android:textColor="#00FFD9"
                     android:fontFamily="@font/poppins"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.013"

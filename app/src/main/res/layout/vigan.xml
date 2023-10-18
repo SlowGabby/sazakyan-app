@@ -5,6 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="8dp"
     app:cardUseCompatPadding="true"
+    android:background="#1A2030"
     android:layout_marginHorizontal="8dp"
     app:cardElevation="12dp">
 
@@ -12,6 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="8dp"
+        android:background="#1F334C"
         android:orientation="vertical">
 
         <ImageView
@@ -27,8 +29,8 @@
             android:layout_height="match_parent"
             android:text="SUV"
             android:textSize="13sp"
-            android:fontFamily="@font/poppins"
-            android:textColor="#0e0e0e"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="#00FFD9"
             android:textAlignment="center"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"

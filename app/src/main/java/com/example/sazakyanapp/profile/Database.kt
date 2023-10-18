@@ -9,7 +9,7 @@ import androidx.core.content.contentValuesOf
 class Database (context: Context) : SQLiteOpenHelper (context, "profile.db", null, 1) {
     override fun onCreate(p0: SQLiteDatabase?) {
 
-        p0?.execSQL("create table userData (username TEXT primary key, password TEXT)")
+        p0?.execSQL("create table userData (username TEXT primary key, password TEXT, email TEXT, contact INT)")
 
     }
 
@@ -19,12 +19,14 @@ class Database (context: Context) : SQLiteOpenHelper (context, "profile.db", nul
 
     }
 
-    fun insertdata(username: String, password: String): Boolean {
+    fun insertdata(username: String, password: String, email: String, contact: String): Boolean {
 
         val p0 = this.writableDatabase
         val cv = ContentValues()
         cv.put("username", username)
         cv.put("password", password)
+        cv.put("email", email)
+        cv.put("contact", contact)
         val result = p0.insert("userData", null, cv)
 
         if (result == -1.toLong()) {
@@ -37,16 +39,17 @@ class Database (context: Context) : SQLiteOpenHelper (context, "profile.db", nul
 
     }
 
-    fun checkuserpass(username: String, password: String): Boolean {
+    fun checkuserpass(username: String, password: String, email: String, contact: String): Boolean {
 
         val p0 = this.writableDatabase
-        val query = "select * from userData where username = '$username' and password = '$password'"
+        val query = "select * from userData where username = '$username' and password = '$password' and email = '$email' and contact = '$contact'"
         val cursor = p0.rawQuery(query, null)
 
         if (cursor.count <= 0) {
 
             cursor.close()
             return false
+
         }
 
         cursor.close()

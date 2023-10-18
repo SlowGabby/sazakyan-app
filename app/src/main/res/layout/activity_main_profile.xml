@@ -7,16 +7,18 @@
     android:background="#1A2030"
     tools:context=".profile.MainProfileActivity">
 
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="313dp"
         android:layout_height="152dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="68dp"
         android:fontFamily="@font/alfa_slab_one"
         android:lineHeight="60sp"
         android:text="Sazakyan\nRental App"
-        android:textColor="#00FF4C"
+        android:textAlignment="center"
+        android:textColor="#00FFD9"
         android:textSize="50sp"
         android:textStyle="italic"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,14 +29,14 @@
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/poppins"
         android:text="Rent an affordable car for you travel\nwhenever you want with your device"
         android:textColor="#f2f2f2"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textView" />
-
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button"

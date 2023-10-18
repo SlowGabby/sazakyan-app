@@ -22,7 +22,7 @@
             android:lineHeight="39sp"
             android:text="Looking for an cheap rental within Dagupan?"
             android:textAlignment="center"
-            android:textColor="#00FF4C"
+            android:textColor="#00FFD9"
             android:textSize="33sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

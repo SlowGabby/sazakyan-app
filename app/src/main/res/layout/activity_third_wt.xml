@@ -18,7 +18,7 @@
         android:lineHeight="35sp"
         android:text="Your Road to Freedom"
         android:textAlignment="center"
-        android:textColor="#00FF4C"
+        android:textColor="#00FFD9"
         android:textSize="40sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

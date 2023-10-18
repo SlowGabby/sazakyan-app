@@ -14,7 +14,7 @@
         android:layout_marginTop="64dp"
         android:fontFamily="@font/poppins_bold"
         android:text="Login"
-        android:textColor="#00FF4C"
+        android:textColor="#00FFD9"
         android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#191A19"
+    android:background="#1A2030"
     tools:context=".ReceiptActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -20,7 +20,7 @@
             android:textColor="#f2f2f2"
             android:gravity="center"
             android:textSize="30sp"
-            android:fontFamily="@font/poppins"
+            android:fontFamily="@font/poppins_bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>

@@ -14,7 +14,7 @@
         android:layout_marginTop="52dp"
         android:fontFamily="@font/poppins_bold"
         android:text="Sign Up"
-        android:textColor="#00FF4C"
+        android:textColor="#00FFD9"
         android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

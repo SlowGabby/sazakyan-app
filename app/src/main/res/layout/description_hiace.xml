@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_color_bg2dark"
+    android:background="#1A2030"
     tools:context=".descriptions.HiaceDescription">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -65,7 +65,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_bold"
             android:text="₱4,500 / day"
-            android:textColor="#2548FF"
+            android:textColor="#00FFD9"
             android:textSize="19sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.077"
@@ -187,7 +187,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/verify"
+                android:src="@drawable/check"
                 android:layout_marginStart="17dp"
                 />
 
@@ -237,7 +237,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/calendar"
+                android:src="@drawable/calendar_aqua"
                 android:layout_marginStart="27dp"
                 />
 
@@ -272,7 +272,7 @@
             android:text="Ask for reservation"
             android:fontFamily="@font/poppins_bold"
             android:background="@drawable/getstarted"
-            android:textColor="#0e0e0e"
+            android:textColor="#f2f2f2"
             android:layout_marginTop="60dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
