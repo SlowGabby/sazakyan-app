@@ -10,13 +10,14 @@ import android.widget.TextView
 import android.widget.Toast
 import com.example.sazakyanapp.HomeActivity
 import com.example.sazakyanapp.R
+import com.google.android.material.textfield.TextInputEditText
 
 
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var loginBtn : Button
-    private lateinit var editUser : EditText
-    private lateinit var editPassword : EditText
+    private lateinit var editUser : TextInputEditText
+    private lateinit var editPassword : TextInputEditText
     private lateinit var databaseHelper : Database
 
     override fun onCreate(savedInstanceState: Bundle?) {
