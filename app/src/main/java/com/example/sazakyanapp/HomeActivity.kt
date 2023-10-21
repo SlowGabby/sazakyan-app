@@ -22,6 +22,7 @@ import com.example.sazakyanapp.descriptions.ViosDescription
 import com.example.sazakyanapp.makati.MakatiActivity
 import com.example.sazakyanapp.manila.ManilaActivity
 import com.example.sazakyanapp.pangasinan.PangasinanActivity
+import com.example.sazakyanapp.profile.Database
 import com.example.sazakyanapp.profile.LoginActivity
 import com.example.sazakyanapp.vigan.ViganActivity
 import com.google.android.material.navigation.NavigationView
@@ -31,6 +32,7 @@ class HomeActivity : AppCompatActivity() {
     private lateinit var imageSlider : ImageSlider
     private lateinit var drawerLayout : DrawerLayout
     private lateinit var toggle : ActionBarDrawerToggle
+    private lateinit var database : Database
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,6 +47,12 @@ class HomeActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val artDialogBuilder = AlertDialog.Builder(this)
+        val insertedUser = intent.getStringExtra("username")
+        val insertedPass = intent.getStringExtra("password")
+        val insertEmail = intent.getStringExtra("email")
+        val insertContact = intent.getStringExtra("contact")
+
+        database = Database(this)
 
         navView.setNavigationItemSelectedListener {
 
@@ -71,6 +79,7 @@ class HomeActivity : AppCompatActivity() {
                 }
 
                 R.id.nav_edit_user -> {
+
                     val intent = Intent(this@HomeActivity, EditActivity::class.java)
                     startActivity(intent)
                     this@HomeActivity.overridePendingTransition(
@@ -81,14 +90,40 @@ class HomeActivity : AppCompatActivity() {
                 }
 
                 R.id.nav_delete_user -> {
-                    val intent = Intent(this@HomeActivity, DeleteActivity::class.java)
-                    startActivity(intent)
-                    this@HomeActivity.overridePendingTransition(
-                        R.anim.animate_fade_enter,
-                        R.anim.animate_fade_exit
-                    )
+
+                    artDialogBuilder.setTitle("Delete")
+                    artDialogBuilder.setMessage("Are you sure you want to delete your account?")
+                    artDialogBuilder.setCancelable(false)
+                    artDialogBuilder.setPositiveButton("Yes") {_, _ ->
+                        database.deleteUser(insertedUser.toString())
+
+                        val intent = Intent(this@HomeActivity, LoginActivity::class.java)
+                        startActivity(intent)
+                        this@HomeActivity.overridePendingTransition(
+                            R.anim.animate_fade_enter,
+                            R.anim.animate_fade_exit
+                        )
+
+                    }
+
+                    artDialogBuilder.setNegativeButton("No") {_, _ ->
+
+                    }
+
+                    val alertDialogBox = artDialogBuilder.create()
+                    alertDialogBox.show()
+
                     finish()
+
                 }
+
+
+
+
+
+
+
+
 
                 R.id.nav_logout -> {
 

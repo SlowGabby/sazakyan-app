@@ -14,6 +14,8 @@ class SignupActivity : AppCompatActivity() {
     private lateinit var username : EditText
     private lateinit var password : EditText
     private lateinit var checkPassword : EditText
+    private lateinit var email : EditText
+    private lateinit var contact : EditText
     private lateinit var database : Database
     private lateinit var signupBtn : Button
 
@@ -25,6 +27,8 @@ class SignupActivity : AppCompatActivity() {
         password = findViewById(R.id.editTextPassword)
         checkPassword = findViewById(R.id.editTextPassword2)
         signupBtn = findViewById(R.id.button3)
+        email = findViewById(R.id.editTextEmail)
+        contact = findViewById(R.id.editTextContactNumber)
         database = Database(this)
 
         signupBtn.setOnClickListener {
@@ -32,7 +36,9 @@ class SignupActivity : AppCompatActivity() {
             val signupUser = username.text.toString()
             val signupPassword = password.text.toString()
             val signupCpassword = checkPassword.text.toString()
-            val saveData = database.insertdata(signupUser, signupPassword)
+            val signupEmail = email.text.toString()
+            val signupContact = contact.text.toString()
+            val saveData = database.insertdata(signupUser, signupPassword, signupEmail, signupContact)
 
             if (TextUtils.isEmpty(signupUser) || TextUtils.isEmpty(signupPassword) || TextUtils.isEmpty(signupCpassword)) {
 

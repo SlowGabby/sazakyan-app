@@ -58,22 +58,6 @@ class ViosReservationActivity : AppCompatActivity() {
             val pickLocation = pickUpLocation.text.toString()
             val dropLocation = dropOffLocation.text.toString()
 
-            artDialogBuilder.setTitle("Reservation Confirm")
-            artDialogBuilder.setMessage("Are you sure you want to reserve this car?")
-            artDialogBuilder.setCancelable(false)
-            artDialogBuilder.setPositiveButton("Yes") { _, _ ->
-                startActivity(Intent(this@ViosReservationActivity, HomeActivity::class.java))
-                finish()
-
-            }
-
-            artDialogBuilder.setNegativeButton("No") { _, _ ->
-
-            }
-
-            val alertDialogBox = artDialogBuilder.create()
-            alertDialogBox.show()
-
 
             if (TextUtils.isEmpty(pickDate) || TextUtils.isEmpty(
                     dropDate
@@ -99,11 +83,26 @@ class ViosReservationActivity : AppCompatActivity() {
                     intent.putExtra("pickup", pickUpLocation.text.toString())
                     intent.putExtra("dropOff", dropOffLocation.text.toString())
 
-                    startActivity(intent)
+                    artDialogBuilder.setTitle("Reservation Confirm")
+                    artDialogBuilder.setMessage("Are you sure you want to reserve this car?")
+                    artDialogBuilder.setCancelable(false)
+                    artDialogBuilder.setPositiveButton("Yes") { _, _ ->
+
+                        startActivity(Intent(this@ViosReservationActivity, HomeActivity::class.java))
+
+                    }
+
+                    artDialogBuilder.setNegativeButton("No") { _, _ ->
+
+                    }
+
                     this@ViosReservationActivity.overridePendingTransition(
                         R.anim.animate_fade_enter,
                         R.anim.animate_fade_exit
                     )
+
+                    val alertDialogBox = artDialogBuilder.create()
+                    alertDialogBox.show()
 
                     Toast.makeText(this, "Reservation Successful", Toast.LENGTH_SHORT).show()
 

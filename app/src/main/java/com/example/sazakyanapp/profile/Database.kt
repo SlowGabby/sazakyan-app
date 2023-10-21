@@ -9,7 +9,7 @@ import androidx.core.content.contentValuesOf
 class Database (context: Context) : SQLiteOpenHelper (context, "profile.db", null, 1) {
     override fun onCreate(p0: SQLiteDatabase?) {
 
-        p0?.execSQL("create table userData (username TEXT primary key, password TEXT)")
+        p0?.execSQL("create table userData (username TEXT primary key, password TEXT, email TEXT, contact TEXT)")
 
     }
 
@@ -19,12 +19,14 @@ class Database (context: Context) : SQLiteOpenHelper (context, "profile.db", nul
 
     }
 
-    fun insertdata(username: String, password: String): Boolean {
+    fun insertdata(username: String, password: String, email : String, contact : String): Boolean {
 
         val p0 = this.writableDatabase
         val cv = ContentValues()
         cv.put("username", username)
         cv.put("password", password)
+        cv.put("email", email)
+        cv.put("contact", contact)
         val result = p0.insert("userData", null, cv)
 
         if (result == -1.toLong()) {
@@ -37,7 +39,7 @@ class Database (context: Context) : SQLiteOpenHelper (context, "profile.db", nul
 
     }
 
-    fun checkuserpass(username: String, password: String): Boolean {
+    fun checkuserpass(username: String, password: String, email : String, contact : String): Boolean {
 
         val p0 = this.writableDatabase
         val query = "select * from userData where username = '$username' and password = '$password'"
@@ -54,4 +56,20 @@ class Database (context: Context) : SQLiteOpenHelper (context, "profile.db", nul
 
     }
 
+    fun deleteUser(username : String) {
+        val p0 = this.writableDatabase
+        p0.delete("userData", "username=?", arrayOf(username))
+        p0.close()
+
+    }
+
+    fun updateData( newPassword: String, username: String){
+        val db = this.writableDatabase
+        val values = ContentValues()
+
+        values.put("password", newPassword)
+        db.update("userData", values, "username=?" , arrayOf(username))
+        db.close()
+    }
 }
+
