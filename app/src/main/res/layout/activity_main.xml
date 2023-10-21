@@ -20,7 +20,7 @@
             android:layout_marginTop="104dp"
             android:fontFamily="@font/alfa_slab_one"
             android:lineHeight="39sp"
-            android:text="Looking for an cheap rental within Dagupan?"
+            android:text="Looking for a cheap rental within Dagupan?"
             android:textAlignment="center"
             android:textColor="#00FFD9"
             android:textSize="33sp"
