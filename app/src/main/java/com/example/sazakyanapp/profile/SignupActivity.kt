@@ -13,8 +13,6 @@ class SignupActivity : AppCompatActivity() {
 
     private lateinit var username : EditText
     private lateinit var password : EditText
-    private lateinit var email : EditText
-    private lateinit var contact : EditText
     private lateinit var checkPassword : EditText
     private lateinit var database : Database
     private lateinit var signupBtn : Button
@@ -25,8 +23,6 @@ class SignupActivity : AppCompatActivity() {
 
         username = findViewById(R.id.editTextPersonName)
         password = findViewById(R.id.editTextPassword)
-        email = findViewById(R.id.editTextEmail)
-        contact = findViewById(R.id.editTextContactNumber)
         checkPassword = findViewById(R.id.editTextPassword2)
         signupBtn = findViewById(R.id.button3)
         database = Database(this)
@@ -35,12 +31,10 @@ class SignupActivity : AppCompatActivity() {
 
             val signupUser = username.text.toString()
             val signupPassword = password.text.toString()
-            val signupEmail = email.text.toString()
-            val signupContact = contact.text.toString()
             val signupCpassword = checkPassword.text.toString()
-            val saveData = database.insertdata(signupUser, signupPassword, signupEmail, signupContact)
+            val saveData = database.insertdata(signupUser, signupPassword)
 
-            if (TextUtils.isEmpty(signupUser) || TextUtils.isEmpty(signupPassword) || TextUtils.isEmpty(signupCpassword) || TextUtils.isEmpty(signupEmail) || TextUtils.isEmpty(signupContact)) {
+            if (TextUtils.isEmpty(signupUser) || TextUtils.isEmpty(signupPassword) || TextUtils.isEmpty(signupCpassword)) {
 
                 Toast.makeText(this, "Add Username, Password & Confirm Password", Toast.LENGTH_SHORT).show()
 
