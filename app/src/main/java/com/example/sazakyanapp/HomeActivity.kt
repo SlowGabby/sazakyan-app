@@ -1,6 +1,7 @@
 package com.example.sazakyanapp
 
 import android.content.Intent
+import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
@@ -26,18 +27,16 @@ import com.google.android.material.navigation.NavigationView
 class HomeActivity : AppCompatActivity() {
 
     private lateinit var imageSlider : ImageSlider
-    private lateinit var drawerLayout: DrawerLayout
-    private lateinit var toggle: ActionBarDrawerToggle
+    private lateinit var drawerLayout : DrawerLayout
+    private lateinit var toggle : ActionBarDrawerToggle
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_home)
 
-
         drawerLayout = findViewById<DrawerLayout>(R.id.drawerLayout)
         val navView : NavigationView = findViewById(R.id.nav_view)
-
         toggle = ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close)
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
@@ -47,10 +46,51 @@ class HomeActivity : AppCompatActivity() {
 
             when(it.itemId) {
 
-                R.id.nav_home -> Toast.makeText(applicationContext, "Clicked Home", Toast.LENGTH_SHORT).show()
-                R.id.nav_settings -> Toast.makeText(applicationContext, "Clicked Settings", Toast.LENGTH_SHORT).show()
-                R.id.nav_rate_us -> Toast.makeText(applicationContext, "Clicked Rate Us", Toast.LENGTH_SHORT).show()
-                R.id.nav_share -> Toast.makeText(applicationContext, "Clicked Share", Toast.LENGTH_SHORT).show()
+                R.id.nav_home -> {
+                    val intent = Intent(this@HomeActivity, HomeActivity::class.java)
+                    startActivity(intent)
+                    this@HomeActivity.overridePendingTransition(
+                        R.anim.animate_fade_enter,
+                        R.anim.animate_fade_exit
+                    )
+                    finish()
+                }
+
+                R.id.nav_history-> {
+                    val intent = Intent(this@HomeActivity, HistoryActivity::class.java)
+                    startActivity(intent)
+                    this@HomeActivity.overridePendingTransition(
+                        R.anim.animate_fade_enter,
+                        R.anim.animate_fade_exit
+                    )
+                    finish()
+                }
+
+                R.id.nav_edit_user -> {
+                    val intent = Intent(this@HomeActivity, EditActivity::class.java)
+                    startActivity(intent)
+                    this@HomeActivity.overridePendingTransition(
+                        R.anim.animate_fade_enter,
+                        R.anim.animate_fade_exit
+                    )
+                    finish()
+                }
+
+                R.id.nav_delete_user -> {
+                    val intent = Intent(this@HomeActivity, DeleteActivity::class.java)
+                    startActivity(intent)
+                    this@HomeActivity.overridePendingTransition(
+                        R.anim.animate_fade_enter,
+                        R.anim.animate_fade_exit
+                    )
+                    finish()
+
+                }
+
+                R.id.nav_share -> {
+
+
+                }
             }
 
             true
