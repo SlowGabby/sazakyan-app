@@ -9,6 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AlertDialog
 import androidx.cardview.widget.CardView
 import androidx.drawerlayout.widget.DrawerLayout
 import com.denzcoskun.imageslider.ImageSlider
@@ -21,6 +22,7 @@ import com.example.sazakyanapp.descriptions.ViosDescription
 import com.example.sazakyanapp.makati.MakatiActivity
 import com.example.sazakyanapp.manila.ManilaActivity
 import com.example.sazakyanapp.pangasinan.PangasinanActivity
+import com.example.sazakyanapp.profile.LoginActivity
 import com.example.sazakyanapp.vigan.ViganActivity
 import com.google.android.material.navigation.NavigationView
 
@@ -41,6 +43,8 @@ class HomeActivity : AppCompatActivity() {
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        val artDialogBuilder = AlertDialog.Builder(this)
 
         navView.setNavigationItemSelectedListener {
 
@@ -84,11 +88,25 @@ class HomeActivity : AppCompatActivity() {
                         R.anim.animate_fade_exit
                     )
                     finish()
-
                 }
 
-                R.id.nav_share -> {
+                R.id.nav_logout -> {
 
+                    artDialogBuilder.setTitle("Log Out")
+                    artDialogBuilder.setMessage("Are you sure you want to sign out?")
+                    artDialogBuilder.setCancelable(false)
+                    artDialogBuilder.setPositiveButton("Yes") { _, _ ->
+                        startActivity(Intent(this@HomeActivity, LoginActivity::class.java))
+                        finish()
+
+                    }
+
+                    artDialogBuilder.setNegativeButton("No") { _, _ ->
+
+                    }
+
+                    val alertDialogBox = artDialogBuilder.create()
+                    alertDialogBox.show()
 
                 }
             }

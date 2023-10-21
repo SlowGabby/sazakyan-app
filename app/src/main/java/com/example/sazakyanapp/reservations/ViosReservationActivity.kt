@@ -9,11 +9,13 @@ import android.widget.CalendarView
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import com.example.sazakyanapp.HomeActivity
 import com.example.sazakyanapp.R
 import com.example.sazakyanapp.ReceiptActivity
 import com.example.sazakyanapp.descriptions.RaptorDescription
 import com.example.sazakyanapp.descriptions.ViosDescription
+import com.example.sazakyanapp.profile.LoginActivity
 
 
 class ViosReservationActivity : AppCompatActivity() {
@@ -29,7 +31,7 @@ class ViosReservationActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_vios_reservation)
 
-
+        val artDialogBuilder = AlertDialog.Builder(this)
 
         pickUpDate = findViewById(R.id.editTextPickUpDate)
         dropOffDate = findViewById(R.id.editTextDropOffDate)
@@ -42,6 +44,7 @@ class ViosReservationActivity : AppCompatActivity() {
         findViewById<ImageView>(R.id.reservationBackBtn).setOnClickListener {
 
             startActivity(Intent(this@ViosReservationActivity, ViosDescription::class.java))
+
             this@ViosReservationActivity.overridePendingTransition(
                 R.anim.animate_fade_enter,
                 R.anim.animate_fade_exit
@@ -54,6 +57,22 @@ class ViosReservationActivity : AppCompatActivity() {
             val dropDate = dropOffDate.text.toString()
             val pickLocation = pickUpLocation.text.toString()
             val dropLocation = dropOffLocation.text.toString()
+
+            artDialogBuilder.setTitle("Reservation Confirm")
+            artDialogBuilder.setMessage("Are you sure you want to reserve this car?")
+            artDialogBuilder.setCancelable(false)
+            artDialogBuilder.setPositiveButton("Yes") { _, _ ->
+                startActivity(Intent(this@ViosReservationActivity, HomeActivity::class.java))
+                finish()
+
+            }
+
+            artDialogBuilder.setNegativeButton("No") { _, _ ->
+
+            }
+
+            val alertDialogBox = artDialogBuilder.create()
+            alertDialogBox.show()
 
 
             if (TextUtils.isEmpty(pickDate) || TextUtils.isEmpty(
