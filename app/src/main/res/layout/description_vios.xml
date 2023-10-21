@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:fontFamily="@font/poppins"
+            android:fontFamily="@font/inter"
             android:textColor="#f2f2f2"
             android:textSize="22sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -48,7 +48,7 @@
             android:id="@+id/toyotaVios"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins"
+            android:fontFamily="@font/inter"
             android:text="Toyota Vios 2021"
             android:textColor="#f2f2f2"
             android:textSize="22sp"
@@ -63,7 +63,7 @@
             android:id="@+id/viosPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins_bold"
+            android:fontFamily="@font/inter_bold"
             android:text="₱3,500 / day"
             android:textColor="#00FFD9"
             android:textSize="19sp"
@@ -93,7 +93,7 @@
                 android:text="Dagupan City, Pangasinan"
                 android:textSize="14sp"
                 android:textColor="#f2f2f2"
-                android:fontFamily="@font/poppins"
+                android:fontFamily="@font/inter"
                 android:layout_marginStart="45dp"/>
 
         </RelativeLayout>
@@ -119,7 +119,7 @@
                 android:text="Automatic Transmissin"
                 android:textSize="14sp"
                 android:textColor="#f2f2f2"
-                android:fontFamily="@font/poppins"
+                android:fontFamily="@font/inter"
                 android:layout_marginStart="45dp"/>
 
         </RelativeLayout>
@@ -145,7 +145,7 @@
                 android:text="Pick up"
                 android:textSize="14sp"
                 android:textColor="#f2f2f2"
-                android:fontFamily="@font/poppins"
+                android:fontFamily="@font/inter"
                 android:layout_marginStart="47dp"/>
 
         </RelativeLayout>
@@ -171,7 +171,7 @@
                 android:text="Dave Tan"
                 android:textSize="14sp"
                 android:textColor="#f2f2f2"
-                android:fontFamily="@font/poppins"
+                android:fontFamily="@font/inter"
                 android:layout_marginStart="47dp"/>
 
         </RelativeLayout>
@@ -197,7 +197,7 @@
                 android:text="Sazakyan Verified"
                 android:textSize="14sp"
                 android:textColor="#f2f2f2"
-                android:fontFamily="@font/poppins"
+                android:fontFamily="@font/inter"
                 android:layout_marginStart="47dp"/>
 
         </RelativeLayout>
@@ -216,7 +216,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="40dp"
-                android:fontFamily="@font/poppins"
+                android:fontFamily="@font/inter"
                 android:text="2021 Toyota Vios \nWhite Pearl Crystal Shine \nDual VVT-I, 4-Cylinder In-Line \nDOHC 16V EFI"
                 android:textColor="#f2f2f2"
                 android:textSize="16sp"
@@ -248,7 +248,7 @@
                 android:text="Schedule Availability"
                 android:textSize="14sp"
                 android:textColor="#f2f2f2"
-                android:fontFamily="@font/poppins"
+                android:fontFamily="@font/inter"
                 android:layout_marginStart="65dp"/>
 
             <TextView
@@ -258,7 +258,7 @@
                 android:text="Available slots are marked in green"
                 android:textSize="12sp"
                 android:textColor="#A9F2F2F2"
-                android:fontFamily="@font/poppins"
+                android:fontFamily="@font/inter"
                 android:layout_marginStart="65dp"
                 android:layout_marginTop="17dp"/>
 
@@ -270,7 +270,7 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:text="Ask for reservation"
-            android:fontFamily="@font/poppins_bold"
+            android:fontFamily="@font/inter_bold"
             android:background="@drawable/getstarted"
             android:textColor="#0e0e0e"
             android:layout_marginTop="60dp"

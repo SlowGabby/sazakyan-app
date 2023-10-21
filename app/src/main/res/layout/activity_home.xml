@@ -34,7 +34,7 @@
                         android:id="@+id/txtdashboard"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_bold"
+                        android:fontFamily="@font/inter_bold"
                         android:text="Good Morning!"
                         android:textColor="#f2f2f2"
                         android:textSize="24sp" />
@@ -43,7 +43,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="What are you looking for?"
-                        android:fontFamily="@font/poppins"
+                        android:fontFamily="@font/inter"
                         android:textSize="14sp"
                         android:textColor="#f2f2f2"
                         android:layout_below="@+id/txtdashboard"
@@ -58,7 +58,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
-                    android:fontFamily="@font/poppins_bold"
+                    android:fontFamily="@font/inter_bold"
                     android:text="Browse By Location"
                     android:textColor="#f2f2f2"
                     android:textSize="19sp" />
@@ -108,7 +108,7 @@
                                     android:text="Makati"
                                     android:textSize="18sp"
                                     android:textColor="#f2f2f2"
-                                    android:fontFamily="@font/poppins_bold"
+                                    android:fontFamily="@font/inter_bold"
                                     android:layout_marginStart="10dp"
                                     android:layout_marginTop="5dp"/>
 
@@ -140,7 +140,7 @@
                                     android:text="Manila"
                                     android:textSize="18sp"
                                     android:textColor="#f2f2f2"
-                                    android:fontFamily="@font/poppins_bold"
+                                    android:fontFamily="@font/inter_bold"
                                     android:layout_marginStart="10dp"
                                     android:layout_marginTop="5dp"/>
 
@@ -172,7 +172,7 @@
                                     android:text="Vigan"
                                     android:textSize="18sp"
                                     android:textColor="#f2f2f2"
-                                    android:fontFamily="@font/poppins_bold"
+                                    android:fontFamily="@font/inter_bold"
                                     android:layout_marginStart="10dp"
                                     android:layout_marginTop="5dp"/>
 
@@ -203,7 +203,7 @@
                                     android:text="Pangasinan"
                                     android:textSize="18sp"
                                     android:textColor="#f2f2f2"
-                                    android:fontFamily="@font/poppins_bold"
+                                    android:fontFamily="@font/inter_bold"
                                     android:layout_marginStart="10dp"
                                     android:layout_marginTop="5dp"/>
 
@@ -226,7 +226,7 @@
                     android:layout_marginTop="10dp"
                     android:text="Popular"
                     android:textColor="#f2f2f2"
-                    android:fontFamily="@font/poppins_bold"
+                    android:fontFamily="@font/inter_bold"
                     android:textSize="18dp"/>
 
                 <GridLayout
@@ -265,7 +265,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Toyota Vios"
-                                android:fontFamily="@font/poppins_bold"
+                                android:fontFamily="@font/inter_bold"
                                 android:textSize="15sp"
                                 android:layout_marginTop="10dp"
                                 android:layout_marginStart="10dp"
@@ -276,7 +276,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Starting Price at ₱2500"
-                                android:fontFamily="@font/poppins"
+                                android:fontFamily="@font/inter"
                                 android:layout_marginStart="10dp"
                                 android:textSize="10sp"
                                 android:textColor="#f2f2f2" />
@@ -286,7 +286,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="Dagupan City, Pangasinan"
                                 android:layout_marginStart="10dp"
-                                android:fontFamily="@font/poppins"
+                                android:fontFamily="@font/inter"
                                 android:textSize="8sp"
                                 android:textColor="#f2f2f2" />
 
@@ -324,7 +324,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Toyota Hilux"
-                                android:fontFamily="@font/poppins_bold"
+                                android:fontFamily="@font/inter_bold"
                                 android:textSize="15sp"
                                 android:layout_marginTop="10dp"
                                 android:layout_marginStart="10dp"
@@ -335,7 +335,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Starting Price at ₱2500"
-                                android:fontFamily="@font/poppins"
+                                android:fontFamily="@font/inter"
                                 android:layout_marginStart="10dp"
                                 android:textSize="10sp"
                                 android:textColor="#f2f2f2" />
@@ -345,7 +345,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="Dagupan City, Pangasinan"
                                 android:layout_marginStart="10dp"
-                                android:fontFamily="@font/poppins"
+                                android:fontFamily="@font/inter"
                                 android:textSize="8sp"
                                 android:textColor="#f2f2f2" />
 
@@ -384,7 +384,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Toyota Hiace"
-                                android:fontFamily="@font/poppins_bold"
+                                android:fontFamily="@font/inter_bold"
                                 android:textSize="15sp"
                                 android:layout_marginTop="10dp"
                                 android:layout_marginStart="10dp"
@@ -395,7 +395,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Starting Price at ₱2500"
-                                android:fontFamily="@font/poppins"
+                                android:fontFamily="@font/inter"
                                 android:layout_marginStart="10dp"
                                 android:textSize="10sp"
                                 android:textColor="#f2f2f2" />
@@ -405,7 +405,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="Dagupan City, Pangasinan"
                                 android:layout_marginStart="10dp"
-                                android:fontFamily="@font/poppins"
+                                android:fontFamily="@font/inter"
                                 android:textSize="8sp"
                                 android:textColor="#f2f2f2" />
 
@@ -444,7 +444,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Land Cruiser"
-                                android:fontFamily="@font/poppins_bold"
+                                android:fontFamily="@font/inter_bold"
                                 android:textSize="15sp"
                                 android:layout_marginTop="10dp"
                                 android:layout_marginStart="10dp"
@@ -455,7 +455,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Starting Price at ₱2500"
-                                android:fontFamily="@font/poppins"
+                                android:fontFamily="@font/inter"
                                 android:layout_marginStart="10dp"
                                 android:textSize="10sp"
                                 android:textColor="#f2f2f2" />
@@ -465,7 +465,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="Dagupan City, Pangasinan"
                                 android:layout_marginStart="10dp"
-                                android:fontFamily="@font/poppins"
+                                android:fontFamily="@font/inter"
                                 android:textSize="8sp"
                                 android:textColor="#f2f2f2" />
 
@@ -485,7 +485,7 @@
                     android:textSize="18sp"
                     android:textColor="#f2f2f2"
                     android:layout_marginStart="10dp"
-                    android:fontFamily="@font/poppins_bold"/>
+                    android:fontFamily="@font/inter_bold"/>
 
                 <com.denzcoskun.imageslider.ImageSlider
                     android:id="@+id/imageSlider"
@@ -517,7 +517,7 @@
                         android:text="Secure payment everytime"
                         android:textSize="15sp"
                         android:textColor="#00FFD9"
-                        android:fontFamily="@font/poppins_bold"
+                        android:fontFamily="@font/inter_bold"
                         android:layout_marginBottom="200dp"
                         android:layout_marginStart="30dp"
                         />
@@ -528,7 +528,7 @@
                         android:text="We work with GCash, a trusted payment gateway, to keep all payment transactions secure and convenient."
                         android:textSize="15sp"
                         android:textColor="#f2f2f2"
-                        android:fontFamily="@font/poppins"
+                        android:fontFamily="@font/inter"
                         android:layout_marginStart="30dp"
                         android:layout_marginTop="25dp"
                         />
@@ -553,7 +553,7 @@
                         android:text="Easily rent a car"
                         android:textSize="15sp"
                         android:textColor="#00FFD9"
-                        android:fontFamily="@font/poppins_bold"
+                        android:fontFamily="@font/inter_bold"
                         android:layout_marginBottom="200dp"
                         android:layout_marginStart="30dp"
                         />
@@ -564,7 +564,7 @@
                         android:text="Browse through our listing, reserve your vehicle of your choice, and pay within the app."
                         android:textSize="15sp"
                         android:textColor="#f2f2f2"
-                        android:fontFamily="@font/poppins"
+                        android:fontFamily="@font/inter"
                         android:layout_marginStart="30dp"
                         android:layout_marginTop="25dp"
                         />
@@ -590,7 +590,7 @@
                         android:text="Rent from verified drivers"
                         android:textSize="15sp"
                         android:textColor="#00FFD9"
-                        android:fontFamily="@font/poppins_bold"
+                        android:fontFamily="@font/inter_bold"
                         android:layout_marginBottom="200dp"
                         android:layout_marginStart="30dp"
                         />
@@ -601,7 +601,7 @@
                         android:text="All registered drivers undergo a strict verification process to ensure safe renting of all passengers or users experience within the app."
                         android:textSize="15sp"
                         android:textColor="#f2f2f2"
-                        android:fontFamily="@font/poppins"
+                        android:fontFamily="@font/inter"
                         android:layout_marginStart="30dp"
                         android:layout_marginTop="25dp"
                         />
@@ -626,7 +626,7 @@
                             android:layout_marginBottom="30dp"
                             android:text="Need any help?"
                             android:textAlignment="center"
-                            android:fontFamily="@font/poppins"
+                            android:fontFamily="@font/inter"
                             android:textColor="#f2f2f2"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -641,7 +641,7 @@
                             android:text="Visit our FAQs"
                             android:textAlignment="center"
                             android:textColor="#00FFD9"
-                            android:fontFamily="@font/poppins"
+                            android:fontFamily="@font/inter"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.013"
                             app:layout_constraintBottom_toBottomOf="parent"
