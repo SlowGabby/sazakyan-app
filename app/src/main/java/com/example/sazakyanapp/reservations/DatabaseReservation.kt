@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper
 
 class DatabaseReservation (context: Context) : SQLiteOpenHelper(context, "reservation.db", null, 1) {
     override fun onCreate (p0: SQLiteDatabase?) {
-        p0?.execSQL("create table reservation (selectedCar TEXT primary key, PickUp DATE, DropOff DATE, PickUpLocation TEXT, DropOffLocation TEXT)")
+        p0?.execSQL("create table reservation (PickUp DATE primary key, DropOff DATE, PickUpLocation TEXT, DropOffLocation TEXT)")
 
     }
 
@@ -16,12 +16,11 @@ class DatabaseReservation (context: Context) : SQLiteOpenHelper(context, "reserv
 
     }
 
-    fun insertReservationData(selectedCar: String, pickUp : String, dropOff : String, pickUpLocation : String, dropOffLocation : String): Boolean {
+    fun insertReservationData(pickUp : String, dropOff : String, pickUpLocation : String, dropOffLocation : String): Boolean {
 
         val p0 = this.writableDatabase
         val cv = ContentValues()
 
-        cv.put("selectedCar", selectedCar)
         cv.put("PickUp", pickUp)
         cv.put("DropOff", dropOff)
         cv.put("PickUpLocation", pickUpLocation)
@@ -37,10 +36,10 @@ class DatabaseReservation (context: Context) : SQLiteOpenHelper(context, "reserv
 
     }
 
-    fun checkReservation(selectedCar: String) :Boolean {
+    fun checkReservation(pickUp: String) :Boolean {
 
         val p0 = this.writableDatabase
-        val query = "select * from reservation where selectedCar='$selectedCar'"
+        val query = "select * from reservation where pickUp='$pickUp'"
         val cursor = p0.rawQuery(query, null)
 
         if (cursor.count <= 0) {

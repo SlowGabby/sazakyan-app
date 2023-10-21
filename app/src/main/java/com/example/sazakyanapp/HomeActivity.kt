@@ -3,9 +3,13 @@ package com.example.sazakyanapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.cardview.widget.CardView
+import androidx.drawerlayout.widget.DrawerLayout
 import com.denzcoskun.imageslider.ImageSlider
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.models.SlideModel
@@ -17,15 +21,54 @@ import com.example.sazakyanapp.makati.MakatiActivity
 import com.example.sazakyanapp.manila.ManilaActivity
 import com.example.sazakyanapp.pangasinan.PangasinanActivity
 import com.example.sazakyanapp.vigan.ViganActivity
+import com.google.android.material.navigation.NavigationView
 
 class HomeActivity : AppCompatActivity() {
 
     private lateinit var imageSlider : ImageSlider
+    private lateinit var drawerLayout: DrawerLayout
+    private lateinit var toggle: ActionBarDrawerToggle
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_home)
+
+
+        drawerLayout = findViewById<DrawerLayout>(R.id.drawerLayout)
+        val navView : NavigationView = findViewById(R.id.nav_view)
+
+        toggle = ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close)
+        drawerLayout.addDrawerListener(toggle)
+        toggle.syncState()
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        navView.setNavigationItemSelectedListener {
+
+            when(it.itemId) {
+
+                R.id.nav_home -> Toast.makeText(applicationContext, "Clicked Home", Toast.LENGTH_SHORT).show()
+                R.id.nav_settings -> Toast.makeText(applicationContext, "Clicked Settings", Toast.LENGTH_SHORT).show()
+                R.id.nav_rate_us -> Toast.makeText(applicationContext, "Clicked Rate Us", Toast.LENGTH_SHORT).show()
+                R.id.nav_share -> Toast.makeText(applicationContext, "Clicked Share", Toast.LENGTH_SHORT).show()
+            }
+
+            true
+
+        }
+
+        fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+            if (toggle.onOptionsItemSelected(item)) {
+
+                return true
+
+            }
+
+            return super.onOptionsItemSelected(item)
+
+        }
+
 
         //  BROWSE BY LOCATION TODO: NEED TO IMPLEMENT ALL THE FUNCTION HERE (IMPLEMENTING)
 

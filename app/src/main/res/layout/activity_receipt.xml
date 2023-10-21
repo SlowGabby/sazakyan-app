@@ -25,31 +25,20 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
 
-        <TextView
-            android:id="@+id/carName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="22sp"
-            android:textColor="#f2f2f2"
-            android:fontFamily="@font/poppins"
-            android:layout_marginTop="90dp"
-            android:layout_marginStart="50dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/receiptLabel"
-            />
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/datePicked"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="22sp"
-            android:textColor="#f2f2f2"
-            android:fontFamily="@font/poppins"
             android:layout_marginStart="50dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="148dp"
+            android:fontFamily="@font/poppins"
+            android:textColor="#f2f2f2"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/carName"
-            />
+            app:layout_constraintTop_toBottomOf="@id/receiptLabel" />
 
         <TextView
             android:id="@+id/dateDrop"

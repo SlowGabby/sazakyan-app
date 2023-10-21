@@ -5,18 +5,20 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Button
+import android.widget.CalendarView
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
 import com.example.sazakyanapp.HomeActivity
 import com.example.sazakyanapp.R
 import com.example.sazakyanapp.ReceiptActivity
+import com.example.sazakyanapp.descriptions.RaptorDescription
+import com.example.sazakyanapp.descriptions.ViosDescription
 
 
 class ViosReservationActivity : AppCompatActivity() {
 
-    private lateinit var carModel : EditText
-    private lateinit var pickUpDate : EditText
+    private lateinit var pickUpDate : CalendarView
     private lateinit var dropOffDate : EditText
     private lateinit var pickUpLocation : EditText
     private lateinit var dropOffLocation : EditText
@@ -25,11 +27,10 @@ class ViosReservationActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_reservation)
+        setContentView(R.layout.activity_vios_reservation)
 
 
 
-        carModel = findViewById(R.id.editTextCarModel)
         pickUpDate = findViewById(R.id.editTextPickUpDate)
         dropOffDate = findViewById(R.id.editTextDropOffDate)
         pickUpLocation = findViewById(R.id.editTextPickUpLocation)
@@ -38,16 +39,24 @@ class ViosReservationActivity : AppCompatActivity() {
         database = DatabaseReservation(this)
 
 
+        findViewById<ImageView>(R.id.reservationBackBtn).setOnClickListener {
+
+            startActivity(Intent(this@ViosReservationActivity, ViosDescription::class.java))
+            this@ViosReservationActivity.overridePendingTransition(
+                R.anim.animate_fade_enter,
+                R.anim.animate_fade_exit
+            )
+        }
+
         submitButton.setOnClickListener {
 
-            val reserveCar = carModel.text.toString()
-            val pickDate = pickUpDate.text.toString()
+            val pickDate = pickUpDate.date.toString()
             val dropDate = dropOffDate.text.toString()
             val pickLocation = pickUpLocation.text.toString()
             val dropLocation = dropOffLocation.text.toString()
 
 
-            if (TextUtils.isEmpty(reserveCar) || TextUtils.isEmpty(pickDate) || TextUtils.isEmpty(
+            if (TextUtils.isEmpty(pickDate) || TextUtils.isEmpty(
                     dropDate
                 ) || TextUtils.isEmpty(pickLocation) || TextUtils.isEmpty(dropLocation)
             ) {
@@ -56,7 +65,6 @@ class ViosReservationActivity : AppCompatActivity() {
             } else {
 
                 val saveData = database.insertReservationData(
-                    reserveCar,
                     pickDate,
                     dropDate,
                     pickLocation,
@@ -67,8 +75,7 @@ class ViosReservationActivity : AppCompatActivity() {
 
                     val intent = Intent(this@ViosReservationActivity, ReceiptActivity::class.java)
 
-                    intent.putExtra("car model", carModel.text.toString())
-                    intent.putExtra("date", pickUpDate.text.toString())
+                    intent.putExtra("date", pickUpDate.date.toString())
                     intent.putExtra("drop", dropOffDate.text.toString())
                     intent.putExtra("pickup", pickUpLocation.text.toString())
                     intent.putExtra("dropOff", dropOffLocation.text.toString())
