@@ -52,6 +52,11 @@ class HomeActivity : AppCompatActivity() {
         val insertedContact = intent.getStringExtra("contact")
         val insertedPass = intent.getStringExtra("password")
 
+        val userName = intent.getStringExtra("username")
+        val passWord = intent.getStringExtra("password")
+        val confirmPass = intent.getStringExtra("newpassword")
+
+
         database = Database(this)
 
         navView.setNavigationItemSelectedListener {
@@ -81,10 +86,13 @@ class HomeActivity : AppCompatActivity() {
                 R.id.nav_edit_user -> {
 
                     val intent = Intent(this@HomeActivity, EditActivity::class.java)
+                    intent.putExtra("username", insertedUser)
+                    intent.putExtra("password", insertedPass)
                     startActivity(intent)
                     this@HomeActivity.overridePendingTransition(
                         R.anim.animate_fade_enter,
                         R.anim.animate_fade_exit
+
                     )
                 }
 

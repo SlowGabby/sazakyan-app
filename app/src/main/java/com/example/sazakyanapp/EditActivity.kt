@@ -31,14 +31,15 @@ class EditActivity : AppCompatActivity() {
         val userName = intent.getStringExtra("username")
         val passWord = intent.getStringExtra("password")
         val confirmPass = intent.getStringExtra("newpassword")
+
         database = Database(this)
 
         button.setOnClickListener {
 
-            Log.d("Debug", "Entered Password: ${curPass.text.toString()}")
+            Log.d("Debug", "Entered Password: ${passWord.toString()}")
             Log.d("Debug", "Stored Password: ${newPass.text.toString()}")
 
-            if (curPass.text.toString() == passWord) {
+            if (curPass.text.toString() == passWord.toString()) {
 
                 if (newPass.text.toString().length >= 8) {
 
