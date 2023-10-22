@@ -88,7 +88,7 @@ class ViosReservationActivity : AppCompatActivity() {
                     artDialogBuilder.setCancelable(false)
                     artDialogBuilder.setPositiveButton("Yes") { _, _ ->
 
-                        startActivity(Intent(this@ViosReservationActivity, HomeActivity::class.java))
+                        startActivity(intent)
 
                     }
 

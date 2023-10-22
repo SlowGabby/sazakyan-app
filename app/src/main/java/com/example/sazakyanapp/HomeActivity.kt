@@ -56,7 +56,6 @@ class HomeActivity : AppCompatActivity() {
         val passWord = intent.getStringExtra("password")
         val confirmPass = intent.getStringExtra("newpassword")
 
-
         database = Database(this)
 
         navView.setNavigationItemSelectedListener {
@@ -97,7 +96,6 @@ class HomeActivity : AppCompatActivity() {
                 }
 
                 R.id.nav_delete_user -> {
-
                     artDialogBuilder.setTitle("Delete")
                     artDialogBuilder.setMessage("Are you sure you want to delete your account?")
                     artDialogBuilder.setCancelable(false)
@@ -108,14 +106,12 @@ class HomeActivity : AppCompatActivity() {
                         database.deleteUser(insertedContact.toString())
                         database.deleteUser(insertedPass.toString())
 
-
                         val intent = Intent(this@HomeActivity, LoginActivity::class.java)
                         startActivity(intent)
                         this@HomeActivity.overridePendingTransition(
                             R.anim.animate_fade_enter,
                             R.anim.animate_fade_exit
                         )
-
                     }
 
                     artDialogBuilder.setNegativeButton("No") {_, _ ->
@@ -126,9 +122,6 @@ class HomeActivity : AppCompatActivity() {
                     alertDialogBox.show()
 
                 }
-
-
-
 
                 R.id.nav_logout -> {
 
