@@ -48,9 +48,9 @@ class HomeActivity : AppCompatActivity() {
 
         val artDialogBuilder = AlertDialog.Builder(this)
         val insertedUser = intent.getStringExtra("username")
+        val insertedEmail = intent.getStringExtra("email")
+        val insertedContact = intent.getStringExtra("contact")
         val insertedPass = intent.getStringExtra("password")
-        val insertEmail = intent.getStringExtra("email")
-        val insertContact = intent.getStringExtra("contact")
 
         database = Database(this)
 
@@ -86,7 +86,6 @@ class HomeActivity : AppCompatActivity() {
                         R.anim.animate_fade_enter,
                         R.anim.animate_fade_exit
                     )
-                    finish()
                 }
 
                 R.id.nav_delete_user -> {
@@ -95,7 +94,12 @@ class HomeActivity : AppCompatActivity() {
                     artDialogBuilder.setMessage("Are you sure you want to delete your account?")
                     artDialogBuilder.setCancelable(false)
                     artDialogBuilder.setPositiveButton("Yes") {_, _ ->
+
                         database.deleteUser(insertedUser.toString())
+                        database.deleteUser(insertedEmail.toString())
+                        database.deleteUser(insertedContact.toString())
+                        database.deleteUser(insertedPass.toString())
+
 
                         val intent = Intent(this@HomeActivity, LoginActivity::class.java)
                         startActivity(intent)
@@ -113,14 +117,7 @@ class HomeActivity : AppCompatActivity() {
                     val alertDialogBox = artDialogBuilder.create()
                     alertDialogBox.show()
 
-                    finish()
-
                 }
-
-
-
-
-
 
 
 
