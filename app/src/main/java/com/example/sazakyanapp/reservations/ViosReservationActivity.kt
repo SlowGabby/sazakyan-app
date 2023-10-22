@@ -86,7 +86,7 @@ class ViosReservationActivity : AppCompatActivity() {
                         R.anim.animate_fade_exit
                     )
 
-                    Toast.makeText(this, "Reservation Successful", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Reservation Successfully", Toast.LENGTH_SHORT).show()
 
                 } else {
 
