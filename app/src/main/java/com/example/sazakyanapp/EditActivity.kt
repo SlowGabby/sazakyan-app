@@ -51,7 +51,10 @@ class EditActivity : AppCompatActivity() {
                         intent.putExtra("username", userName)
                         intent.putExtra("password", passWord)
                         intent.putExtra("newpassword", confirmPass)
+
                         startActivity(intent)
+
+                        Toast.makeText(this@EditActivity, "Password Changed!", Toast.LENGTH_SHORT).show()
 
                     } else {
 
