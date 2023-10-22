@@ -38,7 +38,7 @@ class SignupActivity : AppCompatActivity() {
             val signupCpassword = checkPassword.text.toString()
             val signupEmail = email.text.toString()
             val signupContact = contact.text.toString()
-            val saveData = database.insertdata(signupUser, signupPassword, signupEmail, signupContact)
+            val saveData = database.insertdata(signupUser, signupEmail, signupContact, signupPassword)
 
             if (TextUtils.isEmpty(signupUser) || TextUtils.isEmpty(signupPassword) || TextUtils.isEmpty(signupCpassword)) {
 
@@ -46,7 +46,7 @@ class SignupActivity : AppCompatActivity() {
 
             } else {
 
-                if (signupPassword.equals(signupCpassword)) {
+                if (signupPassword == (signupCpassword)) {
 
                     if (saveData == true) {
 

@@ -24,6 +24,7 @@ class EditActivity : AppCompatActivity() {
         curPass = findViewById<TextInputEditText>(R.id.currentPassword)
         newPass = findViewById<TextInputEditText>(R.id.newPassword)
         conNewPass = findViewById<TextInputEditText>(R.id.confirmNewPass)
+        button = findViewById(R.id.button4)
 
         val userName = intent.getStringExtra("username")
         val passWord = intent.getStringExtra("password")
@@ -33,8 +34,11 @@ class EditActivity : AppCompatActivity() {
         button.setOnClickListener {
 
             if (curPass.text.toString() == passWord) {
+
                 if (newPass.text.toString().length >= 8) {
+
                     if (newPass.text.toString() == conNewPass.text.toString()) {
+
                         database.updateData(newPass.text.toString(), userName.toString())
 
                         val intent = Intent(this@EditActivity, HomeActivity::class.java)
@@ -44,13 +48,20 @@ class EditActivity : AppCompatActivity() {
                         finish()
 
                     } else {
+
                         Toast.makeText(this@EditActivity, "Password Doesn't Matched!", Toast.LENGTH_SHORT).show()
+
                     }
+
                 } else {
+
                     Toast.makeText(this@EditActivity, "Enter Password more than 8 characters!", Toast.LENGTH_SHORT).show()
                 }
+
             } else {
+
                 Toast.makeText(this@EditActivity, "Enter your current password!", Toast.LENGTH_SHORT).show()
+
             }
         }
     }
