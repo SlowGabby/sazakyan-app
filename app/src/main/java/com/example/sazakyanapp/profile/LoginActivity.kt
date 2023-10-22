@@ -47,15 +47,15 @@ class LoginActivity : AppCompatActivity() {
 
             } else {
 
-                val checkUser = databaseHelper.checkuserpass(insertedUser, insertedPass, insertedEmail, insertedContact)
+                val checkUser = databaseHelper.checkuserpass(insertedUser, insertedEmail, insertedContact, insertedPass)
                 if (checkUser == true) {
 
                     Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show()
                     val intent = Intent(applicationContext, HomeActivity::class.java)
                     intent.putExtra("username", insertedUser)
-                    intent.putExtra("password", insertedPass)
                     intent.putExtra("email", insertedEmail)
                     intent.putExtra("contact", insertedContact)
+                    intent.putExtra("password", insertedPass)
                     startActivity(intent)
                     this@LoginActivity.overridePendingTransition(
                         R.anim.animate_fade_enter,
