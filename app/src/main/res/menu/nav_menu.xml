@@ -6,26 +6,34 @@
 
     <item
         android:id="@+id/nav_home"
-        android:icon="@drawable/baseline_home_24"
+        android:icon="@drawable/home"
         android:title="Home"/>
 
     <item
-        android:id="@+id/nav_map"
-        android:icon="@drawable/baseline_map_24"
-        android:title="Map"/>
+        android:id="@+id/nav_history"
+        android:icon="@drawable/history"
+        android:title="History"/>
 
-    <item
-        android:id="@+id/nav_settings"
-        android:icon="@drawable/baseline_settings_24"
-        android:title="Settings"/>
+    <item android:title="Account Settings">
 
-    <item android:title="Profile">
         <menu>
+
             <item
-                android:id="@+id/nav_login"
-                android:icon="@drawable/baseline_login_24"
-                android:title="Login"/>
+                android:id="@+id/nav_edit_user"
+                android:icon="@drawable/user_avatar"
+                android:title="Edit User"/>
+
+            <item
+                android:id="@+id/nav_delete_user"
+                android:icon="@drawable/delete_user"
+                android:title="Delete User"/>
+
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/logout"
+                android:title="Logout"/>
         </menu>
+
     </item>
 
     <item android:title="Communication">
@@ -34,22 +42,17 @@
             <item
                 android:id="@+id/nav_chat"
                 android:title="Chat"
-                android:icon="@drawable/baseline_chat_24"/>
+                android:icon="@drawable/chat"/>
 
-            <item
-                android:id="@+id/nav_rate_us"
-                android:title="Rate Us"
-                android:icon="@drawable/baseline_rate_review_24"/>
 
             <item
                 android:id="@+id/nav_share"
                 android:title="Share"
-                android:icon="@drawable/baseline_share_24"/>
+                android:icon="@drawable/connection"/>
 
 
         </menu>
 
     </item>
-
 
 </menu>

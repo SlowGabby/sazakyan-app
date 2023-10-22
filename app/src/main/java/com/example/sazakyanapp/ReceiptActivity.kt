@@ -23,7 +23,7 @@ class ReceiptActivity : AppCompatActivity() {
         locPick = findViewById(R.id.locPick)
         locDrop = findViewById(R.id.locDrop)
 
-        val userDate = intent.getStringExtra("date")?.toLong()
+        val userDate = intent.getStringExtra("date")?.toInt()
         val userDrop = intent.getStringExtra("drop").toString()
         val userPickUp = intent.getStringExtra("pickup").toString()
         val userDropOff = intent.getStringExtra("dropOff").toString()
